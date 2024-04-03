@@ -6,255 +6,47 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		ynM8afwxvx89AHE2hNuZbLXvJNc=
+		iaoFbQdN1yNZdXRvO9p1v1gkOco=
 		</data>
-		<key>ENBonusViewController.nib</key>
+		<key>ENGuideViewController.nib</key>
 		<data>
-		xVsYJL3YAnKAOWHl6yGT+vk6kMc=
+		agV4hy+mHspBmm1+c34fwxwAG6I=
 		</data>
-		<key>ENDayCheckViewController.nib</key>
+		<key>ENKeyboardInquiryViewController.nib</key>
 		<data>
-		kbqYVR1MAvqXy2l3XwQciFmVfcI=
-		</data>
-		<key>ENDefaultBackgroundCell.nib</key>
-		<data>
-		w7GtjOriedWWUm6ken8Y6B5MAUY=
-		</data>
-		<key>ENDefaultNormalCell.nib</key>
-		<data>
-		lDAqBsc908ex+AMD74OzaVQSNzY=
-		</data>
-		<key>ENDefaultSoundCell.nib</key>
-		<data>
-		tud8mpacdpKVYdgjy8LaCX5a+iA=
-		</data>
-		<key>ENDefaultSwitchCell.nib</key>
-		<data>
-		l6EMmWkuzpm9OlSQ7Wx8axLUZ/o=
-		</data>
-		<key>ENKeyboardClipboardView.nib</key>
-		<data>
-		RJqMQKAfq8ptvqz8E9gvZ6EOcDE=
-		</data>
-		<key>ENKeyboardHeightViewController.nib</key>
-		<data>
-		PzvIj9AODGKEprg1Z+HJDSyPj+I=
-		</data>
-		<key>ENKeyboardSelectViewController.nib</key>
-		<data>
-		On+n2lml+hQuuYPCV1nNGEK+kb4=
+		OuvR9jMapCamUmqPKd0B6r3nVmU=
 		</data>
 		<key>ENKeyboardSoundViewController.nib</key>
 		<data>
-		IwOKU+MkcHREi3tjcRyoen+ApX8=
+		aZCLUK0vcO72lxThq5UnG60iQss=
 		</data>
-		<key>ENKeyboardTabCoupangView.nib</key>
+		<key>ENKeyboardTypeViewController.nib</key>
 		<data>
-		5C56NsXQJsEdZUiNTdfcGfK0Esw=
-		</data>
-		<key>ENKeyboardVibrateViewController.nib</key>
-		<data>
-		N1n3DP5DRs6uaeAlKoAEp+EjlPE=
+		hwWZ33DpBB19rPDypcaYWdVTe7o=
 		</data>
 		<key>ENMainViewController.nib</key>
 		<data>
-		uvMYoWVn5EdAFxT+MAL9/Ys2MLI=
-		</data>
-		<key>ENMemoAddViewController.nib</key>
-		<data>
-		qgYpOuVZ2QEWUUpqPJFcuSIUbmE=
-		</data>
-		<key>ENMemoDetailCell.nib</key>
-		<data>
-		upYEoFpD94rLr9rRPQxri6lpMG4=
-		</data>
-		<key>ENMemoDetailViewController.nib</key>
-		<data>
-		aiFlh+R4sr1N1uMdl3OeiTK2qgE=
-		</data>
-		<key>ENMyPointViewController.nib</key>
-		<data>
-		zB2qYx4Y1J8swdLNfNsEkv12tU4=
-		</data>
-		<key>ENMyThemeBottomBannerView.nib</key>
-		<data>
-		Vx5C4EWumPyjTT/K0cCpqxrPOgE=
-		</data>
-		<key>ENMyThemeEmptyView.nib</key>
-		<data>
-		V+fseD0jnrHyzwbmAFzM3cbEpQo=
+		OXEwg12ZevVqJ/sPatW2lW1I7+s=
 		</data>
 		<key>ENNewThemeManagerViewController.nib</key>
 		<data>
-		yCFSTB893RbiBnwT44Gg1tBOt/o=
+		Pze+f7non8jSwwDu+Ae37zvnzuw=
 		</data>
-		<key>ENPhotoThemeCollectionViewCell.nib</key>
+		<key>ENPPZWebViewController.nib</key>
 		<data>
-		rKXno8R4GDbBK8T6sLIfJpPJAr4=
-		</data>
-		<key>ENPhotoThemeEditColorViewController.nib</key>
-		<data>
-		dbbfUiOJpW0NocvTX0HQLbScz4Y=
-		</data>
-		<key>ENPhotoThemeEditViewController.nib</key>
-		<data>
-		7kp6wOHet7nCzg2gco6CAGQY0XU=
-		</data>
-		<key>ENPhotoThemeHeaderView.nib</key>
-		<data>
-		OlcvwYqMn4jwHOZHvNLtSg2Fqoo=
-		</data>
-		<key>ENPointBarCell.nib</key>
-		<data>
-		PTRRAYUQVJw3utINOwXR4K/owXY=
-		</data>
-		<key>ENPointCell.nib</key>
-		<data>
-		RCEHDo0si+Uh/xFbjgLptBhDCgA=
-		</data>
-		<key>ENPointDetailCell.nib</key>
-		<data>
-		2MmEbGpGxDkMuMFNdXg4VODP0TI=
-		</data>
-		<key>ENPointDetailViewController.nib</key>
-		<data>
-		1Ii+hnpzf1jzUhuKUWxXsQn4tgM=
-		</data>
-		<key>ENSearchBaseViewController.nib</key>
-		<data>
-		gjhC8jpKV5K0NTH6gIDO5SAsYQM=
-		</data>
-		<key>ENSearchKeywordView.nib</key>
-		<data>
-		UL/tONEjKW5f6kLp3JHLl9Bv6RY=
-		</data>
-		<key>ENSearchPhotoEmptyHeaderView.nib</key>
-		<data>
-		b0NP9zUZhaQs0iSJLI74ICpJYSk=
-		</data>
-		<key>ENSettingNoDescTableViewCell.nib</key>
-		<data>
-		q3ClC5os+15PA80gGXT44QG3Crg=
-		</data>
-		<key>ENSettingNormalTableViewCell.nib</key>
-		<data>
-		PReG16eHDVwSnzgjM3R09oYDVj8=
-		</data>
-		<key>ENSettingRadioTableViewCell.nib/objects-14.0+.nib</key>
-		<data>
-		J7bqv1rlRluRM2cbBy+B07z2L2s=
-		</data>
-		<key>ENSettingRadioTableViewCell.nib/runtime.nib</key>
-		<data>
-		o1ICoKZIXmU2cN3trRxV9e5GZnI=
-		</data>
-		<key>ENSettingSlideTableViewCell.nib</key>
-		<data>
-		96Dxm+TfgVllFfQVltfRJpEppYc=
-		</data>
-		<key>ENSettingSwitchTableViewCell.nib</key>
-		<data>
-		0Yl6K2Czg4q/DdcjV0pvTPg2tL4=
-		</data>
-		<key>ENSettingThemeTableViewCell.nib</key>
-		<data>
-		Ow9VYHqf8CcHyxxcoLMXmAFmN9Y=
-		</data>
-		<key>ENSettingViewController.nib</key>
-		<data>
-		iPVPo8LPTNxQfJJCqTqAFIExAps=
-		</data>
-		<key>ENSoundSelectViewController.nib</key>
-		<data>
-		2RDWTWHXp2YtLfkUTQLCCqfM8l0=
-		</data>
-		<key>ENThemeBannerCollectionViewCell.nib</key>
-		<data>
-		aoaGBRTD7snXJdhH5XFTIipQZh0=
+		F9U/QYDwKkXNzlYdwMh+/LMYjug=
 		</data>
 		<key>ENThemeCategoryCollectionViewCell.nib</key>
 		<data>
-		As4yThC78wIbozTIKGdbJjyEFsw=
+		TGpG9/BuF6lVq4jRqPmxVwplewA=
 		</data>
 		<key>ENThemeCategoryHeaderView.nib</key>
 		<data>
-		7OUzYyYd851hkuV7UDlo9kRHg08=
+		9z3eX7MJHZ73ApEl9bpFXpjKQCM=
 		</data>
 		<key>ENThemeCollectionViewCell.nib</key>
 		<data>
-		MEZYhb3kjy6dWRzr+yLz6Tz6Pg0=
-		</data>
-		<key>ENThemeColorCategoryCollectionViewCell.nib</key>
-		<data>
-		CkLGAbNNpluINhR2wejqSbTxxa0=
-		</data>
-		<key>ENThemeSearchEmptyView.nib</key>
-		<data>
-		FUdQxsSWfOZQv/k6qyz8mytj05g=
-		</data>
-		<key>ENThemeSortOptionView.nib</key>
-		<data>
-		nU/LQjbE1WV7pRjwXvlVeLNDmwI=
-		</data>
-		<key>ENToolbarBackgroundCell.nib</key>
-		<data>
-		Xt69shUgPn1FWWaACKG6i8cv5Lw=
-		</data>
-		<key>ENToolbarBackgroundSwitchCell.nib</key>
-		<data>
-		pnW8UFNQbnh1vCL4WePNWtNYNbU=
-		</data>
-		<key>ENToolbarBonousCell.nib</key>
-		<data>
-		jraHMwJbE26Elbdx95E9/g86gjE=
-		</data>
-		<key>ENToolbarNormalCell.nib</key>
-		<data>
-		9gvEFk08zMG845mwOjLrnjLPpms=
-		</data>
-		<key>ENToolbarSelectViewController.nib</key>
-		<data>
-		IrQ4LzKAjy4cLEgbIyQGb7A3q3Q=
-		</data>
-		<key>ENToolbarSettingViewController.nib</key>
-		<data>
-		bY67dkKAAh+SgLfiaMMSEu/N6Ns=
-		</data>
-		<key>ENTutorialViewController.nib</key>
-		<data>
-		gekdbhwkSuoqF5jz13Bawsf0wk8=
-		</data>
-		<key>ENTypingViewController.nib</key>
-		<data>
-		LhpP+4DAJnm9LN9djaXzkPVIBdQ=
-		</data>
-		<key>GameZoneViewController.nib</key>
-		<data>
-		3H+2vqw6rD5pynti8OEJNK8desM=
-		</data>
-		<key>HanaGuideViewController.nib</key>
-		<data>
-		guWKmuYKFjc4Yi8hiwdhysf4Vpo=
-		</data>
-		<key>HanaKeyboardInquiryViewController.nib</key>
-		<data>
-		kh974TBr4ajSpNFHoyPjoV9nm7Y=
-		</data>
-		<key>HanaKeyboardSoundViewController.nib</key>
-		<data>
-		aZCLUK0vcO72lxThq5UnG60iQss=
-		</data>
-		<key>HanaKeyboardTypeViewController.nib</key>
-		<data>
-		2+Bms/eXkWhDeo2wASrh5z/3gkI=
-		</data>
-		<key>HanaMainViewController.nib</key>
-		<data>
-		04ECGkb5dlq3EKM+x/twIF6nCUY=
-		</data>
-		<key>HanaPPZWebViewController.nib</key>
-		<data>
-		1Ay5UaOXEhekJEOSVhfz865uBzM=
+		0jpt+TTqq8xuGd5JM44Pazeccx8=
 		</data>
 		<key>Headers/GSKGeometry.h</key>
 		<data>
@@ -270,11 +62,11 @@
 		</data>
 		<key>Headers/KeyboardSDK-Swift.h</key>
 		<data>
-		fjb6I1lOF9pIJlBmLPDKVGENUD4=
+		TnS+N8kQCN88r5lNpZ7ITcxxCUw=
 		</data>
 		<key>Headers/KeyboardSDK.h</key>
 		<data>
-		zv0WF7W/zaFuJX+2N0nCZ10BdtU=
+		VoYeb4zlUFKzS3qBK3M11jsLj9E=
 		</data>
 		<key>Headers/UIScrollView+GSKStretchyHeaderView.h</key>
 		<data>
@@ -286,27 +78,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		OoMrznQI/r9qEmXQNC5uo1Mqy2Y=
+		KnozxGjj6bihTB5Kip62M0FE0TU=
 		</data>
 		<key>Modules/KeyboardSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		Zk3l6rqP2OEgKPDfUxh85qMz66U=
+		9ZM+bN7v/tlb9HyIoXyPvpZfuG4=
 		</data>
 		<key>Modules/KeyboardSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		YeuXsR1XJuN/xp9hrOIrv7bOGfw=
+		HY6G7cwehTGRJU9BN5g/BhpioZs=
 		</data>
 		<key>Modules/KeyboardSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		P1z3jdLtzoPcSmtqm6MWmEXOCGE=
+		SiY6uWvxyorRvBSfkzgujP0pxBI=
 		</data>
 		<key>Modules/KeyboardSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		YeuXsR1XJuN/xp9hrOIrv7bOGfw=
+		HY6G7cwehTGRJU9BN5g/BhpioZs=
 		</data>
 		<key>Modules/KeyboardSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		vyoGMhMZixooK1EET2WyIEe6j5w=
+		m0+TtEaUY1k/OUqhKQ3yPsojYHo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -371,441 +163,77 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sKpL3VfnevuaGHA6dS20XK+7cxkH+h5U92+6MoegVK0=
+			Yq/19BMHs3LsvhCNspF6u+KQxjMAJ987UyEauLprWoE=
 			</data>
 		</dict>
-		<key>ENBonusViewController.nib</key>
+		<key>ENGuideViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WVjbprL+VHvks+Cbdq+TpF/tymrecUGXlPjmDoB8yQI=
+			+Gi2nwo7usaLzlzW1MORHOlHFi4sftVqp5C9T0SRHvc=
 			</data>
 		</dict>
-		<key>ENDayCheckViewController.nib</key>
+		<key>ENKeyboardInquiryViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qqm/FGYv21+T8yxzISLS/jHPwzM/pe5cdJWuKEZDNN8=
-			</data>
-		</dict>
-		<key>ENDefaultBackgroundCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			KejWg8JiQ2383LTRUTs2cRjJhJ83y6Hh+d+YED4MSe8=
-			</data>
-		</dict>
-		<key>ENDefaultNormalCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			TErTpIs1CadLN+NXfoLAYwkJ+1leegCkjfrB38/zaYI=
-			</data>
-		</dict>
-		<key>ENDefaultSoundCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			NbhJCwsxwqrUF+W6PPNP3PBXSV2/f8i+ZPfx3xqRcGs=
-			</data>
-		</dict>
-		<key>ENDefaultSwitchCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			1mbMJQiPZ9Xq8Wv82GA8rxS2XiQvp+0l0pZRX+2KJ50=
-			</data>
-		</dict>
-		<key>ENKeyboardClipboardView.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			RSofC2uW8xMtjs+XLsoNFSeE9+6VurjjxIYJ3XLdmwY=
-			</data>
-		</dict>
-		<key>ENKeyboardHeightViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			piMJ6gAImC70bPisnsjix1VITYX1VTeUDi8b3ao7Itg=
-			</data>
-		</dict>
-		<key>ENKeyboardSelectViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			iE+B5IazrhTHzY9NvT+cZ4uE6SIuIXu+JvV2Jx6ZcGc=
+			fsknySlJu323ujMzj5lLNx0DPs62NYA8yVG6J9Ol5iw=
 			</data>
 		</dict>
 		<key>ENKeyboardSoundViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+F1Cnq5Xvhq1tMD0WTbduxabqliCWyFEC0+gdRrvXHk=
+			VGNAWXzQHqANV/8vj6gCWgrDP+TxorvDijHZMIuaRcw=
 			</data>
 		</dict>
-		<key>ENKeyboardTabCoupangView.nib</key>
+		<key>ENKeyboardTypeViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XYcDfQ5UqNmRf90oBbesRlMCX5aHLr46SQdr6XbsM50=
-			</data>
-		</dict>
-		<key>ENKeyboardVibrateViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			scsyd2ctsXGElBVNjnkOfTpOaLXtRaigr6Z5JzGGFos=
+			i9S+wq8gr+ukZOX67X3d6JftUgxKnaVN+Zo9ECPKRwY=
 			</data>
 		</dict>
 		<key>ENMainViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wyIhKFtizoBpub7fz6J34dvUCGr8GDbecolOFPw0/g0=
-			</data>
-		</dict>
-		<key>ENMemoAddViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			FT+wpkCZsF1SfgRcPL28l2lxAOdATGpPmUQkqt07CJI=
-			</data>
-		</dict>
-		<key>ENMemoDetailCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			q1/aFewP9G6et0iUK/k2UzlPvvCnA8BXpqWJDf27Y+U=
-			</data>
-		</dict>
-		<key>ENMemoDetailViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Xy2Pgk9KMeDSQhkKesR5k3QtwGeLTox9234FsJ8YC90=
-			</data>
-		</dict>
-		<key>ENMyPointViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Bla4R56NBqrGYMg48GH0kysyYCaxm+JOa6DarJanfpE=
-			</data>
-		</dict>
-		<key>ENMyThemeBottomBannerView.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ZVUf5D9Rh47hBG8utiaMKCnSg7tFQlcQpYD9SNs2WDs=
-			</data>
-		</dict>
-		<key>ENMyThemeEmptyView.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			mgzMAMT8a3GsTeHDRmeWCG78Df3o4QfFszHF7gFeiSs=
+			SH1TJsjRk5y/cb+36lU2x8Wj+4/+VFrkqC7syV80u9Y=
 			</data>
 		</dict>
 		<key>ENNewThemeManagerViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4FXdonfELXt1U1cpYR1YRgIkzCXjVOl2RYTmug9swtw=
+			PD7J8jbP+e8jIi5fDCCnQh8JgrgYDuO/gng4/3hWc6U=
 			</data>
 		</dict>
-		<key>ENPhotoThemeCollectionViewCell.nib</key>
+		<key>ENPPZWebViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			evEt47z7FcnHu7eveb5sX3QFicf2kYdiX/Cf+5p+2qM=
-			</data>
-		</dict>
-		<key>ENPhotoThemeEditColorViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ZWUZ2nlYL3Vi4iMnsNFgwcVxRfYB/GRK/oav+Q6LS4s=
-			</data>
-		</dict>
-		<key>ENPhotoThemeEditViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			MV8v/SN+a9BdO063SD8t6XdlzAxvFuC6oufha31Z+sE=
-			</data>
-		</dict>
-		<key>ENPhotoThemeHeaderView.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			k+eZWZPoBK7ZIv7Mbjn7hNdP4ZNDgCb6JXaiCSwOhZI=
-			</data>
-		</dict>
-		<key>ENPointBarCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			oyXys02pFs6lW3iKrIPZKfrD1iJ7HP8coSDmlWm601E=
-			</data>
-		</dict>
-		<key>ENPointCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			EbhSlFq4Z0cB5Mub/uMixhxvshfYK3gaOkNx+1xiPmc=
-			</data>
-		</dict>
-		<key>ENPointDetailCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			5r6GDfiDSNrVJbzeoZWe5wk0PsrgO1LupkHVxFBzAas=
-			</data>
-		</dict>
-		<key>ENPointDetailViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			L5YIWC+lMQAn4Vk9+flbM7MKPqHzIQtWiBWcyDh4Rc8=
-			</data>
-		</dict>
-		<key>ENSearchBaseViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			IQ7W2jBddwzM+2apfr+IApfvB0sPHSCu+7Sj+jel2hw=
-			</data>
-		</dict>
-		<key>ENSearchKeywordView.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			h6Q1Lc3qsNao3ckaLqUEcL3nMr0abBzne/33d6en8DY=
-			</data>
-		</dict>
-		<key>ENSearchPhotoEmptyHeaderView.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			3//imwSsO3+KQEm2b8K8cCA+ljcrFOZMdySMDZop+lQ=
-			</data>
-		</dict>
-		<key>ENSettingNoDescTableViewCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			FNZ04cOn7LiDVI1GzQX5uNBqZGBiPivrEjhRMZ3WXUs=
-			</data>
-		</dict>
-		<key>ENSettingNormalTableViewCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			xKALi/txRRe9czwXPuHuPeiKEqX87HIgvxvjmEdA74M=
-			</data>
-		</dict>
-		<key>ENSettingRadioTableViewCell.nib/objects-14.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			iL66AfPrNEv8GkDfmkBe31SB8ENPtQZd/c6WQa+VlFc=
-			</data>
-		</dict>
-		<key>ENSettingRadioTableViewCell.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Kg8XglZ4CqstcMw4s8UPHUStSVCZw+QqYGiEhEZOOys=
-			</data>
-		</dict>
-		<key>ENSettingSlideTableViewCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			29H7UXr/Vv1valcK3nJeBTZWQT+NqouYhHqjYG07JUE=
-			</data>
-		</dict>
-		<key>ENSettingSwitchTableViewCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			AOOPFWQLDTR1m5AybeX3EDMgSxwvN4uPyTrLHrX5YX0=
-			</data>
-		</dict>
-		<key>ENSettingThemeTableViewCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			fiStwV354WuXYsVYtJpG27mZ+qrz1XiuB4lJ13hOmK8=
-			</data>
-		</dict>
-		<key>ENSettingViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			VYEmvmaE25AteAbrKcCfObWOSgbkm5ZZHbRwPUJ4cx8=
-			</data>
-		</dict>
-		<key>ENSoundSelectViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			roCF7VD96DQWMmyxMQyGiMjbwlx93yVbiMTET6PN59s=
-			</data>
-		</dict>
-		<key>ENThemeBannerCollectionViewCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			jQkJzSWN/wYofaN9EEwe5+4QAsd/Btmbw7E+Al/QPuk=
+			EXs23yahv3CeyJcXk6G/B+Ve+/D79eg2EW13IJ7aMS0=
 			</data>
 		</dict>
 		<key>ENThemeCategoryCollectionViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gc3lDXqrr8SEIM0WE/KCUC9Y9n9xb2I/9+cOz+Z8LAA=
+			OUUBdjTgiMDNDJU1/e40aeHmB7q6OJTdRr44Hv/bXpA=
 			</data>
 		</dict>
 		<key>ENThemeCategoryHeaderView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lxVOb9Fu1twf8jeRBAMoeerrOUoBZt6H2DruoIpIBQA=
+			9lmohHku+4xKq9TlYwh7JhcmfOQjMQBOYj2aqnJb2KU=
 			</data>
 		</dict>
 		<key>ENThemeCollectionViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6jNmGV/qSH30uCDuei1fN21lNxu8ZxbaV11YyMvyN0Y=
-			</data>
-		</dict>
-		<key>ENThemeColorCategoryCollectionViewCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			CBNUwsemsJOAM1914bAkd3XQjrrTrsF5WnWagDiC7uQ=
-			</data>
-		</dict>
-		<key>ENThemeSearchEmptyView.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			VM9nHP+JNe/onAGjuJamHE48ipOnzaWtOxc3U7qzDEU=
-			</data>
-		</dict>
-		<key>ENThemeSortOptionView.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			d0lwwv8koMM8W7PYARSMxLnNb64yNcFjzPXCRDb+1xA=
-			</data>
-		</dict>
-		<key>ENToolbarBackgroundCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			fixWSStcBAcAVXr4VIE95PwPrFFa7TAuqQp1uLZufcY=
-			</data>
-		</dict>
-		<key>ENToolbarBackgroundSwitchCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Ai5hgIwIk4IlNsVgG/PMCRwzKnfMs1xtD8OlqCweN9g=
-			</data>
-		</dict>
-		<key>ENToolbarBonousCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			a2TNUZbBqYPsXfT0uIlpwy7w4lHpIUrWfFOxHen3b7c=
-			</data>
-		</dict>
-		<key>ENToolbarNormalCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			r8Bg4ByhC5JcMRts1Z1/6MZIx9LjmYFAW1qzX8F5P4U=
-			</data>
-		</dict>
-		<key>ENToolbarSelectViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			fYiracZCelLhkK+05kODQqQePMp+k91LxSIwyEWH/+0=
-			</data>
-		</dict>
-		<key>ENToolbarSettingViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			yXGiCKdNiJ7sesd2FeNJUUkUTRwq+ywwTMsUi63TIQs=
-			</data>
-		</dict>
-		<key>ENTutorialViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			KOcogI3zhiV6P0hJruolOOwpFbT3PUgovT2EgtLtlqU=
-			</data>
-		</dict>
-		<key>ENTypingViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			dzYemqxQ5Lb6OTwcTQGtPKtLrgTwhRhoAFc5MJKCkkc=
-			</data>
-		</dict>
-		<key>GameZoneViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			eQc3xdGh/IKMmAhUhsuvjp4YBX7n1411iX4IRBuEsbg=
-			</data>
-		</dict>
-		<key>HanaGuideViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			hAgiNlC4PAW18r3ZwqrPkAY1njTqTmHesTDV6XCWWUw=
-			</data>
-		</dict>
-		<key>HanaKeyboardInquiryViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			HyqS0YWYLVGx8qSIS1to7VASAR78hqYgwFbXEkxIhsc=
-			</data>
-		</dict>
-		<key>HanaKeyboardSoundViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			VGNAWXzQHqANV/8vj6gCWgrDP+TxorvDijHZMIuaRcw=
-			</data>
-		</dict>
-		<key>HanaKeyboardTypeViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			iDxWUpYWTGtIH8s51ERfq638HdQeJmgfUFoju1hDCAM=
-			</data>
-		</dict>
-		<key>HanaMainViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			rxA5p2ayFALG5PcMfAInac+9w6TECe/31t5/KHgsIsQ=
-			</data>
-		</dict>
-		<key>HanaPPZWebViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			3/QuxWAmTUcf9eHMLNsCryxQ/fpJZypDGCxym7kKVYc=
+			Yi/B/E2thi1Ag/rFZtC2LXbbk/v/e9MCbqD7MRlDOVM=
 			</data>
 		</dict>
 		<key>Headers/GSKGeometry.h</key>
@@ -833,14 +261,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1azAb7K0XHvP1nAiBLO+afWascgpgVXdGguQNW17LoI=
+			ul4ZT3GV/eQBIEHJX19cSl6oV9DKjbLb0Sx4f3cDn4M=
 			</data>
 		</dict>
 		<key>Headers/KeyboardSDK.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4s6RTTe4fgqV+WCw9pVWVqdEMAchN2tkQ+CoYOzgzSE=
+			MP/AQOKDriZ/7VylWdUPzYPOqWaLweTRipZAsmvAHZ4=
 			</data>
 		</dict>
 		<key>Headers/UIScrollView+GSKStretchyHeaderView.h</key>
@@ -861,35 +289,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			51B/F2ay2JUuOk5dKGAaIw8Rragn8TIxQZcHF4LlRcE=
+			H2hJcc0KnrhbEqxvPUuB/KuCsrPIn+S6D7ytDpMoDLQ=
 			</data>
 		</dict>
 		<key>Modules/KeyboardSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			07Ve3xV3Ze2to0xY2oPy5R5TWxXuC4u3h1QMEpyIxu8=
+			3Zzpdlz2AJ/bRBm4IlzENFWnyNLdQ91L7Z4pFxJUTf4=
 			</data>
 		</dict>
 		<key>Modules/KeyboardSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MWLF9pHdP0z2LLD2Xk6jiXWE21PhR4rfcaGXtJ4mVy0=
+			ZiUekdkD6MuJlj1gIHdJBqAx+/2Ws9cf409otRhzLcA=
 			</data>
 		</dict>
 		<key>Modules/KeyboardSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			07Ve3xV3Ze2to0xY2oPy5R5TWxXuC4u3h1QMEpyIxu8=
+			3Zzpdlz2AJ/bRBm4IlzENFWnyNLdQ91L7Z4pFxJUTf4=
 			</data>
 		</dict>
 		<key>Modules/KeyboardSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vVrjkdgPssdf98LzpxZ8qP4vjK2em+6gPH3f2p5HG+E=
+			eW46BDKNXboIZfZhHH8DvTIiHXZf0N2GcEdJ3BMuYjg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

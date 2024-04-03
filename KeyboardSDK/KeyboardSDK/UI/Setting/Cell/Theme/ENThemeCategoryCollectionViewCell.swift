@@ -2,7 +2,7 @@
 //  ENThemeCategoryCollectionViewCell.swift
 //  KeyboardSDK
 //
-//  Created by enlipleIOS1 on 2021/06/02.
+//  Created by cashwalkKeyboard on 2021/06/02.
 //
 
 import UIKit
@@ -23,6 +23,7 @@ class ENThemeCategoryCollectionViewCell: UICollectionViewCell {
     func setSelectedCategory(isSelected:Bool) {
         labelName.textColor = isSelected ? UIColor.sortButtonSelected : UIColor.sortButtonNormal
         selecteIndicatorView.isHidden = !isSelected
+        labelName.font = UIFont.systemFont(ofSize: 15, weight: isSelected ? .bold : .regular)
     }
     
 }

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SpoqaHanSansNeo-Regular.otf">
+            <string>SpoqaHanSansNeo-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ENPPZWebViewController" customModule="KeyboardSDK" customModuleProvider="target">
+            <connections>
+                <outlet property="constraintBridgeHeight" destination="Ewi-63-hJP" id="hOf-wa-asF"/>
+                <outlet property="tempView" destination="CZe-TC-qMY" id="AbC-jm-FLN"/>
+                <outlet property="view" destination="iN0-l3-epB" id="dkw-PY-NkH"/>
+                <outlet property="viewFrame" destination="yBz-xE-2Eq" id="4kP-pt-cvl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kPV-br-3P8">
+                    <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="플러스 포인트존" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lw9-N2-nkh">
+                            <rect key="frame" x="20" y="13.666666666666664" width="120" height="23"/>
+                            <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFK-iC-u1a">
+                            <rect key="frame" x="370" y="13" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="ix0-hS-6EB"/>
+                                <constraint firstAttribute="width" constant="24" id="xkr-0T-lMp"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" backgroundImage="keyboardHeaderClose"/>
+                            <connections>
+                                <action selector="btnMainClose:" destination="-1" eventType="touchUpInside" id="nxB-4W-y4d"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Lw9-N2-nkh" firstAttribute="centerY" secondItem="kPV-br-3P8" secondAttribute="centerY" id="Axb-rb-qjE"/>
+                        <constraint firstAttribute="height" constant="50" id="CQC-Qk-XIc"/>
+                        <constraint firstItem="gFK-iC-u1a" firstAttribute="centerY" secondItem="kPV-br-3P8" secondAttribute="centerY" id="DcI-tI-AzJ"/>
+                        <constraint firstAttribute="trailing" secondItem="gFK-iC-u1a" secondAttribute="trailing" constant="20" id="kRf-1h-Pw7"/>
+                        <constraint firstItem="Lw9-N2-nkh" firstAttribute="leading" secondItem="kPV-br-3P8" secondAttribute="leading" constant="20" id="yhC-z7-UHO"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6M-S0-yFR">
+                    <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ult-X1-XRE">
+                            <rect key="frame" x="20" y="13" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="b6A-E1-8Pa"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" backgroundImage="keyboardHeaderBack"/>
+                            <connections>
+                                <action selector="btnBridgeHeaderBack:" destination="-1" eventType="touchUpInside" id="Lcr-EZ-KRi"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="미션참여" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azz-8E-a8j">
+                            <rect key="frame" x="52" y="0.0" width="67" height="50"/>
+                            <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuV-xb-DIU">
+                            <rect key="frame" x="370" y="13" width="24" height="24"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" backgroundImage="keyboardHeaderClose"/>
+                            <connections>
+                                <action selector="btnBridgeHeaderClose:" destination="-1" eventType="touchUpInside" id="fz7-ra-M7w"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="GuV-xb-DIU" firstAttribute="top" secondItem="Y6M-S0-yFR" secondAttribute="top" constant="13" id="375-fs-jOW"/>
+                        <constraint firstAttribute="height" constant="50" id="Ewi-63-hJP"/>
+                        <constraint firstItem="Ult-X1-XRE" firstAttribute="leading" secondItem="Y6M-S0-yFR" secondAttribute="leading" constant="20" id="I5W-r5-Rx9"/>
+                        <constraint firstAttribute="bottom" secondItem="GuV-xb-DIU" secondAttribute="bottom" constant="13" id="IIE-0J-eEc"/>
+                        <constraint firstAttribute="trailing" secondItem="GuV-xb-DIU" secondAttribute="trailing" constant="20" id="ISP-dS-jcN"/>
+                        <constraint firstAttribute="bottom" secondItem="Ult-X1-XRE" secondAttribute="bottom" constant="13" id="Lgu-3W-SF0"/>
+                        <constraint firstAttribute="bottom" secondItem="Azz-8E-a8j" secondAttribute="bottom" id="WVX-1Z-ubF"/>
+                        <constraint firstItem="Azz-8E-a8j" firstAttribute="leading" secondItem="Ult-X1-XRE" secondAttribute="trailing" constant="8" id="YD3-iF-vWM"/>
+                        <constraint firstItem="Ult-X1-XRE" firstAttribute="top" secondItem="Y6M-S0-yFR" secondAttribute="top" constant="13" id="hcW-Sz-cts"/>
+                        <constraint firstItem="Azz-8E-a8j" firstAttribute="top" secondItem="Y6M-S0-yFR" secondAttribute="top" id="wMX-T2-pxn"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZe-TC-qMY">
+                    <rect key="frame" x="0.0" y="94" width="414" height="802"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yBz-xE-2Eq">
+                    <rect key="frame" x="0.0" y="94" width="414" height="802"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="CZe-TC-qMY" firstAttribute="top" secondItem="kPV-br-3P8" secondAttribute="bottom" id="3xA-pV-lLk"/>
+                <constraint firstAttribute="trailing" secondItem="yBz-xE-2Eq" secondAttribute="trailing" id="5mN-TF-rrV"/>
+                <constraint firstAttribute="bottom" secondItem="yBz-xE-2Eq" secondAttribute="bottom" id="6wj-g2-ftI"/>
+                <constraint firstItem="Y6M-S0-yFR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Bhc-mf-Fx7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kPV-br-3P8" secondAttribute="trailing" id="GWV-Q4-Gau"/>
+                <constraint firstItem="kPV-br-3P8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Rfv-Es-E12"/>
+                <constraint firstItem="CZe-TC-qMY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="TLT-kR-nMZ"/>
+                <constraint firstAttribute="bottom" secondItem="CZe-TC-qMY" secondAttribute="bottom" id="TOl-je-iSE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CZe-TC-qMY" secondAttribute="trailing" id="V2Y-rD-wCl"/>
+                <constraint firstItem="yBz-xE-2Eq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Vou-Bc-vfM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Y6M-S0-yFR" secondAttribute="trailing" id="gYs-Fn-6NT"/>
+                <constraint firstItem="kPV-br-3P8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="okY-wK-hHq"/>
+                <constraint firstItem="Y6M-S0-yFR" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="vMk-w5-56K"/>
+                <constraint firstItem="yBz-xE-2Eq" firstAttribute="top" secondItem="kPV-br-3P8" secondAttribute="bottom" id="wBj-k0-ObS"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="keyboardHeaderBack" width="24" height="24"/>
+        <image name="keyboardHeaderClose" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

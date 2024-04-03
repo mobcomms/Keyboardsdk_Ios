@@ -2,7 +2,7 @@
 //  DHColorPicker.swift
 //  KeyboardSDKCore
 //
-//  Created by enlipleIOS1 on 2021/06/17.
+//  Created by cashwalkKeyboard on 2021/06/17.
 //
 
 import Foundation
@@ -42,9 +42,6 @@ class DHColorPicker : UIView {
         
         shadow.backgroundColor = UIColor.init(white: 1.0, alpha: 0.1)
         shadow.layer.applyRounding(cornerRadius: 11, borderColor: .white, borderWidth: 2.0, masksToBounds: true)
-//        let shadow2 = UIView()
-//        shadow2.backgroundColor = .clear
-//        shadow2.layer.applyRounding(cornerRadius: 6.5, borderColor: .black, borderWidth: 1.0, masksToBounds: true)
         
         pointView.frame = CGRect(x: 0, y: 0, width: 22, height: 22)
         pointView.backgroundColor = .clear
@@ -53,10 +50,7 @@ class DHColorPicker : UIView {
         
         shadow.frame = pointView.bounds
         pointView.addSubview(shadow)
-        
-//        shadow2.frame = CGRect.init(x: 1, y: 1, width: pointView.bounds.width-2, height: pointView.bounds.height-2)
-//        pointView.addSubview(shadow2)
-        
+            
         self.addSubview(pointView)
         pointView.isHidden = true
     }
@@ -114,7 +108,6 @@ class DHColorPicker : UIView {
             let percentageY = powf(Float(saturation), 1.0 / saturationExponentTop)
             yPos = CGFloat(percentageY) * halfHeight
         } else {
-            //use brightness to get Y
             yPos = halfHeight + halfHeight * (1.0 - brightness)
         }
         let xPos = hue * self.bounds.width

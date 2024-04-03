@@ -2,7 +2,7 @@
 //  ENPhotoThemeHeaderView.swift
 //  KeyboardSDK
 //
-//  Created by enlipleIOS1 on 2021/06/28.
+//  Created by cashwalkKeyboard on 2021/06/28.
 //
 
 import UIKit

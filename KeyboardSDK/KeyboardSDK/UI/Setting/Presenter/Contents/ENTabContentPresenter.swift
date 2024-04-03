@@ -2,7 +2,7 @@
 //  ENTabContentPresenter.swift
 //  KeyboardSDK
 //
-//  Created by enlipleIOS1 on 2021/06/21.
+//  Created by cashwalkKeyboard on 2021/06/21.
 //
 
 import Foundation
@@ -26,15 +26,9 @@ extension ENTabContentPresenterDelegate where Self:UIViewController {
 }
 
 
-
 class ENTabContentPresenter: NSObject {
     
     var collectionView: UICollectionView? = nil
-    var topButton:UIView? = nil {
-        didSet {
-            contentPresenter?.topButton = topButton
-        }
-    }
     
     var delegate:ENTabContentPresenterDelegate?
     
@@ -49,7 +43,6 @@ class ENTabContentPresenter: NSObject {
     init(collectionView:UICollectionView) {
         self.collectionView = collectionView
         contentPresenter = ENCollectionViewPresenter.init(collectionView: collectionView)
-        contentPresenter?.topButton = topButton
     }
     
     

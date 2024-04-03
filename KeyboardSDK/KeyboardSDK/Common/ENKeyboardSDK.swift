@@ -2,7 +2,7 @@
 //  ENKeyboardSDK.swift
 //  KeyboardSDK
 //
-//  Created by enlipleIOS1 on 2021/05/17.
+//  Created by cashwalkKeyboard on 2021/05/17.
 //
 
 import Foundation
@@ -14,7 +14,7 @@ public class ENKeyboardSDK {
     public static let shared:ENKeyboardSDK = ENKeyboardSDK()
     
     /// SDK 버전 정보 (get-only)
-    public private(set) var SDK_VERSION: String = "SDK Version : 1.0.13" // 이거 무조건 바꿔야함... 전달 할때마다!!!!!
+    public private(set) var SDK_VERSION: String = "SDK Version : 1.0.13"
     
     let appLovinMediationProvider = "max"
     let appLovinIdentifier = "mobcomms.app@gmail.com"
@@ -27,7 +27,6 @@ public class ENKeyboardSDK {
     
     public func sdkInit() {
         setDebug(isDebug:false)
-        DHApi.HOST = "https://api.cashkeyboard.co.kr/API"
     }
     
     public func setDebug(isDebug: Bool) {
@@ -70,40 +69,34 @@ public class ENKeyboardSDK {
             viewController?.view.showEnToast(message: "\(path), \(ENKeyboardSDKSchemeManager.path)")
             return false
         }
-        
+
         
         let pageType = ENKeyboardSDKSchemePageType.init(rawValue: value ?? "") ?? .unknown
-        
+
         switch pageType {
-        case .setting:
-            let vc = ENSettingViewController.create()
-            openViewController(parent: viewController, open: vc)
-            break
         case .KeyboardFullAccessSetting:
             if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
                 openUrl(parent: viewController, open: settingsURL)
             }
             break
-        case .userMemoEdit:
-            let vc = ENMainViewController.create()
-            vc.isUserMemoEdit = true
-            openViewController(parent: viewController, open: vc)
-            return true
-        case .enMainPage:
-            let vc = ENMainViewController.create()
-            vc.isUserMemoEdit = false
-            openViewController(parent: viewController, open: vc)
-            return true
         case .ppzone:
-            let vc = HanaPPZWebViewController.create()
+            let vc = ENPPZWebViewController.create()
             openViewController(parent: viewController, open: vc)
             return true
-        case .hanaSetting:
-            let vc = HanaMainViewController.create()
+        case .keyboardSetting:
+            let vc = ENMainViewController.create()
             openViewController(parent: viewController, open: vc)
             return true
-        case .hanaInquiry:
-            let vc = HanaKeyboardInquiryViewController.create()
+        case .keyboardCashDeal:
+            let vc = ENMainViewController.create()
+            openViewController(parent: viewController, open: vc)
+            return true
+        case .keyboardInquiry:
+            let vc = ENKeyboardInquiryViewController.create()
+            openViewController(parent: viewController, open: vc)
+            return true
+        case .theme:
+            let vc = ENNewThemeManagerViewController.create()
             openViewController(parent: viewController, open: vc)
             return true
         default:
@@ -143,13 +136,12 @@ public class ENKeyboardSDK {
         }
     }
     public func saveUUID(_ uuid :String) {
-        ENSettingManager.shared.hanaCustomerID = uuid
+        ENSettingManager.shared.customerID = uuid
         ENKeyboardAPIManeger.shared.callUpdateUserInfo() { data, response, error in
             if let data = data, let jsonString = String(data: data, encoding: .utf8) {
                 if let jsonData = jsonString.data(using: .utf8) {
                     do {
                         let data = try JSONDecoder().decode(ENUpdateUserInfoModel.self, from: jsonData)
-                        //print("ENUpdateUserInfoModel result : \(data.Result)")
                     } catch {
                         print("error")
                     }
@@ -162,7 +154,7 @@ public class ENKeyboardSDK {
 
 
 public class ENKeyboardSDKSchemeManager {
-    public static let scheme:String = "ENKeyboardSDK"
+    public static let scheme:String = "CashwalkKeyboardSDK"
     
     public static var path:String {
         get {
@@ -171,27 +163,10 @@ public class ENKeyboardSDKSchemeManager {
     }
     
     
-    public static var settingPage:String {
-        get {
-            return "\(scheme)\(ENKeyboardSDKCore.shared.apiKey):\(path)?page=\(ENKeyboardSDKSchemePageType.setting.rawValue)"
-        }
-    }
     
     public static var fullAccessPage:String {
         get {
             return "\(scheme)\(ENKeyboardSDKCore.shared.apiKey):\(path)?page=\(ENKeyboardSDKSchemePageType.KeyboardFullAccessSetting.rawValue)"
-        }
-    }
-    
-    public static var enMainPage: String {
-        get {
-            return "\(scheme)\(ENKeyboardSDKCore.shared.apiKey):\(path)?page=\(ENKeyboardSDKSchemePageType.enMainPage.rawValue)"
-        }
-    }
-    
-    public static var userMemoEdit: String {
-        get {
-            return "\(scheme)\(ENKeyboardSDKCore.shared.apiKey):\(path)?page=\(ENKeyboardSDKSchemePageType.userMemoEdit.rawValue)"
         }
     }
     
@@ -207,30 +182,39 @@ public class ENKeyboardSDKSchemeManager {
         }
     }
     
-    public static var hanaSetting: String {
+    public static var keyboardSetting: String {
         get {
-            return "\(scheme)\(ENKeyboardSDKCore.shared.apiKey):\(path)?page=\(ENKeyboardSDKSchemePageType.hanaSetting.rawValue)"
+            return "\(scheme)\(ENKeyboardSDKCore.shared.apiKey):\(path)?page=\(ENKeyboardSDKSchemePageType.keyboardSetting.rawValue)"
         }
     }
-    
-    public static var hanaInquiry: String {
+    public static var keyboardCashDeal: String {
         get {
-            return "\(scheme)\(ENKeyboardSDKCore.shared.apiKey):\(path)?page=\(ENKeyboardSDKSchemePageType.hanaInquiry.rawValue)"
+            return "\(scheme)\(ENKeyboardSDKCore.shared.apiKey):\(path)?page=\(ENKeyboardSDKSchemePageType.keyboardCashDeal.rawValue)"
         }
     }
-    
+
+    public static var keyboardInquiry: String {
+        get {
+            return "\(scheme)\(ENKeyboardSDKCore.shared.apiKey):\(path)?page=\(ENKeyboardSDKSchemePageType.keyboardInquiry.rawValue)"
+        }
+    }
+    public static var theme: String {
+        get {
+            return "\(scheme)\(ENKeyboardSDKCore.shared.apiKey):\(path)?page=\(ENKeyboardSDKSchemePageType.theme.rawValue)"
+        }
+    }
 }
 
 
 enum ENKeyboardSDKSchemePageType: String {
     case unknown                    = "unknown"
-    case setting                    = "setting"
     case KeyboardFullAccessSetting  = "KeyboardFullAccessSetting"
-    case userMemoEdit               = "userMemoEdit"
-    case enMainPage                 = "enMainPage"
     case openUrl                    = "openUrl"
     case selfApp                    = "selfApp"
     case ppzone                     = "ppzone"
-    case hanaSetting                = "hanaSetting"
-    case hanaInquiry                = "hanaInquiry"
+    case keyboardSetting            = "keyboardSetting"
+    case keyboardCashDeal           = "keyboardCashDeal"
+    case keyboardInquiry            = "keyboardInquiry"
+    case theme                      = "theme"
+
 }

@@ -2,7 +2,7 @@
 //  ENInputViewController.swift
 //  KeyboardSDK
 //
-//  Created by enlipleIOS1 on 2021/05/04.
+//  Created by cashwalkKeyboard on 2021/05/04.
 //
 
 import UIKit
@@ -22,6 +22,8 @@ open class ENInputViewController: UIInputViewController {
         super.viewDidLoad()
         
         ENPlusInputViewManager.shared.viewDidLoad()
+        print("ENInputViewController self.hasFullAccess :: \(self.hasFullAccess)")
+
     }
 
     open override func viewWillLayoutSubviews() {

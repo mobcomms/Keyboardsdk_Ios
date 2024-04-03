@@ -2,7 +2,7 @@
 //  ENThemeCategoryPresenter.swift
 //  KeyboardSDK
 //
-//  Created by enlipleIOS1 on 2021/06/24.
+//  Created by cashwalkKeyboard on 2021/06/24.
 //
 
 import Foundation
@@ -18,26 +18,26 @@ class ENThemeCategoryPresenter: ENCollectionViewPresenter {
     var currentSelectedIndex:IndexPath? = nil
     var currentSelectedCategoryIndex:IndexPath? = nil
     
-    let sortOptionView: ENThemeSortOptionView = ENThemeSortOptionView.create()
-    
+    let defaultThemeName = "라이트모드 (기본)"
     
     var categoryCode:String = "" {
         didSet {
             if !categoryCode.isEmpty {
-                self.page = 1
-                self.loadThemeData()
+                self.reloadFilterData()
             }
         }
     }
-    
+    var themeData: [ENKeyboardThemeModel]? = []
     
     override init(collectionView: UICollectionView) {
         super.init(collectionView: collectionView)
         
-        sortOptionView.updateSortButtonState(isFamousSelected: false)
-        sortOptionView.delegate = self
+        
         
         self.selectedTheme = ENKeyboardThemeManager.shared.getCurrentTheme()
+        if self.selectedTheme?.name == "default"{
+            self.selectedTheme?.name = defaultThemeName
+        }
         self.numberOfSections = 1
     }
     
@@ -59,12 +59,20 @@ class ENThemeCategoryPresenter: ENCollectionViewPresenter {
         
         cell.imageViewThumbnail.loadImageAsync(with: theme.image)
         cell.labelName.text = theme.name
-//        cell.setBadge(isNew: theme.isNew, isOwn: theme.isOwn)
-        if let selectThemeName = theme.name, let currentThemeName = ENKeyboardThemeManager.shared.getCurrentTheme().name {
+        cell.setBadge(isNew: theme.isNew, isOwn: theme.isOwn ?? false)
+        var currentThemeName = ENKeyboardThemeManager.shared.getCurrentTheme().name
+        if currentThemeName == "default"{
+            currentThemeName = defaultThemeName
+        }
+        if let selectThemeName = theme.name   {
             if selectThemeName == currentThemeName {
                 cell.imageViewSelectIcon.isHidden = false
+                cell.selectionView.backgroundColor = UIColor(red: 1, green: 236/255, blue: 146/255, alpha: 0.6)
+                
             } else {
                 cell.imageViewSelectIcon.isHidden = true
+                cell.selectionView.backgroundColor = .clear
+                
             }
         } else {
             cell.imageViewSelectIcon.isHidden = true
@@ -72,14 +80,12 @@ class ENThemeCategoryPresenter: ENCollectionViewPresenter {
         
         if theme.name == selectedTheme?.name {
             currentSelectedIndex = indexPath
-//            cell.setSelectedTheme(isSelected: true)
-            cell.layer.borderWidth = 3
-            cell.layer.borderColor = UIColor(red: 24/255, green: 110/255, blue: 245/255, alpha: 1).cgColor
-            cell.layer.cornerRadius = 8
+            cell.rootView.layer.borderWidth = 3
+            cell.rootView.layer.borderColor = UIColor(red: 94/255, green: 80/255, blue: 80/255, alpha: 1).cgColor
+            cell.rootView.layer.cornerRadius = 8
         }
         else {
-//            cell.setSelectedTheme(isSelected: false)
-            cell.layer.borderWidth = 0
+            cell.rootView.layer.borderWidth = 0
         }
     }
     
@@ -100,8 +106,7 @@ class ENThemeCategoryPresenter: ENCollectionViewPresenter {
     
     
     override func loadData() {
-        self.page += 1
-        self.loadThemeData()
+        
     }
 }
 
@@ -114,26 +119,8 @@ extension ENThemeCategoryPresenter {
     
     
     override func sizeForHeader(section: Int) -> CGSize {
-        return CGSize.init(width: UIScreen.main.bounds.width, height: 45)
+        return .zero
     }
-    
-    override func dequeueViewForSupplementaryElementOf(kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if kind == UICollectionView.elementKindSectionHeader {
-            sortOptionView.removeFromSuperview()
-            
-            let reusableView = super.dequeueViewForSupplementaryElementOf(kind: kind, at: indexPath)
-            reusableView.addSubview(sortOptionView)
-            
-            sortOptionView.frame = reusableView.bounds
-            sortOptionView.sizeToFit()
-            
-            return reusableView
-        }
-        else {
-            return super.dequeueViewForSupplementaryElementOf(kind: kind, at: indexPath)
-        }
-    }
-    
     
     @objc override func didSelectedItem(at indexPath: IndexPath) {
         guard let theme = getIndexedData(indexPath: indexPath) else {
@@ -141,7 +128,6 @@ extension ENThemeCategoryPresenter {
         }
         
         let themeFileInfo = theme.themeFileInfo()
-        
         if !(ENKeyboardThemeManager.shared.alreadyDownlaoded(theme: themeFileInfo)) {
             
             delegate?.collectionViewPresenter(self, showProgress: "테마 미리보기 적용중")
@@ -179,62 +165,28 @@ extension ENThemeCategoryPresenter {
             }
         }
     }
-    
 }
-
 
 
 //MARK:- load data
 extension ENThemeCategoryPresenter {
     
-    func loadThemeData() {
-        if categoryCode.isEmpty || isInReqeust {
-            return
-        }
-        isInReqeust = true
+    func reloadFilterData(){
+        self.dataSource.removeAll()
         
-        let request:DHNetwork = DHApi.themeList(cateCode: categoryCode, userId: "test", sortByFamous: sortOptionView.sortByFamousButton.isSelected, page: page)
-        DHApiClient.shared.fetch(with: request) {[weak self] (result: Result<ENKeyboardThemeListModel, DHApiError>) in
-            guard let self else { return }
-            switch result {
-            case .success(let retValue):
-                DHLogger.log("\(retValue.debugDescription)")
-                
-                if self.page == 1 {
-                    self.dataSource.removeAll()
-                }
-                
-                if let data = retValue.data, data.count > 0 {
-                    self.dataSource.append(contentsOf:data)
-                }
-                else {
-                    self.page = -1
-                }
-                
-                DispatchQueue.main.async {
-                    self.collectionView?.reloadData()
-                }
-                break
-                
-            case .failure(let error):
-                DHLogger.log("\(error.localizedDescription)")
-                break
-                
-            @unknown default:
-                break
+        if let data = themeData, data.count > 0 {
+            if categoryCode == "" || categoryCode == "00"{
+                self.dataSource.append(contentsOf:data)
+            }else{
+                let rs = data.filter({ $0.cat!.lowercased().contains(categoryCode)})
+                self.dataSource.append(contentsOf:rs)
             }
-            
-            self.isInReqeust = false
+        }
+        DispatchQueue.main.async {
+            self.collectionView?.reloadData()
         }
     }
 }
 
 
 
-extension ENThemeCategoryPresenter: ENThemeSortOptionViewDelegate {
-    
-    func enThemeSortOptionView(sortOptionView: ENThemeSortOptionView, sortBy isFamous: Bool) {
-        self.page = 1
-        loadThemeData()
-    }
-}

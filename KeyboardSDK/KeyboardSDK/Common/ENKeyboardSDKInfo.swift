@@ -2,7 +2,7 @@
 //  ENKeyboardSDKInfo.swift
 //  KeyboardSDKCore
 //
-//  Created by enlipleIOS1 on 2021/04/27.
+//  Created by cashwalkKeyboard on 2021/04/27.
 //
 
 import Foundation

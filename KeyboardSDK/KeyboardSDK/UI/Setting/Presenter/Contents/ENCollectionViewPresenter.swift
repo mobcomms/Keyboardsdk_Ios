@@ -2,11 +2,12 @@
 //  ENCollectionViewPresenter.swift
 //  KeyboardSDK
 //
-//  Created by enlipleIOS1 on 2021/06/18.
+//  Created by cashwalkKeyboard on 2021/06/18.
 //
 
 
 import UIKit
+import KeyboardSDKCore
 
 
 
@@ -21,10 +22,7 @@ protocol ENCollectionViewPresenterDelegate: AnyObject {
     func showKeyboardPreview(_ presenter:ENCollectionViewPresenter)
     func hideKeyboardPreview(_ presenter:ENCollectionViewPresenter)
     
-    func openGallery(_ presenter:ENCollectionViewPresenter)
-    func editPhoto(_ presenter:ENCollectionViewPresenter, edit image:UIImage)
     
-    func exitEditMode(_ presenter:ENCollectionViewPresenter, deletedCount:Int)
     
     
 }
@@ -38,21 +36,14 @@ class ENCollectionViewPresenter: NSObject {
     weak var delegate:ENCollectionViewPresenterDelegate?
     
     var collectionView:UICollectionView?
-    var topButton:UIView? = nil {
-        didSet {
-            topButton?.isHidden = true
-        }
-    }
     
-    var dataSource:[Any] = []
+    var dataSource:[Any] = [] 
     
     var numberOfSections:Int = 1
     var minimumLineSpacing:CGFloat = 11.0
-    var minimumInteritemSpacing:CGFloat = 10.0
+    var minimumInteritemSpacing:CGFloat = 30.0
     
-    var topButtonHideTimer:Timer? = nil
     
-    var page:Int = 0
     var willPaging:Bool = true
     var isInReqeust:Bool = false
     
@@ -68,7 +59,6 @@ class ENCollectionViewPresenter: NSObject {
         self.collectionView?.contentInset = UIEdgeInsets.init(top: 0.0, left: 0.0, bottom: 15.0, right: 0.0)
         
         self.collectionView?.register(UINib.init(nibName: "ENThemeCollectionViewCell", bundle: Bundle.frameworkBundle), forCellWithReuseIdentifier: ENThemeCollectionViewCell.ID)
-        self.collectionView?.register(UINib.init(nibName: "ENPhotoThemeCollectionViewCell", bundle: Bundle.frameworkBundle), forCellWithReuseIdentifier: ENPhotoThemeCollectionViewCell.ID)
         
         self.collectionView?.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ENCollectionViewPresenterHeaderDefault)
         self.collectionView?.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: ENCollectionViewPresenterFooterDefault)
@@ -102,8 +92,8 @@ extension ENCollectionViewPresenter {
     
     @objc func sizeForItem(at indexPath: IndexPath) -> CGSize {
         let needSize = ENThemeCollectionViewCell.needSize
-        let width = (UIScreen.main.bounds.width - (15.0 + 15.0 + minimumInteritemSpacing)) / 2.0
-        
+        let width = (UIScreen.main.bounds.width - (34.0 + minimumInteritemSpacing)) / 2.0
+
         return CGSize.init(width: width, height: ((width * needSize.height) / needSize.width))
     }
     
@@ -123,7 +113,6 @@ extension ENCollectionViewPresenter {
     @objc func insetForSectionAt(section: Int) -> UIEdgeInsets {
         return UIEdgeInsets.init(top: 0.0, left: 14.0, bottom: 0.0, right: 14.0)
     }
-    
     @objc func sizeForHeader(section:Int) -> CGSize {
         return .zero
     }
@@ -140,9 +129,6 @@ extension ENCollectionViewPresenter {
         else {
             return collectionView?.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: ENCollectionViewPresenterFooterDefault, for: indexPath) ?? UICollectionReusableView()
         }
-        
-        
-        
     }
     
     
@@ -160,43 +146,22 @@ extension ENCollectionViewPresenter {
 extension ENCollectionViewPresenter: UIScrollViewDelegate {
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        runTopButtonHideTimer()
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        topButtonHideTimer?.invalidate()
-        topButtonHideTimer = nil
-        topButton?.isHidden = !(scrollView.contentOffset.y > UIScreen.main.bounds.height)
-        
-        
         guard willPaging else { return }
-        
-        
         var minRow = 0
-        
         for indexPath in collectionView?.indexPathsForVisibleItems ?? [] {
             if indexPath.row > minRow {
                 minRow = indexPath.row
             }
         }
         
-        if (minRow >= (dataSource.count - 7)) && page > 0 {
+        if (minRow >= (dataSource.count - 7)) {//}&& page > 0 {
             loadData()
         }
     }
-    
-    
-    func runTopButtonHideTimer() {
-        topButtonHideTimer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false, block: { [weak self] (t) in
-            guard let self else { return }
-            self.topButton?.isHidden = true
-        })
-    }
 }
-
-
-
 
 //MARK:- UICollectionView Delegate
 

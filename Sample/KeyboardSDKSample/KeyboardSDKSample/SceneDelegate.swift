@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  KeyboardSDKSample
 //
-//  Created by enlipleIOS1 on 2021/05/04.
+//  Created by cashwalkKeyboard on 2021/05/04.
 //
 
 import UIKit
@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
         if let urlContext = URLContexts.first {
             let url = urlContext.url
-            if url.absoluteString.contains("ENKeyboardSDK123") {
+            if url.absoluteString.contains("CashwalkKeyboardSDK123") {
                 let _ = ENKeyboardSDK.shared.openByUniversalLink(url: url, sceneDelegate: self)
             }
         }

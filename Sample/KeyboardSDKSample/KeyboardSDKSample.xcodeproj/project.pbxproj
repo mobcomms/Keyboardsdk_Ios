@@ -18,8 +18,8 @@
 		66CDA7BA26411DC300D98DB6 /* KeyboardSDKSampleExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 66CDA7B226411DC200D98DB6 /* KeyboardSDKSampleExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6A83F4252B6041BF00896D71 /* KeyboardSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A9AF542ABC92060032B7B7 /* KeyboardSDK.xcframework */; };
 		6A83F4262B6041BF00896D71 /* KeyboardSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26A9AF542ABC92060032B7B7 /* KeyboardSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6A83F4382B60489100896D71 /* KeyboardSDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A83F4372B60489100896D71 /* KeyboardSDKCore.xcframework */; };
-		6A83F4392B60489100896D71 /* KeyboardSDKCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A83F4372B60489100896D71 /* KeyboardSDKCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6AE216A12B73FCD6000C4C52 /* KeyboardSDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE216A02B73FCD6000C4C52 /* KeyboardSDKCore.xcframework */; };
+		6AE216A22B73FCD6000C4C52 /* KeyboardSDKCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE216A02B73FCD6000C4C52 /* KeyboardSDKCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,16 +30,9 @@
 			remoteGlobalIDString = 66CDA7B126411DC200D98DB6;
 			remoteInfo = KeyboardSDKSampleExtension;
 		};
-		6A83F42D2B6041D000896D71 /* PBXContainerItemProxy */ = {
+		6AE2169A2B73FC35000C4C52 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6A83F4282B6041CF00896D71 /* KeyboardSDKCore.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 66D1312E2643C0F500C5E9E1;
-			remoteInfo = KeyboardSDKCore;
-		};
-		6A95539D2BBD0B4600CA3B49 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6A9553982BBD0B4600CA3B49 /* KeyboardSDKCore.xcodeproj */;
+			containerPortal = 6AE216952B73FC35000C4C52 /* KeyboardSDKCore.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 66D1312E2643C0F500C5E9E1;
 			remoteInfo = KeyboardSDKCore;
@@ -81,7 +74,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6A83F4392B60489100896D71 /* KeyboardSDKCore.xcframework in Embed Frameworks */,
+				6AE216A22B73FCD6000C4C52 /* KeyboardSDKCore.xcframework in Embed Frameworks */,
 				6A83F4262B6041BF00896D71 /* KeyboardSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -106,10 +99,8 @@
 		66CDA7B226411DC200D98DB6 /* KeyboardSDKSampleExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = KeyboardSDKSampleExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		66CDA7B426411DC200D98DB6 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		66CDA7B626411DC200D98DB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6A83F4212B60418E00896D71 /* hanakeyboardsdkcore_ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = hanakeyboardsdkcore_ios; path = ../../../hanakeyboardsdkcore_ios; sourceTree = "<group>"; };
-		6A83F4282B6041CF00896D71 /* KeyboardSDKCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeyboardSDKCore.xcodeproj; path = ../../../hanakeyboardsdkcore_ios/KeyboardSDKCore.xcodeproj; sourceTree = "<group>"; };
-		6A83F4372B60489100896D71 /* KeyboardSDKCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = KeyboardSDKCore.xcframework; path = ../../../hanakeyboardsdkcore_ios/Release/KeyboardSDKCore.xcframework; sourceTree = "<group>"; };
-		6A9553982BBD0B4600CA3B49 /* KeyboardSDKCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeyboardSDKCore.xcodeproj; path = ../../../Keyboardsdkcore_Ios/KeyboardSDKCore.xcodeproj; sourceTree = "<group>"; };
+		6AE216952B73FC35000C4C52 /* KeyboardSDKCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeyboardSDKCore.xcodeproj; path = ../../../keyboardsdkcore/KeyboardSDKCore.xcodeproj; sourceTree = "<group>"; };
+		6AE216A02B73FCD6000C4C52 /* KeyboardSDKCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = KeyboardSDKCore.xcframework; path = ../../../keyboardsdkcore/Release/KeyboardSDKCore.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A83F4382B60489100896D71 /* KeyboardSDKCore.xcframework in Frameworks */,
+				6AE216A12B73FCD6000C4C52 /* KeyboardSDKCore.xcframework in Frameworks */,
 				6A83F4252B6041BF00896D71 /* KeyboardSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,7 +134,7 @@
 		66CDA7662641194200D98DB6 = {
 			isa = PBXGroup;
 			children = (
-				6A9553982BBD0B4600CA3B49 /* KeyboardSDKCore.xcodeproj */,
+				6AE216952B73FC35000C4C52 /* KeyboardSDKCore.xcodeproj */,
 				66AA5E6D2648BF0400AF9E35 /* KeyboardSDK.xcodeproj */,
 				66CDA7712641194200D98DB6 /* KeyboardSDKSample */,
 				66CDA7B326411DC200D98DB6 /* KeyboardSDKSampleExtension */,
@@ -190,26 +181,16 @@
 		66CDA7C426411DEA00D98DB6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6A83F4372B60489100896D71 /* KeyboardSDKCore.xcframework */,
-				6A83F4282B6041CF00896D71 /* KeyboardSDKCore.xcodeproj */,
-				6A83F4212B60418E00896D71 /* hanakeyboardsdkcore_ios */,
+				6AE216A02B73FCD6000C4C52 /* KeyboardSDKCore.xcframework */,
 				26A9AF542ABC92060032B7B7 /* KeyboardSDK.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6A83F4292B6041CF00896D71 /* Products */ = {
+		6AE216962B73FC35000C4C52 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6A83F42E2B6041D000896D71 /* KeyboardSDKCore.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6A9553992BBD0B4600CA3B49 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6A95539E2BBD0B4600CA3B49 /* KeyboardSDKCore.framework */,
+				6AE2169B2B73FC35000C4C52 /* KeyboardSDKCore.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -290,12 +271,8 @@
 					ProjectRef = 66AA5E6D2648BF0400AF9E35 /* KeyboardSDK.xcodeproj */;
 				},
 				{
-					ProductGroup = 6A83F4292B6041CF00896D71 /* Products */;
-					ProjectRef = 6A83F4282B6041CF00896D71 /* KeyboardSDKCore.xcodeproj */;
-				},
-				{
-					ProductGroup = 6A9553992BBD0B4600CA3B49 /* Products */;
-					ProjectRef = 6A9553982BBD0B4600CA3B49 /* KeyboardSDKCore.xcodeproj */;
+					ProductGroup = 6AE216962B73FC35000C4C52 /* Products */;
+					ProjectRef = 6AE216952B73FC35000C4C52 /* KeyboardSDKCore.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -307,18 +284,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		6A83F42E2B6041D000896D71 /* KeyboardSDKCore.framework */ = {
+		6AE2169B2B73FC35000C4C52 /* KeyboardSDKCore.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = KeyboardSDKCore.framework;
-			remoteRef = 6A83F42D2B6041D000896D71 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6A95539E2BBD0B4600CA3B49 /* KeyboardSDKCore.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = KeyboardSDKCore.framework;
-			remoteRef = 6A95539D2BBD0B4600CA3B49 /* PBXContainerItemProxy */;
+			remoteRef = 6AE2169A2B73FC35000C4C52 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		A1B840DF2A823D4600F521A0 /* KeyboardSDK.framework */ = {
@@ -472,7 +442,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = HanaMoneyKeyboard;
+				INFOPLIST_KEY_CFBundleDisplayName = CashWalkKeyboard;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -530,7 +500,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = HanaMoneyKeyboard;
+				INFOPLIST_KEY_CFBundleDisplayName = CashWalkKeyboard;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -550,18 +520,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = KeyboardSDKSample/KeyboardSDKSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = GL4YVZY43K;
 				INFOPLIST_FILE = KeyboardSDKSample/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "하나머니 샘플 앱";
+				INFOPLIST_KEY_CFBundleDisplayName = "캐시워크키보드 샘플 앱";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.enliple.keyboardsdksample;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cashwalk.keyboardsdksample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 5.0;
@@ -577,18 +547,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = KeyboardSDKSample/KeyboardSDKSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = GL4YVZY43K;
 				INFOPLIST_FILE = KeyboardSDKSample/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "하나머니 샘플 앱";
+				INFOPLIST_KEY_CFBundleDisplayName = "캐시워크키보드 샘플 앱";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.enliple.keyboardsdksample;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cashwalk.keyboardsdksample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_VERSION = 5.0;
@@ -609,7 +579,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.enliple.keyboardsdksample.keyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cashwalk.keyboardsdksample.keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -631,7 +601,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.enliple.keyboardsdksample.keyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cashwalk.keyboardsdksample.keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";

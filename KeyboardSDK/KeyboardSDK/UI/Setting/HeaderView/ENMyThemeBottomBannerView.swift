@@ -2,7 +2,7 @@
 //  ENMyThemeBottomBannerView.swift
 //  KeyboardSDK
 //
-//  Created by enlipleIOS1 on 2021/07/05.
+//  Created by cashwalkKeyboard on 2021/07/05.
 //
 
 import UIKit

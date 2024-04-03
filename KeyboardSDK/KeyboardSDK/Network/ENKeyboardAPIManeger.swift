@@ -2,7 +2,7 @@
 //  ENKeyboardAPIManeger.swift
 //  KeyboardSDK
 //
-//  Created by Enliple on 2024/01/11.
+//  Created by cashwalkKeyboard on 2024/01/11.
 //
 
 import Foundation
@@ -40,12 +40,12 @@ public class ENKeyboardAPIManeger{
 
         let urlString = "\(ENAPIConst.API_URL)get_brand_util.php"
         let param = ["uuid": "\(ENAPIConst.uuid)"]
+
         URLUtil.customCallApi(url: urlString, method: .GET, parameters: param, token: nil) {[weak self] data, response, error in
             guard let self = self else { return }
             completion(data, response, error)
         }
     }
-
     public func getUserTotalPoint( completion: @escaping (Data?, URLResponse?, Error?) -> Void){
 
         let urlString = "\(ENAPIConst.API_URL)get_user_total_point.php"
@@ -69,30 +69,18 @@ public class ENKeyboardAPIManeger{
     public func getUserPoint( completion: @escaping (Data?, URLResponse?, Error?) -> Void){
 
         let urlString = "\(ENAPIConst.API_URL)get_user_point.php"
-        let param = ["uuid": "\(ENAPIConst.uuid)", "server_type": "\(ENAPIConst.API_SERVER_TYPE)"]
+        let param = ["uuid": "\(ENAPIConst.uuid)", "server_type": "\(ENAPIConst.API_SERVER_TYPE)", "os_type": "I"]
 
         URLUtil.customCallApi(url: urlString, method: .GET, parameters: param, token: nil) {[weak self] data, response, error in
             guard let self = self else { return }
             completion(data, response, error)
         }
     }
-    //신규 api
-    public func callDayStats( completion: @escaping (Data?, URLResponse?, Error?) -> Void){
-
-        let urlString = "\(ENAPIConst.API_URL)set_day_stats.php"
-        let param = ["uuid": "\(ENAPIConst.uuid)"]
-
-        URLUtil.customCallApi(url: urlString, method: .GET, parameters: param, token: nil) {[weak self] data, response, error in
-            guard let self = self else { return }
-            completion(data, response, error)
-        }
-    }
-
     public func callSendPoint( completion: @escaping (Data?, URLResponse?, Error?) -> Void){
 
         let urlString = "\(ENAPIConst.API_URL)send_point.php"
         let param = ["uuid": "\(ENAPIConst.uuid)",
-                     "user_point": ENSettingManager.shared.readyForHanaPoint,
+                     "user_point": ENSettingManager.shared.readyForPoint,
                      "event_id": "1",
                      "server_type": "\(ENAPIConst.API_SERVER_TYPE)"
         ] as [String : Any]
@@ -127,8 +115,9 @@ public class ENKeyboardAPIManeger{
     public func getTabDetail(completion: @escaping (Data?, URLResponse?, Error?) -> Void){
 
         let urlString = "\(ENAPIConst.API_URL)get_tab_detail.php"
+        let param = ["os_type":"I"]
 
-        URLUtil.customCallApi(url: urlString, method: .GET, parameters: nil, token: nil) {[weak self] data, response, error in
+        URLUtil.customCallApi(url: urlString, method: .GET, parameters: param, token: nil) {[weak self] data, response, error in
             guard let self = self else { return }
             completion(data, response, error)
         }

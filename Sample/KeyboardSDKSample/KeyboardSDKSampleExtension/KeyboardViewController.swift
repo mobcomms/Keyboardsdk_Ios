@@ -2,7 +2,7 @@
 //  KeyboardViewController.swift
 //  KeyboardSDKSampleExtension
 //
-//  Created by enlipleIOS1 on 2021/05/04.
+//  Created by cashwalkKeyboard on 2021/05/04.
 //
 
 import UIKit
@@ -22,6 +22,8 @@ class KeyboardViewController: ENInputViewController {
 
 //        ENKeyboardSDK.shared.setDebug(isDebug: false)
         print("KeyboardViewController viewDidLoad")
+        
+        print("KeyboardViewController self.hasFullAccess :: \(self.hasFullAccess)")
 
         super.viewDidLoad()
     }

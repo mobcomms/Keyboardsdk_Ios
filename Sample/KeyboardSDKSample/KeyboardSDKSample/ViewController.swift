@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  KeyboardSDKSample
 //
-//  Created by enlipleIOS1 on 2021/05/04.
+//  Created by cashwalkKeyboard on 2021/05/04.
 //
 
 import UIKit
@@ -32,11 +32,8 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        ENTutorialViewController.showTutorialIfNeed(parent: self)
-        // let main = ENMainViewController.create()
-        // self.navigationController?.pushViewController(main, animated: true)
-        
         if #available(iOS 14, *) {
+
             ATTrackingManager.requestTrackingAuthorization { (status) in
                 switch status {
                 case .authorized:
@@ -56,99 +53,32 @@ class ViewController: UIViewController {
         }
         
         adid = ASIdentifierManager.shared().advertisingIdentifier.uuidString
-        
         if let idfa = adid {
             ENSettingManager.shared.userIdfa = idfa
         }
         
-//        ENKeyboardSDK.shared.saveUUID("5XRNRyUoG4Eifg21Od0kQA==")
+        ENKeyboardSDK.shared.saveUUID("rzWKcbVLkG6cetZVt2nChg==") //고객 아이디
 
-//        ENKeyboardSDK.shared.saveUUID("oNV6SI330ASUXJwGciHidw==")
-
-        ENKeyboardSDK.shared.saveUUID("rzWKcbVLkG6cetZVt2nChg==") //재민 아이디
-
-        
-
-//        ENKeyboardSDK.shared.setDebug(isDebug: true)
-        
-//        let hanaMain = HanaMainViewController.create()
-//        self.navigationController?.pushViewController(hanaMain, animated: true)
-//        
-//        let testMain = HanaPPZWebViewController.create()
-//        self.navigationController?.pushViewController(testMain, animated: true)
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    @IBAction func moveGameZone(_ sender: Any) {
-                let testMain = GameZoneViewController.create()  
-                self.navigationController?.pushViewController(testMain, animated: true)
-
-    }
 
     @IBAction func downloadTheme(_ sender: Any) {
         
-//        let vc = ENMainViewController.create()
-//        self.navigationController?.isNavigationBarHidden = true
-//        self.navigationController?.pushViewController(vc, animated: true)
-        ENKeyboardSDK.shared.saveUUID("rzWKcbVLkG6cetZVt2nChg==") //재민 아이디
-
         
         self.navigationController?.isNavigationBarHidden = true
-        self.navigationController?.pushViewController(HanaMainViewController.create(), animated: true)
+        self.navigationController?.pushViewController(ENMainViewController.create(), animated: true)
+        
 
     }
     
     @IBAction func pastedFromPastedboard(_ sender: Any) {
-        addedView?.removeFromSuperview()
+        ENSettingManager.shared.isFirstUser = true
+        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.pushViewController(ENMainViewController.create(), animated: true)
 
-        for dict in UIPasteboard.general.items {
-            if let image = checkImage(dict: dict) {
-                let imageView = UIImageView.init(image: image)
-                imageView.frame = CGRect(x: 13.0, y: 50.0, width: UIScreen.main.bounds.width - 26.0, height: 290.0)
-                imageView.backgroundColor = .black
-                imageView.contentMode = .scaleAspectFit
-
-                self.view.addSubview(imageView)
-                addedView = imageView
-            }
-            else if let string = checkString(dict: dict) {
-                let label = UILabel.init()
-                label.frame = CGRect(x: 13.0, y: 50.0, width: UIScreen.main.bounds.width - 26.0, height: 290.0)
-                label.backgroundColor = .black
-                label.font = UIFont.systemFont(ofSize: 13.0, weight: .regular)
-                label.textColor = .white
-                label.text = string
-
-                self.view.addSubview(label)
-                addedView = label
-            }
-            else if let url = checkURL(dict: dict) {
-                let label = UILabel.init()
-                label.frame = CGRect(x: 13.0, y: 50.0, width: UIScreen.main.bounds.width - 26.0, height: 290.0)
-                label.backgroundColor = .blue
-                label.font = UIFont.systemFont(ofSize: 13.0, weight: .regular)
-                label.textColor = .white
-                label.text = url.absoluteString
-
-                self.view.addSubview(label)
-                addedView = label
-            }
-            else if let color = checkColor(dict: dict) {
-                let label = UILabel.init()
-                label.frame = CGRect(x: 13.0, y: 50.0, width: UIScreen.main.bounds.width - 26.0, height: 290.0)
-                label.backgroundColor = color
-                label.font = UIFont.systemFont(ofSize: 20.0, weight: .bold)
-                label.textAlignment = .center
-                label.textColor = .black
-                label.text = "색상 붙여넣기!!"
-
-                self.view.addSubview(label)
-                addedView = label
-            }
-        }
         
     }
     

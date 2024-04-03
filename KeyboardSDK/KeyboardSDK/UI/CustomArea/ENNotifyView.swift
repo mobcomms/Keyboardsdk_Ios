@@ -70,8 +70,6 @@ class ENNotifyView: UIView, WKUIDelegate, WKNavigationDelegate, UIScrollViewDele
         btn.setTitleColor(.white, for: .normal)
         btn.backgroundColor = .lightGray
         btn.titleLabel?.font = .systemFont(ofSize: 12)
-        //        btn.adjustsImageWhenHighlighted = false
-        //        btn.setImage(UIImage.init(named: "custom_view_ad_close", in: Bundle.frameworkBundle, compatibleWith: nil), for: .normal)
         return btn
     }()
     var btnCloseHeightConstraint: NSLayoutConstraint?
@@ -264,26 +262,26 @@ class ENNotifyView: UIView, WKUIDelegate, WKNavigationDelegate, UIScrollViewDele
         btnPoint.removeFromSuperview()
         if rewardFlag == "true" {
             btnPoint.setTitle("+\(rewardPoint)", for: .normal)
-            btnPoint.setTitleColor(.white, for: .normal)
+            btnPoint.setTitleColor(UIColor(red: 94/255, green: 80/255, blue: 80/255, alpha:1), for: .normal)
             btnPoint.titleLabel?.font = .systemFont(ofSize: 13, weight: .semibold)
-            btnPoint.backgroundColor = UIColor(red: 19/255, green: 201/255, blue: 190/255, alpha: 1)
-            btnPoint.setImage(nil, for: .normal)
-            
+            btnPoint.setBackgroundImage(UIImage.init(named: "cashwalkReadyPoint", in: Bundle.frameworkBundle, compatibleWith: nil), for: .normal)
+
         } else {
-            btnPoint.setImage(UIImage.init(named: "hanaAdPointCheck", in: Bundle.frameworkBundle, compatibleWith: nil), for: .normal)
+            btnPoint.setBackgroundImage(UIImage.init(named: "cashwalkAdPointCheck", in: Bundle.frameworkBundle, compatibleWith: nil), for: .normal)
             btnPoint.backgroundColor = .clear
         }
         
         innerADView.addSubview(btnPoint)
         
         btnPoint.translatesAutoresizingMaskIntoConstraints = false
-        btnPoint.widthAnchor.constraint(equalToConstant: 25).isActive = true
-        btnPoint.heightAnchor.constraint(equalToConstant: 25).isActive = true
-        btnPoint.trailingAnchor.constraint(equalTo: btnClose.leadingAnchor).isActive = true
+        btnPoint.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        btnPoint.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        btnPoint.trailingAnchor.constraint(equalTo: btnClose.leadingAnchor, constant: -4).isActive = true
+
         btnPoint.centerYAnchor.constraint(equalTo: leftView.centerYAnchor).isActive = true
         
         if rewardFlag == "true" {
-            btnPoint.layer.cornerRadius = 25 / 2
+            btnPoint.layer.cornerRadius = 30 / 2
         }
     }
     func webViewSetting() {
@@ -350,7 +348,7 @@ class ENNotifyView: UIView, WKUIDelegate, WKNavigationDelegate, UIScrollViewDele
                         if data.Result == "true" {
                             ENSettingManager.shared.zoneToastMsg = data.message ?? "리워드 포인트 당첨!"
                             DispatchQueue.main.async {
-                                self.btnPoint.setImage(UIImage.init(named: "hanaAdPointCheck", in: Bundle.frameworkBundle, compatibleWith: nil), for: .normal)
+                                self.btnPoint.setBackgroundImage(UIImage.init(named: "cashwalkAdPointCheck", in: Bundle.frameworkBundle, compatibleWith: nil), for: .normal)
                                 self.btnPoint.backgroundColor = .clear
                                 self.btnPoint.setTitle("", for: .normal)
                                 self.btnPoint.layer.cornerRadius = 0
@@ -367,9 +365,7 @@ class ENNotifyView: UIView, WKUIDelegate, WKNavigationDelegate, UIScrollViewDele
                                 }
                             }
                         } else {
-                            print("send_reward_zone_point error code : \(data.errcode ?? "code nil")")
-                            print("send_reward_zone_point error String : \(data.errstr ?? "errstr nil")")
-                            ENSettingManager.shared.zoneToastMsg = data.errstr ?? "사용자 정보를 확인할 수 없어요. 하나머니 앱에서 인증해 주세요."
+                            ENSettingManager.shared.zoneToastMsg = data.errstr ?? "사용자 정보를 확인할 수 없어요. 캐시워크 앱에서 인증해 주세요."
                             
                         }
                         
@@ -419,19 +415,15 @@ extension ENNotifyView {
     }
     
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
-//        print("webview did commit url : \(webView.url?.absoluteString)")
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-//        print("webview didFail : \(error.localizedDescription)")
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-//        print("webview load finish url : \(webView.url?.absoluteString)")
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-//        print("webview load decidePolicyFor : \(navigationAction.request.url?.absoluteString)")
         decisionHandler(.allow)
         return
     }

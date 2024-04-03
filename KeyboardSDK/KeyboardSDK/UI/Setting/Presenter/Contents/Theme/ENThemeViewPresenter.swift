@@ -2,7 +2,7 @@
 //  ENThemeViewPresenter.swift
 //  KeyboardSDK
 //
-//  Created by enlipleIOS1 on 2021/06/21.
+//  Created by cashwalkKeyboard on 2021/06/21.
 //
 
 import Foundation
@@ -13,20 +13,19 @@ class ENThemeViewPresenter: ENTabContentPresenter {
     
     
     var cateCode:String = ""
-    
+    var themeData: [ENKeyboardThemeModel]? = []
+
     let headerView: ENThemeCategoryHeaderView = ENThemeCategoryHeaderView.create()
     
     
     override init(collectionView: UICollectionView) {
         super.init(collectionView: collectionView)
         
-        contentPresenter = ENThemeRecommandPresenter.init(collectionView: collectionView)
-        
+        contentPresenter = ENThemeCategoryPresenter.init(collectionView: collectionView)
         self.collectionView?.contentInsetAdjustmentBehavior = .never
         self.collectionView?.addSubview(headerView)
         
-//        self.loadBannerData()
-        self.loadCategory()
+        self.loadThemeData()
         
         layoutHeaderView()
     }
@@ -61,13 +60,12 @@ class ENThemeViewPresenter: ENTabContentPresenter {
     }
     
     override func reset() {
-        self.loadCategory()
+
+        self.loadThemeData()
         
         if let collectionView = contentPresenter?.collectionView {
-            contentPresenter = ENThemeRecommandPresenter.init(collectionView: collectionView)
-            (contentPresenter as? ENThemeRecommandPresenter)?.loadData()
+            contentPresenter = ENThemeCategoryPresenter.init(collectionView: collectionView)
             
-            contentPresenter?.topButton = topButton
             contentPresenter?.delegate = contentDelegate
             layoutHeaderView()
         }
@@ -80,48 +78,29 @@ class ENThemeViewPresenter: ENTabContentPresenter {
 //MARK:- load data
 extension ENThemeViewPresenter {
     
-    func loadBannerData() {
-        let request:DHNetwork = DHApi.themeBannerList()
-        DHApiClient.shared.fetch(with: request) {[weak self] (result: Result<[ENThemeBannerListModel], DHApiError>) in
+    func loadThemeData(){
+         
+        let request:DHNetwork = DHApi.themeList(cateCode:"00", keyword:"")
+        DHApiClient.shared.fetch(with: request) {[weak self] (result: Result<ENKeyboardThemeListModel, DHApiError>) in
             guard let self else { return }
             switch result {
             case .success(let retValue):
-                DHLogger.log("\(retValue.debugDescription)")
+//                DHLogger.log("\(retValue.debugDescription)")
                 
                 DispatchQueue.main.async {
-                    self.headerView.bannerList.removeAll()
-                    self.headerView.bannerList = retValue
-                }
-                break
-                
-            case .failure(let error):
-                DHLogger.log("\(error.localizedDescription)")
-                break
-            @unknown default:
-                break
-            }
-        }
-    }
-    
-    
-    func loadCategory() {
-        let request:DHNetwork = DHApi.categoryList()
-        DHApiClient.shared.fetch(with: request) {[weak self] (result: Result<ENKeyboardThemeCategoryListModel, DHApiError>) in
-            guard let self else { return }
-            switch result {
-            case .success(let retValue):
-                DHLogger.log("\(retValue.debugDescription)")
-                
-                DispatchQueue.main.async {
-                    guard let category = retValue.category else {
+                    guard let category = retValue.category, let data = retValue.data else {
                         return
                     }
                     self.headerView.categoryList.removeAll()
-                    self.headerView.colorList.removeAll()
                     
-                    self.headerView.isColor = false
-                    self.headerView.categoryList = category.word ?? []
-                    self.headerView.colorList = category.color ?? []
+                    self.headerView.categoryList = category
+                    
+                    if  data.count > 0 {
+                        self.themeData = data
+                        (self.contentPresenter as? ENThemeCategoryPresenter)?.themeData = data
+                        (self.contentPresenter as? ENThemeCategoryPresenter)?.categoryCode = "00"
+
+                    }
                 }
                 break
                 
@@ -133,31 +112,19 @@ extension ENThemeViewPresenter {
             }
         }
     }
-    
 }
-
-
 
 //MARK:- ENThemeCategoryHeaderView Delegate
 
 extension ENThemeViewPresenter: ENThemeCategoryHeaderViewDelegate {
-    
-    func enThemeCategoryHeaderView(headerView: ENThemeCategoryHeaderView, bannerSelected banner: ENThemeBannerListModel?) {
-        delegate?.open(url: URL(string: banner?.url ?? ""), from: self)
-    }
-    
     func enThemeCategoryHeaderView(headerView: ENThemeCategoryHeaderView, categorySelected category: ENKeyboardThemeCategoryModel?) {
         if let collectionView = self.collectionView, let categoryCode = category?.code_id {
-            if categoryCode.isEmpty || categoryCode == "00" {
-                contentPresenter = ENThemeRecommandPresenter.init(collectionView: collectionView)
-                (contentPresenter as? ENThemeRecommandPresenter)?.loadData()
-            }
-            else {
-                contentPresenter = ENThemeCategoryPresenter.init(collectionView: collectionView)
-                (contentPresenter as? ENThemeCategoryPresenter)?.categoryCode = categoryCode
-            }
             
-            contentPresenter?.topButton = topButton
+                contentPresenter = ENThemeCategoryPresenter.init(collectionView: collectionView)
+                (contentPresenter as? ENThemeCategoryPresenter)?.themeData = self.themeData
+                (contentPresenter as? ENThemeCategoryPresenter)?.categoryCode = categoryCode
+            
+            
             contentPresenter?.delegate = contentDelegate
             layoutHeaderView()
         }

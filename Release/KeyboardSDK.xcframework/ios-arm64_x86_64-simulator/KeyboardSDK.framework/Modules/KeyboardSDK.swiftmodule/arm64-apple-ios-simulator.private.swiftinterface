@@ -3,13 +3,10 @@
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name KeyboardSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AdSupport
-import CoreGraphics
-import Darwin
 import DeveloperToolsSupport
 import Foundation
 @_exported import KeyboardSDK
 import KeyboardSDKCore
-import QuartzCore
 import Swift
 import SwiftUI
 import UIKit
@@ -17,39 +14,8 @@ import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ENKeyboardSoundViewController : UIKit.UIViewController, KeyboardSDKCore.ENViewPrsenter {
-  @_Concurrency.MainActor(unsafe) public static func create() -> KeyboardSDK.ENKeyboardSoundViewController
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ENMemoAddViewController : UIKit.UIViewController, KeyboardSDKCore.ENViewPrsenter, UIKit.UITextViewDelegate {
-  @_Concurrency.MainActor(unsafe) public static func create() -> KeyboardSDK.ENMemoAddViewController
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc public func textViewDidBeginEditing(_ textView: UIKit.UITextView)
-  @_Concurrency.MainActor(unsafe) @objc public func textViewDidChange(_ textView: UIKit.UITextView)
-  @_Concurrency.MainActor(unsafe) @objc public func textViewDidEndEditing(_ textView: UIKit.UITextView)
-  @_Concurrency.MainActor(unsafe) @objc public func textView(_ textView: UIKit.UITextView, shouldChangeTextIn range: Foundation.NSRange, replacementText text: Swift.String) -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ENLadderViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
-  @objc deinit
-}
-extension KeyboardSDK.ENLadderViewController : UIKit.UIScrollViewDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func viewForZooming(in scrollView: UIKit.UIScrollView) -> UIKit.UIView?
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class HanaPPZWebViewController : UIKit.UIViewController, WebKit.WKUIDelegate, WebKit.WKNavigationDelegate, UIKit.UIScrollViewDelegate, KeyboardSDKCore.ENViewPrsenter {
-  @_Concurrency.MainActor(unsafe) public static func create() -> KeyboardSDK.HanaPPZWebViewController
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ENPPZWebViewController : UIKit.UIViewController, WebKit.WKUIDelegate, WebKit.WKNavigationDelegate, UIKit.UIScrollViewDelegate, KeyboardSDKCore.ENViewPrsenter {
+  @_Concurrency.MainActor(unsafe) public static func create() -> KeyboardSDK.ENPPZWebViewController
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func loadView()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
@@ -70,29 +36,6 @@ extension KeyboardSDK.ENLadderViewController : UIKit.UIScrollViewDelegate {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ENDutchpayView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public var stackView1: UIKit.UIStackView {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var stackView2: UIKit.UIStackView {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var stackView3: UIKit.UIStackView {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var innerStackView: UIKit.UIStackView {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) public func initDutchPayView()
-  @_Concurrency.MainActor(unsafe) public func settingUI()
-  @_Concurrency.MainActor(unsafe) public func updateButtonHeight(isLand: Swift.Bool)
-  @objc deinit
-}
 @_hasMissingDesignatedInitializers public class ENButtonConstant {
   public static let SETTING: Swift.Int
   public static let EMOJI: Swift.Int
@@ -101,21 +44,6 @@ extension KeyboardSDK.ENLadderViewController : UIKit.UIScrollViewDelegate {
   public static let BOOK_MARK: Swift.Int
   public static let GAME: Swift.Int
   public static let ADD_TYPE: Swift.Int
-  @objc deinit
-}
-public struct ENCoupangADListModel : Swift.Codable, KeyboardSDKCore.DHCodable {
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct ENCoupangADModel : Swift.Codable, KeyboardSDKCore.DHCodable {
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class GameZoneViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) public static func create() -> KeyboardSDK.GameZoneViewController
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ENInputViewController : UIKit.UIInputViewController {
@@ -135,8 +63,8 @@ public struct ENCoupangADModel : Swift.Codable, KeyboardSDKCore.DHCodable {
   @objc override dynamic public init()
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class HanaMainViewController : UIKit.UIViewController, KeyboardSDKCore.ENViewPrsenter {
-  @_Concurrency.MainActor(unsafe) public static func create() -> KeyboardSDK.HanaMainViewController
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ENMainViewController : UIKit.UIViewController, KeyboardSDKCore.ENViewPrsenter {
+  @_Concurrency.MainActor(unsafe) public static func create() -> KeyboardSDK.ENMainViewController
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
@@ -146,68 +74,11 @@ public struct ENCoupangADModel : Swift.Codable, KeyboardSDKCore.DHCodable {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
-public struct ENSearchResultListModel : Swift.Codable, KeyboardSDKCore.DHCodable {
-  public var data: [KeyboardSDKCore.ENKeyboardThemeModel]?
-  public var recentList: [KeyboardSDK.ENKeywordModel]?
-  public var mostList: [KeyboardSDK.ENKeywordModel]?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ENPageControlAleppo : KeyboardSDK.ENBasePageControl {
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
-    @objc get
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
-  @_Concurrency.MainActor(unsafe) @objc open func didTouch(gesture: UIKit.UITapGestureRecognizer)
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ENPageControlPuya : KeyboardSDK.ENBasePageControl {
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
-    @objc get
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
-  @_Concurrency.MainActor(unsafe) @objc open func didTouch(gesture: UIKit.UITapGestureRecognizer)
-  @objc deinit
-}
 public struct PPZErrorModel : Swift.Codable, KeyboardSDKCore.DHCodable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-extension KeyboardSDK.ENMainViewController {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
-}
-public struct ENRecommandThemeDataModel : Swift.Codable, KeyboardSDKCore.DHCodable {
-  public var theme_recommend: [KeyboardSDKCore.ENKeyboardThemeModel]?
-  public var theme_favor: [KeyboardSDKCore.ENKeyboardThemeModel]?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
 public enum ENAPIConst {
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ENSubContentView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public var lblTest: UIKit.UILabel {
-    get
-    set
-  }
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ENMainViewController : UIKit.UIViewController, KeyboardSDKCore.ENViewPrsenter, UIKit.UIScrollViewDelegate {
-  @_Concurrency.MainActor(unsafe) public static func create() -> KeyboardSDK.ENMainViewController
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
 }
 @_hasMissingDesignatedInitializers public class ENKeyboardSDKInfo {
   public static var version: Swift.String {
@@ -218,93 +89,19 @@ public enum ENAPIConst {
   }
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ENSettingViewController : UIKit.UIViewController, KeyboardSDKCore.ENViewPrsenter {
-  @_Concurrency.MainActor(unsafe) public static func create() -> KeyboardSDK.ENSettingViewController
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public var shouldAutorotate: Swift.Bool {
-    @objc get
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
-    @objc get
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) public func reloadData()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
-extension KeyboardSDK.ENSettingViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, viewForFooterInSection section: Swift.Int) -> UIKit.UIView?
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForFooterInSection section: Swift.Int) -> CoreFoundation.CGFloat
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplayHeaderView view: UIKit.UIView, forSection section: Swift.Int)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplayFooterView view: UIKit.UIView, forSection section: Swift.Int)
-}
 public protocol ENKeyboardCustomAreaViewDelegate : AnyObject {
   func enKeyboardCusomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, openMainPage completion: (() -> Swift.Void)?)
   func enKeyboardCusomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, showEmojiView completion: (() -> Swift.Void)?)
   func enKeyboardCusomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, showCoupangView completion: (() -> Swift.Void)?)
-  func enKeyboardCusomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, showCliplboard completion: (() -> Swift.Void)?)
-  func enKeyboardCusomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, showUserMemo completion: (() -> Swift.Void)?)
-  func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, showDutchPay completion: (() -> Swift.Void)?)
-  func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, showHotIssue completion: (() -> Swift.Void)?)
-  func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, dutchPayHide completion: (() -> Swift.Void)?)
-  func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, focusPerson completion: (() -> Swift.Void)?)
-  func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, focusPrice completion: (() -> Swift.Void)?)
   func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, text: Swift.String, pasteText completion: (() -> Swift.Void)?)
-  func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, cursorStyle: Swift.String, cursorMove: (() -> Swift.Void)?)
-  func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, hanaApp completion: (() -> Swift.Void)?)
-  func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, hanaPPZone completion: (() -> Swift.Void)?)
-  func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, hanaCoupang completion: (() -> Swift.Void)?)
-  func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, hanaPointList completion: (() -> Swift.Void)?)
-  func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, hanaSetting completion: (() -> Swift.Void)?)
+  func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, moveApp completion: (() -> Swift.Void)?)
+  func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, movePPZone completion: (() -> Swift.Void)?)
+  func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, moveCoupang completion: (() -> Swift.Void)?)
+  func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, movePointList completion: (() -> Swift.Void)?)
+  func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, moveSetting completion: (() -> Swift.Void)?)
+  func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, moveCashDeal completion: (() -> Swift.Void)?)
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ENKeyboardCustomAreaView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public var dutchPayView: UIKit.UIView {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var lblDutchPayTop: UIKit.UILabel {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var btnPersonNumber: UIKit.UIButton {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var btnCalculatePay: UIKit.UIButton {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var btnDutchPayClose: UIKit.UIButton {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var viewAd: UIKit.UIView {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var buttonAdClose: UIKit.UIButton {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var imgAdTitle: UIKit.UIImageView {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var lblNewsTitle: UIKit.UILabel {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var lblPoint: UIKit.UILabel {
-    get
-    set
-  }
   @_Concurrency.MainActor(unsafe) public var scrollView: UIKit.UIScrollView {
     get
     set
@@ -325,49 +122,6 @@ public protocol ENKeyboardCustomAreaViewDelegate : AnyObject {
   @_Concurrency.MainActor(unsafe) public func resetButtonStatus()
   @_Concurrency.MainActor(unsafe) public func setScrollViewConstraint()
   @objc deinit
-}
-public typealias Color = UIKit.UIColor
-public func randomColor(hue: KeyboardSDK.Hue = .random, luminosity: KeyboardSDK.Luminosity = .random) -> KeyboardSDK.Color
-public func randomColors(count: Swift.Int, hue: KeyboardSDK.Hue = .random, luminosity: KeyboardSDK.Luminosity = .random) -> [KeyboardSDK.Color]
-public enum Luminosity : Swift.Int {
-  case bright, light, dark
-  case random
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum Hue {
-  case monochrome, red, orange, yellow, green, blue, purple, pink
-  case value(Swift.Int)
-  case random
-  public func toInt() -> Swift.Int
-}
-public func == (lhs: KeyboardSDK.Hue, rhs: KeyboardSDK.Hue) -> Swift.Bool
-extension KeyboardSDK.Hue : Swift.Hashable {
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ENTutorialViewController : UIKit.UIViewController, KeyboardSDKCore.ENViewPrsenter {
-  @_Concurrency.MainActor(unsafe) public static func create() -> KeyboardSDK.ENTutorialViewController
-  @_Concurrency.MainActor(unsafe) public static func showTutorialIfNeed(parent: UIKit.UIViewController)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
-public struct ENPhotoThemeListModel : Swift.Codable, KeyboardSDKCore.DHCodable {
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct ENPhotoThemeModel : Swift.Codable, KeyboardSDKCore.DHCodable {
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
 }
 extension UIKit.UIViewController {
   @_Concurrency.MainActor(unsafe) public func showErrorMessage(message: Swift.String)
@@ -399,16 +153,7 @@ extension UIKit.UIViewController {
   public static var path: Swift.String {
     get
   }
-  public static var settingPage: Swift.String {
-    get
-  }
   public static var fullAccessPage: Swift.String {
-    get
-  }
-  public static var enMainPage: Swift.String {
-    get
-  }
-  public static var userMemoEdit: Swift.String {
     get
   }
   public static var selfApp: Swift.String {
@@ -417,119 +162,19 @@ extension UIKit.UIViewController {
   public static var ppzone: Swift.String {
     get
   }
-  public static var hanaSetting: Swift.String {
+  public static var keyboardSetting: Swift.String {
     get
   }
-  public static var hanaInquiry: Swift.String {
+  public static var keyboardCashDeal: Swift.String {
+    get
+  }
+  public static var keyboardInquiry: Swift.String {
+    get
+  }
+  public static var theme: Swift.String {
     get
   }
   @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ENPageControlAji : KeyboardSDK.ENBasePageControl {
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
-    @objc get
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
-  @_Concurrency.MainActor(unsafe) @objc open func didTouch(gesture: UIKit.UITapGestureRecognizer)
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ENPageControlChimayo : KeyboardSDK.ENBasePageControl {
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
-    @objc get
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
-  @_Concurrency.MainActor(unsafe) @objc open func didTouch(gesture: UIKit.UITapGestureRecognizer)
-  @objc deinit
-}
-@objc public protocol ENScratchViewDelegate {
-  @objc func scratchCardEraseProgress(eraseProgress: Swift.Float)
-}
-public struct ENRecommandThemeListModel : Swift.Codable, KeyboardSDKCore.DHCodable {
-  public var data: KeyboardSDK.ENRecommandThemeDataModel?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class ENBasePageControl : UIKit.UIControl {
-  @_Concurrency.MainActor(unsafe) weak open var delegate: (any KeyboardSDK.ENBasePageControlDelegate)?
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var numberOfPages: Swift.Int {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var progress: Swift.Double {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor(unsafe) open var currentPage: Swift.Int {
-    get
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var padding: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var radius: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var inactiveTransparency: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var hidesForSinglePage: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var borderWidth: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var tintColor: UIKit.UIColor! {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor(unsafe) open var tintColors: [UIKit.UIColor] {
-    get
-    set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var currentPageTintColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) open func set(progress: Swift.Int, animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) open func insertTintColor(_ color: UIKit.UIColor, position: Swift.Int)
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var enableTouchEvents: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @objc deinit
-}
-public protocol ENBasePageControlDelegate : AnyObject {
-  func didTouch(pager: KeyboardSDK.ENBasePageControl, index: Swift.Int)
-}
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ENRouletteViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
-  @objc deinit
-}
-public struct ENKeywordListModel : Swift.Codable, KeyboardSDKCore.DHCodable {
-  public var recentList: [KeyboardSDK.ENKeywordModel]?
-  public var mostList: [KeyboardSDK.ENKeywordModel]?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct ENKeywordModel : Swift.Codable, KeyboardSDKCore.DHCodable {
-  public var idx: Swift.String?
-  public var word: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers public class ENPlusInputViewManager {
   public static let shared: KeyboardSDK.ENPlusInputViewManager
@@ -552,315 +197,17 @@ extension KeyboardSDK.ENPlusInputViewManager : KeyboardSDK.ENKeyboardCustomAreaV
   public func enKeyboardCusomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, openMainPage completion: (() -> Swift.Void)?)
   public func enKeyboardCusomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, showEmojiView completion: (() -> Swift.Void)?)
   public func enKeyboardCusomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, showCoupangView completion: (() -> Swift.Void)?)
-  public func enKeyboardCusomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, showCliplboard completion: (() -> Swift.Void)?)
-  public func enKeyboardCusomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, showUserMemo completion: (() -> Swift.Void)?)
-  public func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, showHotIssue completion: (() -> Swift.Void)?)
-  public func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, showDutchPay completion: (() -> Swift.Void)?)
-  public func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, dutchPayHide completion: (() -> Swift.Void)?)
-  public func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, focusPerson completion: (() -> Swift.Void)?)
-  public func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, focusPrice completion: (() -> Swift.Void)?)
   public func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, text: Swift.String, pasteText completion: (() -> Swift.Void)?)
   public func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, cursorStyle: Swift.String, cursorMove: (() -> Swift.Void)?)
-  public func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, hanaApp completion: (() -> Swift.Void)?)
-  public func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, hanaPPZone completion: (() -> Swift.Void)?)
-  public func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, hanaCoupang completion: (() -> Swift.Void)?)
-  public func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, hanaPointList completion: (() -> Swift.Void)?)
-  public func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, hanaSetting completion: (() -> Swift.Void)?)
+  public func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, moveApp completion: (() -> Swift.Void)?)
+  public func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, movePPZone completion: (() -> Swift.Void)?)
+  public func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, moveCoupang completion: (() -> Swift.Void)?)
+  public func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, movePointList completion: (() -> Swift.Void)?)
+  public func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, moveSetting completion: (() -> Swift.Void)?)
+  public func enKeyboardCustomAreaView(_ customAreaView: KeyboardSDK.ENKeyboardCustomAreaView, targetButton: UIKit.UIButton, moveCashDeal completion: (() -> Swift.Void)?)
 }
 extension KeyboardSDK.ENPlusInputViewManager : KeyboardSDKCore.ENKeyboardViewManagerDelegate {
   public func enKeyboardViewManager(_ delegate: KeyboardSDKCore.ENKeyboardViewManager, restoreToKeyboard: Swift.Bool)
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ENPageControlFresno : KeyboardSDK.ENBasePageControl {
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
-    @objc get
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
-  @_Concurrency.MainActor(unsafe) @objc open func didTouch(gesture: UIKit.UITapGestureRecognizer)
-  @objc deinit
-}
-public class LadderDelegate<Input, Output> {
-  public init()
-  public func delegate<T>(on target: T, block: ((T, Input) -> Output)?) where T : AnyObject
-  public func call(_ input: Input) -> Output?
-  public func callAsFunction(_ input: Input) -> Output?
-  @objc deinit
-}
-extension KeyboardSDK.LadderDelegate where Input == () {
-  public func call() -> Output?
-  public func callAsFunction() -> Output?
-}
-extension KeyboardSDK.LadderDelegate where Input == (), Output : KeyboardSDK.OptionalProtocol {
-  public func call() -> Output
-  public func callAsFunction() -> Output
-}
-extension KeyboardSDK.LadderDelegate where Output : KeyboardSDK.OptionalProtocol {
-  public func call(_ input: Input) -> Output
-  public func callAsFunction(_ input: Input) -> Output
-}
-public protocol OptionalProtocol {
-  static var _createNil: Self { get }
-}
-extension Swift.Optional : KeyboardSDK.OptionalProtocol {
-  public static var _createNil: Swift.Optional<Wrapped> {
-    get
-  }
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ENKeyboardClipboardView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public static var lastAddedClipboardData: Swift.String
-  @_Concurrency.MainActor(unsafe) public var keyboardTheme: KeyboardSDKCore.ENKeyboardTheme? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var keyboardThemeModel: KeyboardSDKCore.ENKeyboardThemeModel? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public static func create() -> KeyboardSDK.ENKeyboardClipboardView
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func awakeFromNib()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
-extension KeyboardSDK.ENKeyboardClipboardView : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: Foundation.IndexPath) -> UIKit.UISwipeActionsConfiguration?
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ENPageControlJalapeno : KeyboardSDK.ENBasePageControl {
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
-    @objc get
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
-  @_Concurrency.MainActor(unsafe) @objc open func didTouch(gesture: UIKit.UITapGestureRecognizer)
-  @objc deinit
-}
-public struct ENThemeBannerListModel : Swift.Codable, KeyboardSDKCore.DHCodable {
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ENPageControlPaprika : KeyboardSDK.ENBasePageControl {
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
-    @objc get
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
-  @_Concurrency.MainActor(unsafe) @objc open func didTouch(gesture: UIKit.UITapGestureRecognizer)
-  @objc deinit
-}
-@objc public protocol ENImageScrollViewDelegate : UIKit.UIScrollViewDelegate {
-  @objc func imageScrollViewDidChangeOrientation(imageScrollView: KeyboardSDK.ENImageScrollView)
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ENImageScrollView : UIKit.UIScrollView {
-  @objc public enum ScaleMode : Swift.Int {
-    case aspectFill
-    case aspectFit
-    case widthFill
-    case heightFill
-    public init?(rawValue: Swift.Int)
-    public typealias RawValue = Swift.Int
-    public var rawValue: Swift.Int {
-      get
-    }
-  }
-  @objc public enum Offset : Swift.Int {
-    case begining
-    case center
-    public init?(rawValue: Swift.Int)
-    public typealias RawValue = Swift.Int
-    public var rawValue: Swift.Int {
-      get
-    }
-  }
-  @objc @_Concurrency.MainActor(unsafe) open var imageContentMode: KeyboardSDK.ENImageScrollView.ScaleMode
-  @objc @_Concurrency.MainActor(unsafe) open var initialOffset: KeyboardSDK.ENImageScrollView.Offset
-  @objc @_Concurrency.MainActor(unsafe) public var zoomView: UIKit.UIImageView? {
-    get
-  }
-  @objc @_Concurrency.MainActor(unsafe) weak open var imageScrollViewDelegate: (any KeyboardSDK.ENImageScrollViewDelegate)?
-  @_Concurrency.MainActor(unsafe) open var maxScaleFromMinScale: CoreFoundation.CGFloat
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var frame: CoreFoundation.CGRect {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc deinit
-  @objc @_Concurrency.MainActor(unsafe) public func adjustFrameToCenter()
-  @_Concurrency.MainActor(unsafe) open func setup()
-  @objc @_Concurrency.MainActor(unsafe) open func display(image: UIKit.UIImage)
-  @_Concurrency.MainActor(unsafe) open func refresh()
-}
-extension KeyboardSDK.ENImageScrollView : UIKit.UIScrollViewDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewWillEndDragging(_ scrollView: UIKit.UIScrollView, withVelocity velocity: CoreFoundation.CGPoint, targetContentOffset: Swift.UnsafeMutablePointer<CoreFoundation.CGPoint>)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidEndDragging(_ scrollView: UIKit.UIScrollView, willDecelerate decelerate: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewWillBeginDecelerating(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidEndScrollingAnimation(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewWillBeginZooming(_ scrollView: UIKit.UIScrollView, with view: UIKit.UIView?)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidEndZooming(_ scrollView: UIKit.UIScrollView, with view: UIKit.UIView?, atScale scale: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewShouldScrollToTop(_ scrollView: UIKit.UIScrollView) -> Swift.Bool
-  @available(iOS 11.0, *)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidChangeAdjustedContentInset(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func viewForZooming(in scrollView: UIKit.UIScrollView) -> UIKit.UIView?
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidZoom(_ scrollView: UIKit.UIScrollView)
-}
-@objc public protocol ENTagListViewDelegate {
-  @objc optional func tagPressed(_ title: Swift.String, tagView: KeyboardSDK.ENTagView, sender: KeyboardSDK.ENTagListView)
-  @objc optional func tagRemoveButtonPressed(_ title: Swift.String, tagView: KeyboardSDK.ENTagView, sender: KeyboardSDK.ENTagListView)
-}
-@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class ENTagListView : UIKit.UIView {
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var textColor: UIKit.UIColor {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var selectedTextColor: UIKit.UIColor {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var tagLineBreakMode: UIKit.NSLineBreakMode {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var tagBackgroundColor: UIKit.UIColor {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var tagHighlightedBackgroundColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var tagSelectedBackgroundColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var cornerRadius: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var borderWidth: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var borderColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var selectedBorderColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var paddingY: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var paddingX: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var marginY: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var marginX: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var minWidth: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc public enum Alignment : Swift.Int {
-    case left
-    case center
-    case right
-    case leading
-    case trailing
-    public init?(rawValue: Swift.Int)
-    public typealias RawValue = Swift.Int
-    public var rawValue: Swift.Int {
-      get
-    }
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var alignment: KeyboardSDK.ENTagListView.Alignment {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var shadowColor: UIKit.UIColor {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var shadowRadius: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var shadowOffset: CoreFoundation.CGSize {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var shadowOpacity: Swift.Float {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var enableRemoveButton: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var removeButtonIconSize: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var removeIconLineWidth: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var removeIconLineColor: UIKit.UIColor {
-    @objc get
-    @objc set
-  }
-  @objc @_Concurrency.MainActor(unsafe) dynamic open var textFont: UIKit.UIFont {
-    @objc get
-    @objc set
-  }
-  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var delegate: (any KeyboardSDK.ENTagListViewDelegate)?
-  @_Concurrency.MainActor(unsafe) open var tagViews: [KeyboardSDK.ENTagView] {
-    get
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func prepareForInterfaceBuilder()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
-    @objc get
-  }
-  @discardableResult
-  @_Concurrency.MainActor(unsafe) open func addTag(_ title: Swift.String) -> KeyboardSDK.ENTagView
-  @discardableResult
-  @_Concurrency.MainActor(unsafe) open func addTags(_ titles: [Swift.String]) -> [KeyboardSDK.ENTagView]
-  @discardableResult
-  @_Concurrency.MainActor(unsafe) open func addTagView(_ tagView: KeyboardSDK.ENTagView) -> KeyboardSDK.ENTagView
-  @discardableResult
-  @_Concurrency.MainActor(unsafe) open func addTagViews(_ tagViewList: [KeyboardSDK.ENTagView]) -> [KeyboardSDK.ENTagView]
-  @discardableResult
-  @_Concurrency.MainActor(unsafe) open func insertTag(_ title: Swift.String, at index: Swift.Int) -> KeyboardSDK.ENTagView
-  @discardableResult
-  @_Concurrency.MainActor(unsafe) open func insertTagView(_ tagView: KeyboardSDK.ENTagView, at index: Swift.Int) -> KeyboardSDK.ENTagView
-  @_Concurrency.MainActor(unsafe) open func setTitle(_ title: Swift.String, at index: Swift.Int)
-  @_Concurrency.MainActor(unsafe) open func removeTag(_ title: Swift.String)
-  @_Concurrency.MainActor(unsafe) open func removeTagView(_ tagView: KeyboardSDK.ENTagView)
-  @_Concurrency.MainActor(unsafe) open func removeAllTags()
-  @_Concurrency.MainActor(unsafe) open func selectedTags() -> [KeyboardSDK.ENTagView]
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
 }
 @_hasMissingDesignatedInitializers public class ENKeyboardAPIManeger {
   public func callSendRewardPoint(_ zone_id: Swift.String, completion: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
@@ -869,7 +216,6 @@ extension KeyboardSDK.ENImageScrollView : UIKit.UIScrollViewDelegate {
   public func getUserTotalPoint(completion: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
   public func getUserCheckPoint(completion: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
   public func getUserPoint(completion: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
-  public func callDayStats(completion: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
   public func callSendPoint(completion: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
   public func getNews(completion: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
   public func getBannerPoint(isMainBanner isMain: Swift.Bool, completion: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
@@ -877,152 +223,3 @@ extension KeyboardSDK.ENImageScrollView : UIKit.UIScrollViewDelegate {
   public func callSetUserInfo(completion: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
   @objc deinit
 }
-extension KeyboardSDK.ENMainViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, viewForFooterInSection section: Swift.Int) -> UIKit.UIView?
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForFooterInSection section: Swift.Int) -> CoreFoundation.CGFloat
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplayHeaderView view: UIKit.UIView, forSection section: Swift.Int)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplayFooterView view: UIKit.UIView, forSection section: Swift.Int)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, canEditRowAt indexPath: Foundation.IndexPath) -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, moveRowAt sourceIndexPath: Foundation.IndexPath, to destinationIndexPath: Foundation.IndexPath)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, targetIndexPathForMoveFromRowAt sourceIndexPath: Foundation.IndexPath, toProposedIndexPath proposedDestinationIndexPath: Foundation.IndexPath) -> Foundation.IndexPath
-}
-extension KeyboardSDK.ENMainViewController : UIKit.UITableViewDragDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, itemsForBeginning session: any UIKit.UIDragSession, at indexPath: Foundation.IndexPath) -> [UIKit.UIDragItem]
-}
-extension KeyboardSDK.ENMainViewController : UIKit.UITableViewDropDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, performDropWith coordinator: any UIKit.UITableViewDropCoordinator)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, dropSessionDidUpdate session: any UIKit.UIDropSession, withDestinationIndexPath destinationIndexPath: Foundation.IndexPath?) -> UIKit.UITableViewDropProposal
-}
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ENScratchViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
-  @objc deinit
-}
-extension KeyboardSDK.ENScratchViewController : KeyboardSDK.ENScratchViewDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scratchCardEraseProgress(eraseProgress: Swift.Float)
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ENPageControlJaloro : KeyboardSDK.ENBasePageControl {
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var elementWidth: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var elementHeight: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
-    @objc get
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
-  @_Concurrency.MainActor(unsafe) @objc open func didTouch(gesture: UIKit.UITapGestureRecognizer)
-  @objc deinit
-}
-@objc @IBDesignable @_Concurrency.MainActor(unsafe) open class ENTagView : UIKit.UIButton {
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var cornerRadius: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var borderWidth: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var borderColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var textColor: UIKit.UIColor {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var selectedTextColor: UIKit.UIColor {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var titleLineBreakMode: UIKit.NSLineBreakMode {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var paddingY: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var paddingX: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var tagBackgroundColor: UIKit.UIColor {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var highlightedBackgroundColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var selectedBorderColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var selectedBackgroundColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var textFont: UIKit.UIFont {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isHighlighted: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isSelected: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var enableRemoveButton: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var removeButtonIconSize: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var removeIconLineWidth: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var removeIconLineColor: UIKit.UIColor {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor(unsafe) open var onTap: ((KeyboardSDK.ENTagView) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) open var onLongPress: ((KeyboardSDK.ENTagView) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) public init(title: Swift.String)
-  @objc deinit
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
-    @objc get
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
-}
-extension KeyboardSDK.Luminosity : Swift.Equatable {}
-extension KeyboardSDK.Luminosity : Swift.Hashable {}
-extension KeyboardSDK.Luminosity : Swift.RawRepresentable {}
-extension KeyboardSDK.ENImageScrollView.ScaleMode : Swift.Equatable {}
-extension KeyboardSDK.ENImageScrollView.ScaleMode : Swift.Hashable {}
-extension KeyboardSDK.ENImageScrollView.ScaleMode : Swift.RawRepresentable {}
-extension KeyboardSDK.ENImageScrollView.Offset : Swift.Equatable {}
-extension KeyboardSDK.ENImageScrollView.Offset : Swift.Hashable {}
-extension KeyboardSDK.ENImageScrollView.Offset : Swift.RawRepresentable {}
-extension KeyboardSDK.ENTagListView.Alignment : Swift.Equatable {}
-extension KeyboardSDK.ENTagListView.Alignment : Swift.Hashable {}
-extension KeyboardSDK.ENTagListView.Alignment : Swift.RawRepresentable {}

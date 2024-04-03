@@ -2,7 +2,7 @@
 //  UserDefaults+KeyboardSDK.swift
 //  KeyboardSDK
 //
-//  Created by enlipleIOS1 on 2021/06/28.
+//  Created by cashwalkKeyboard on 2021/06/28.
 //
 
 import Foundation
@@ -21,25 +21,6 @@ enum ENKeyboardSDKUserDefaultsConstants: String {
 
 extension UserDefaults {
     
-    func updateMiniSayBannerViewShow() {
-        let calender = Calendar.current
-        let today = calender.startOfDay(for: Date())
-        if let tomorrow = calender.date(byAdding: .day, value: 1, to: today) {
-            setValue(tomorrow, forKey: ENKeyboardSDKUserDefaultsConstants.keyMiniSayBannerViewShow.rawValue)
-            self.synchronize()
-        }
-    }
-    
-    
-    func willShowMiniSayBannerView() -> Bool {
-        guard let saved = value(forKey: ENKeyboardSDKUserDefaultsConstants.keyMiniSayBannerViewShow.rawValue) as? Date else {
-            return true
-        }
-        
-        let today = Date()
-        
-        return saved.timeIntervalSince1970 < today.timeIntervalSince1970
-    }
     
     
 }
