@@ -1,0 +1,676 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		667FBC2C265248F200AE4E82 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 667FBC2B265248F100AE4E82 /* Settings.bundle */; };
+		66CDA7732641194200D98DB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CDA7722641194200D98DB6 /* AppDelegate.swift */; };
+		66CDA7752641194200D98DB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CDA7742641194200D98DB6 /* SceneDelegate.swift */; };
+		66CDA7772641194200D98DB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CDA7762641194200D98DB6 /* ViewController.swift */; };
+		66CDA77A2641194200D98DB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66CDA7782641194200D98DB6 /* Main.storyboard */; };
+		66CDA77C2641194200D98DB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66CDA77B2641194200D98DB6 /* Assets.xcassets */; };
+		66CDA77F2641194200D98DB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66CDA77D2641194200D98DB6 /* LaunchScreen.storyboard */; };
+		66CDA7B526411DC200D98DB6 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CDA7B426411DC200D98DB6 /* KeyboardViewController.swift */; };
+		66CDA7BA26411DC300D98DB6 /* KeyboardSDKSampleExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 66CDA7B226411DC200D98DB6 /* KeyboardSDKSampleExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6A83F4252B6041BF00896D71 /* KeyboardSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A9AF542ABC92060032B7B7 /* KeyboardSDK.xcframework */; };
+		6A83F4262B6041BF00896D71 /* KeyboardSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26A9AF542ABC92060032B7B7 /* KeyboardSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6A83F4382B60489100896D71 /* KeyboardSDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A83F4372B60489100896D71 /* KeyboardSDKCore.xcframework */; };
+		6A83F4392B60489100896D71 /* KeyboardSDKCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A83F4372B60489100896D71 /* KeyboardSDKCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66CDA7B726411DC200D98DB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66CDA7672641194200D98DB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66CDA7B126411DC200D98DB6;
+			remoteInfo = KeyboardSDKSampleExtension;
+		};
+		6A83F42D2B6041D000896D71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A83F4282B6041CF00896D71 /* KeyboardSDKCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 66D1312E2643C0F500C5E9E1;
+			remoteInfo = KeyboardSDKCore;
+		};
+		6A95539D2BBD0B4600CA3B49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A9553982BBD0B4600CA3B49 /* KeyboardSDKCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 66D1312E2643C0F500C5E9E1;
+			remoteInfo = KeyboardSDKCore;
+		};
+		A1B840DE2A823D4600F521A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66AA5E6D2648BF0400AF9E35 /* KeyboardSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A1B840DC2A823D2D00F521A0;
+			remoteInfo = KeyboardSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		66741822264CD1E000AF4D42 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66CDA7B926411DC300D98DB6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				66CDA7BA26411DC300D98DB6 /* KeyboardSDKSampleExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A83F4272B6041BF00896D71 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6A83F4392B60489100896D71 /* KeyboardSDKCore.xcframework in Embed Frameworks */,
+				6A83F4262B6041BF00896D71 /* KeyboardSDK.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		26A9AF542ABC92060032B7B7 /* KeyboardSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = KeyboardSDK.xcframework; path = ../../Release/KeyboardSDK.xcframework; sourceTree = "<group>"; };
+		667FBC252652332700AE4E82 /* KeyboardSDKSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyboardSDKSample.entitlements; sourceTree = "<group>"; };
+		667FBC282652334800AE4E82 /* KeyboardSDKSampleExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyboardSDKSampleExtension.entitlements; sourceTree = "<group>"; };
+		667FBC2B265248F100AE4E82 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		66AA5E6D2648BF0400AF9E35 /* KeyboardSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeyboardSDK.xcodeproj; path = ../../KeyboardSDK/KeyboardSDK.xcodeproj; sourceTree = "<group>"; };
+		66CDA76F2641194200D98DB6 /* KeyboardSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyboardSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66CDA7722641194200D98DB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		66CDA7742641194200D98DB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		66CDA7762641194200D98DB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		66CDA7792641194200D98DB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		66CDA77B2641194200D98DB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		66CDA77E2641194200D98DB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		66CDA7802641194200D98DB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66CDA7B226411DC200D98DB6 /* KeyboardSDKSampleExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = KeyboardSDKSampleExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		66CDA7B426411DC200D98DB6 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		66CDA7B626411DC200D98DB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A83F4212B60418E00896D71 /* hanakeyboardsdkcore_ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = hanakeyboardsdkcore_ios; path = ../../../hanakeyboardsdkcore_ios; sourceTree = "<group>"; };
+		6A83F4282B6041CF00896D71 /* KeyboardSDKCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeyboardSDKCore.xcodeproj; path = ../../../hanakeyboardsdkcore_ios/KeyboardSDKCore.xcodeproj; sourceTree = "<group>"; };
+		6A83F4372B60489100896D71 /* KeyboardSDKCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = KeyboardSDKCore.xcframework; path = ../../../hanakeyboardsdkcore_ios/Release/KeyboardSDKCore.xcframework; sourceTree = "<group>"; };
+		6A9553982BBD0B4600CA3B49 /* KeyboardSDKCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeyboardSDKCore.xcodeproj; path = ../../../Keyboardsdkcore_Ios/KeyboardSDKCore.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66CDA76C2641194200D98DB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A83F4382B60489100896D71 /* KeyboardSDKCore.xcframework in Frameworks */,
+				6A83F4252B6041BF00896D71 /* KeyboardSDK.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66CDA7AF26411DC200D98DB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66AA5E6E2648BF0400AF9E35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1B840DF2A823D4600F521A0 /* KeyboardSDK.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66CDA7662641194200D98DB6 = {
+			isa = PBXGroup;
+			children = (
+				6A9553982BBD0B4600CA3B49 /* KeyboardSDKCore.xcodeproj */,
+				66AA5E6D2648BF0400AF9E35 /* KeyboardSDK.xcodeproj */,
+				66CDA7712641194200D98DB6 /* KeyboardSDKSample */,
+				66CDA7B326411DC200D98DB6 /* KeyboardSDKSampleExtension */,
+				66CDA7702641194200D98DB6 /* Products */,
+				66CDA7C426411DEA00D98DB6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		66CDA7702641194200D98DB6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66CDA76F2641194200D98DB6 /* KeyboardSDKSample.app */,
+				66CDA7B226411DC200D98DB6 /* KeyboardSDKSampleExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66CDA7712641194200D98DB6 /* KeyboardSDKSample */ = {
+			isa = PBXGroup;
+			children = (
+				667FBC252652332700AE4E82 /* KeyboardSDKSample.entitlements */,
+				667FBC2B265248F100AE4E82 /* Settings.bundle */,
+				66CDA7722641194200D98DB6 /* AppDelegate.swift */,
+				66CDA7742641194200D98DB6 /* SceneDelegate.swift */,
+				66CDA7762641194200D98DB6 /* ViewController.swift */,
+				66CDA7782641194200D98DB6 /* Main.storyboard */,
+				66CDA77B2641194200D98DB6 /* Assets.xcassets */,
+				66CDA77D2641194200D98DB6 /* LaunchScreen.storyboard */,
+				66CDA7802641194200D98DB6 /* Info.plist */,
+			);
+			path = KeyboardSDKSample;
+			sourceTree = "<group>";
+		};
+		66CDA7B326411DC200D98DB6 /* KeyboardSDKSampleExtension */ = {
+			isa = PBXGroup;
+			children = (
+				667FBC282652334800AE4E82 /* KeyboardSDKSampleExtension.entitlements */,
+				66CDA7B426411DC200D98DB6 /* KeyboardViewController.swift */,
+				66CDA7B626411DC200D98DB6 /* Info.plist */,
+			);
+			path = KeyboardSDKSampleExtension;
+			sourceTree = "<group>";
+		};
+		66CDA7C426411DEA00D98DB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A83F4372B60489100896D71 /* KeyboardSDKCore.xcframework */,
+				6A83F4282B6041CF00896D71 /* KeyboardSDKCore.xcodeproj */,
+				6A83F4212B60418E00896D71 /* hanakeyboardsdkcore_ios */,
+				26A9AF542ABC92060032B7B7 /* KeyboardSDK.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A83F4292B6041CF00896D71 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A83F42E2B6041D000896D71 /* KeyboardSDKCore.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6A9553992BBD0B4600CA3B49 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A95539E2BBD0B4600CA3B49 /* KeyboardSDKCore.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66CDA76E2641194200D98DB6 /* KeyboardSDKSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66CDA7832641194200D98DB6 /* Build configuration list for PBXNativeTarget "KeyboardSDKSample" */;
+			buildPhases = (
+				66CDA76B2641194200D98DB6 /* Sources */,
+				66CDA76C2641194200D98DB6 /* Frameworks */,
+				66CDA76D2641194200D98DB6 /* Resources */,
+				66CDA7B926411DC300D98DB6 /* Embed App Extensions */,
+				6A83F4272B6041BF00896D71 /* Embed Frameworks */,
+				6A83F43A2B604F0F00896D71 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66CDA7B826411DC200D98DB6 /* PBXTargetDependency */,
+			);
+			name = KeyboardSDKSample;
+			productName = KeyboardSDKSample;
+			productReference = 66CDA76F2641194200D98DB6 /* KeyboardSDKSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		66CDA7B126411DC200D98DB6 /* KeyboardSDKSampleExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66CDA7BB26411DC300D98DB6 /* Build configuration list for PBXNativeTarget "KeyboardSDKSampleExtension" */;
+			buildPhases = (
+				66CDA7AE26411DC200D98DB6 /* Sources */,
+				66CDA7AF26411DC200D98DB6 /* Frameworks */,
+				66CDA7B026411DC200D98DB6 /* Resources */,
+				66741822264CD1E000AF4D42 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeyboardSDKSampleExtension;
+			productName = KeyboardSDKSampleExtension;
+			productReference = 66CDA7B226411DC200D98DB6 /* KeyboardSDKSampleExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66CDA7672641194200D98DB6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					66CDA76E2641194200D98DB6 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					66CDA7B126411DC200D98DB6 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 66CDA76A2641194200D98DB6 /* Build configuration list for PBXProject "KeyboardSDKSample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 66CDA7662641194200D98DB6;
+			productRefGroup = 66CDA7702641194200D98DB6 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 66AA5E6E2648BF0400AF9E35 /* Products */;
+					ProjectRef = 66AA5E6D2648BF0400AF9E35 /* KeyboardSDK.xcodeproj */;
+				},
+				{
+					ProductGroup = 6A83F4292B6041CF00896D71 /* Products */;
+					ProjectRef = 6A83F4282B6041CF00896D71 /* KeyboardSDKCore.xcodeproj */;
+				},
+				{
+					ProductGroup = 6A9553992BBD0B4600CA3B49 /* Products */;
+					ProjectRef = 6A9553982BBD0B4600CA3B49 /* KeyboardSDKCore.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				66CDA76E2641194200D98DB6 /* KeyboardSDKSample */,
+				66CDA7B126411DC200D98DB6 /* KeyboardSDKSampleExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6A83F42E2B6041D000896D71 /* KeyboardSDKCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeyboardSDKCore.framework;
+			remoteRef = 6A83F42D2B6041D000896D71 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6A95539E2BBD0B4600CA3B49 /* KeyboardSDKCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeyboardSDKCore.framework;
+			remoteRef = 6A95539D2BBD0B4600CA3B49 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A1B840DF2A823D4600F521A0 /* KeyboardSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeyboardSDK.framework;
+			remoteRef = A1B840DE2A823D4600F521A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66CDA76D2641194200D98DB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				667FBC2C265248F200AE4E82 /* Settings.bundle in Resources */,
+				66CDA77F2641194200D98DB6 /* LaunchScreen.storyboard in Resources */,
+				66CDA77C2641194200D98DB6 /* Assets.xcassets in Resources */,
+				66CDA77A2641194200D98DB6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66CDA7B026411DC200D98DB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6A83F43A2B604F0F00896D71 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66CDA76B2641194200D98DB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66CDA7772641194200D98DB6 /* ViewController.swift in Sources */,
+				66CDA7732641194200D98DB6 /* AppDelegate.swift in Sources */,
+				66CDA7752641194200D98DB6 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66CDA7AE26411DC200D98DB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66CDA7B526411DC200D98DB6 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66CDA7B826411DC200D98DB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66CDA7B126411DC200D98DB6 /* KeyboardSDKSampleExtension */;
+			targetProxy = 66CDA7B726411DC200D98DB6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		66CDA7782641194200D98DB6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66CDA7792641194200D98DB6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		66CDA77D2641194200D98DB6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66CDA77E2641194200D98DB6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		66CDA7812641194200D98DB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = HanaMoneyKeyboard;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		66CDA7822641194200D98DB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = HanaMoneyKeyboard;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		66CDA7842641194200D98DB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KeyboardSDKSample/KeyboardSDKSample.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = GL4YVZY43K;
+				INFOPLIST_FILE = KeyboardSDKSample/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "하나머니 샘플 앱";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.enliple.keyboardsdksample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66CDA7852641194200D98DB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KeyboardSDKSample/KeyboardSDKSample.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = GL4YVZY43K;
+				INFOPLIST_FILE = KeyboardSDKSample/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "하나머니 샘플 앱";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.enliple.keyboardsdksample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		66CDA7BC26411DC300D98DB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = KeyboardSDKSampleExtension/KeyboardSDKSampleExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GL4YVZY43K;
+				INFOPLIST_FILE = KeyboardSDKSampleExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.enliple.keyboardsdksample.keyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66CDA7BD26411DC300D98DB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = KeyboardSDKSampleExtension/KeyboardSDKSampleExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GL4YVZY43K;
+				INFOPLIST_FILE = KeyboardSDKSampleExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.enliple.keyboardsdksample.keyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66CDA76A2641194200D98DB6 /* Build configuration list for PBXProject "KeyboardSDKSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66CDA7812641194200D98DB6 /* Debug */,
+				66CDA7822641194200D98DB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66CDA7832641194200D98DB6 /* Build configuration list for PBXNativeTarget "KeyboardSDKSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66CDA7842641194200D98DB6 /* Debug */,
+				66CDA7852641194200D98DB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66CDA7BB26411DC300D98DB6 /* Build configuration list for PBXNativeTarget "KeyboardSDKSampleExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66CDA7BC26411DC300D98DB6 /* Debug */,
+				66CDA7BD26411DC300D98DB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66CDA7672641194200D98DB6 /* Project object */;
+}

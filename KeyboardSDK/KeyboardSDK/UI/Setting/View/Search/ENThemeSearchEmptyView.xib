@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ENThemeSearchEmptyView" customModule="KeyboardSDK" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="th6-9f-zYu" customClass="ENThemeSearchEmptyView" customModule="KeyboardSDK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="419" height="478"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D6W-WR-3Re">
+                    <rect key="frame" x="0.0" y="0.0" width="419" height="478"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4cG-gX-Pax">
+                            <rect key="frame" x="0.0" y="0.0" width="419" height="478"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색된 테마가 없어요😭" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89z-aJ-Dd7">
+                                    <rect key="frame" x="14" y="17" width="391" height="23"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="23" id="TMQ-NP-L7g"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                    <color key="textColor" name="aikbdBodyLargeTitle"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색어를 다시 입력해 주세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1mT-Ba-rjq">
+                                    <rect key="frame" x="14" y="40" width="391" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="cWf-4b-jAj"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                    <color key="textColor" name="aikbdBasicTitleGray181"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 인기 검색어" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcR-yh-Zw3">
+                                    <rect key="frame" x="14" y="93" width="97" height="19"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="19" id="4eh-Qw-Xqp"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                    <color key="textColor" name="aikbdDeactivateGrey"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E0U-Ir-PbX" customClass="ENTagListView" customModule="KeyboardSDK" customModuleProvider="target">
+                                    <rect key="frame" x="14" y="125" width="391" height="30"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="ujJ-Ee-u2k"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="13"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="enableRemoveButton" value="NO"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingY">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingX">
+                                            <real key="value" value="11"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="tagBackgroundColor">
+                                            <color key="value" name="aikbdSKeywords"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="tagHighlightedBackgroundColor">
+                                            <color key="value" name="aikbdSKeywords"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="tagSelectedBackgroundColor">
+                                            <color key="value" name="aikbdSKeywords"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
+                                            <color key="value" name="aikbdBodySmallTitle"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                            <color key="value" name="aikbdBodySmallTitle"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="marginY">
+                                            <real key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="marginX">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="removeIconLineWidth">
+                                            <real key="value" value="1.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="removeButtonIconSize">
+                                            <real key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="removeIconLineColor">
+                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="E0U-Ir-PbX" secondAttribute="bottom" constant="10" id="40s-bZ-60D"/>
+                                <constraint firstItem="E0U-Ir-PbX" firstAttribute="leading" secondItem="4cG-gX-Pax" secondAttribute="leading" constant="14" id="4B2-b7-zBP"/>
+                                <constraint firstItem="1mT-Ba-rjq" firstAttribute="leading" secondItem="4cG-gX-Pax" secondAttribute="leading" constant="14" id="8pG-Mj-IDE"/>
+                                <constraint firstItem="E0U-Ir-PbX" firstAttribute="top" secondItem="QcR-yh-Zw3" secondAttribute="bottom" constant="13" id="Gxt-gV-clx"/>
+                                <constraint firstAttribute="trailing" secondItem="1mT-Ba-rjq" secondAttribute="trailing" constant="14" id="gFv-NM-01Q"/>
+                                <constraint firstItem="1mT-Ba-rjq" firstAttribute="top" secondItem="89z-aJ-Dd7" secondAttribute="bottom" id="lXi-M0-WYB"/>
+                                <constraint firstAttribute="trailing" secondItem="89z-aJ-Dd7" secondAttribute="trailing" constant="14" id="rwy-Li-Wbc"/>
+                                <constraint firstItem="89z-aJ-Dd7" firstAttribute="top" secondItem="4cG-gX-Pax" secondAttribute="top" constant="17" id="vpq-A4-vvt"/>
+                                <constraint firstItem="QcR-yh-Zw3" firstAttribute="leading" secondItem="4cG-gX-Pax" secondAttribute="leading" constant="14" id="xTz-oy-JCT"/>
+                                <constraint firstItem="89z-aJ-Dd7" firstAttribute="leading" secondItem="4cG-gX-Pax" secondAttribute="leading" constant="14" id="xdv-3c-ZmV"/>
+                                <constraint firstItem="QcR-yh-Zw3" firstAttribute="top" secondItem="1mT-Ba-rjq" secondAttribute="bottom" constant="33" id="yAD-4W-I5v"/>
+                                <constraint firstAttribute="trailing" secondItem="E0U-Ir-PbX" secondAttribute="trailing" constant="14" id="zb0-ka-a6R"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="4cG-gX-Pax" firstAttribute="leading" secondItem="1NL-tW-5sD" secondAttribute="leading" id="1FJ-Sa-X8l"/>
+                        <constraint firstItem="1NL-tW-5sD" firstAttribute="trailing" secondItem="4cG-gX-Pax" secondAttribute="trailing" id="6SE-n1-cmo"/>
+                        <constraint firstItem="1NL-tW-5sD" firstAttribute="bottom" secondItem="4cG-gX-Pax" secondAttribute="bottom" id="CzL-t6-1Ts"/>
+                        <constraint firstItem="4cG-gX-Pax" firstAttribute="top" secondItem="1NL-tW-5sD" secondAttribute="top" id="zIu-dt-cxE"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="1NL-tW-5sD"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="Oqx-ZC-IlD"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="1Pe-as-uE1"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="D6W-WR-3Re" firstAttribute="leading" secondItem="th6-9f-zYu" secondAttribute="leading" id="8Cy-De-5TB"/>
+                <constraint firstAttribute="bottom" secondItem="D6W-WR-3Re" secondAttribute="bottom" id="FyS-Dr-ZYa"/>
+                <constraint firstAttribute="trailing" secondItem="D6W-WR-3Re" secondAttribute="trailing" id="cbf-jU-ZbM"/>
+                <constraint firstItem="4cG-gX-Pax" firstAttribute="width" secondItem="th6-9f-zYu" secondAttribute="width" id="lYl-L9-wgd"/>
+                <constraint firstItem="D6W-WR-3Re" firstAttribute="top" secondItem="th6-9f-zYu" secondAttribute="top" id="yac-Ab-StC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="recommandKeywordTagListView" destination="E0U-Ir-PbX" id="kta-AB-Y4d"/>
+            </connections>
+            <point key="canvasLocation" x="7" y="22"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="aikbdBasicTitleGray181">
+            <color red="0.70980392156862748" green="0.70980392156862748" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="aikbdBodyLargeTitle">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="aikbdBodySmallTitle">
+            <color red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="aikbdDeactivateGrey">
+            <color red="0.72549019607843135" green="0.72549019607843135" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="aikbdSKeywords">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

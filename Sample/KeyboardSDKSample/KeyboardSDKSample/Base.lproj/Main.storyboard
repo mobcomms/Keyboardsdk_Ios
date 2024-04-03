@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dh8-FK-wag">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KeyboardSDKSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yNq-r0-B1P">
+                                <rect key="frame" x="10" y="169" width="394" height="150"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="6KC-GT-2cZ"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hy-zB-8aA">
+                                <rect key="frame" x="10" y="114" width="394" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DNF-Ap-RZD"/>
+                                </constraints>
+                                <state key="normal" title="키보드 설정">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="downloadTheme:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s0y-P6-SvB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wH-dE-xTN">
+                                <rect key="frame" x="341" y="340" width="60" height="45"/>
+                                <color key="backgroundColor" red="0.76078431369999999" green="0.49019607840000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Zdj-Xa-VOp"/>
+                                    <constraint firstAttribute="width" constant="60" id="jes-t0-xEG"/>
+                                </constraints>
+                                <state key="normal" title="초기화"/>
+                                <connections>
+                                    <action selector="restore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CEW-Um-e3O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZZ-2m-voz">
+                                <rect key="frame" x="13" y="340" width="308" height="45"/>
+                                <color key="backgroundColor" red="0.65490196079999996" green="0.7843137255" blue="1" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="nrS-ZI-ayc"/>
+                                </constraints>
+                                <state key="normal" title="붙여넣기"/>
+                                <connections>
+                                    <action selector="pastedFromPastedboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MGp-Rv-cuO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lym-BU-7vl">
+                                <rect key="frame" x="10" y="405" width="60" height="45"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Yvf-Lp-gha"/>
+                                    <constraint firstAttribute="width" constant="60" id="cLA-vK-vN9"/>
+                                </constraints>
+                                <state key="normal" title="게임존"/>
+                                <connections>
+                                    <action selector="moveGameZone:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w6q-5d-Fuy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yNq-r0-B1P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="0Wz-MJ-sOA"/>
+                            <constraint firstItem="3wH-dE-xTN" firstAttribute="top" secondItem="yNq-r0-B1P" secondAttribute="bottom" constant="21" id="Gt3-2K-VGc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yNq-r0-B1P" secondAttribute="trailing" constant="10" id="QUe-J4-ark"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9hy-zB-8aA" secondAttribute="trailing" constant="10" id="UGW-Ze-Yry"/>
+                            <constraint firstItem="lym-BU-7vl" firstAttribute="leading" secondItem="yNq-r0-B1P" secondAttribute="leading" id="ZPJ-EF-dbV"/>
+                            <constraint firstItem="3wH-dE-xTN" firstAttribute="leading" secondItem="jZZ-2m-voz" secondAttribute="trailing" constant="20" id="gDq-I9-FMy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3wH-dE-xTN" secondAttribute="trailing" constant="13" id="jJq-da-j2M"/>
+                            <constraint firstItem="jZZ-2m-voz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="13" id="kn7-oZ-E2P"/>
+                            <constraint firstItem="jZZ-2m-voz" firstAttribute="top" secondItem="yNq-r0-B1P" secondAttribute="bottom" constant="21" id="o2l-XB-Opa"/>
+                            <constraint firstItem="yNq-r0-B1P" firstAttribute="top" secondItem="9hy-zB-8aA" secondAttribute="bottom" constant="15" id="snz-u5-XZG"/>
+                            <constraint firstItem="9hy-zB-8aA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="t78-uc-hwk"/>
+                            <constraint firstItem="lym-BU-7vl" firstAttribute="top" secondItem="jZZ-2m-voz" secondAttribute="bottom" constant="20" id="vFa-nl-0GG"/>
+                            <constraint firstItem="9hy-zB-8aA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="xd1-P4-fLz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="MJD-aW-KbW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216" y="-356"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JIN-Zc-FmY">
+            <objects>
+                <navigationController id="Dh8-FK-wag" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KOh-vB-61S">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="idl-Jc-7IF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="92A-YO-gHE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-632" y="-356"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

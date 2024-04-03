@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ENKeyboardVibrateViewController" customModule="KeyboardSDK" customModuleProvider="target">
+            <connections>
+                <outlet property="btnConfirm" destination="sO6-jz-c5B" id="olU-jw-wSE"/>
+                <outlet property="btnStrong" destination="D4o-Lo-QSD" id="jgF-rp-oC0"/>
+                <outlet property="btnVeryStrong" destination="4fg-8t-M6g" id="94M-JM-dbC"/>
+                <outlet property="btnVeryWeak" destination="kFm-Th-VBk" id="C1l-hq-77Q"/>
+                <outlet property="btnWeak" destination="ZtV-vU-n0o" id="Muo-fO-x2d"/>
+                <outlet property="view" destination="iN0-l3-epB" id="xjb-J5-FLe"/>
+                <outlet property="viewOpacity" destination="M7j-AL-noP" id="HU0-lF-RGn"/>
+                <outlet property="viewWrapper" destination="DAG-qp-WUA" id="lJW-Ol-A4d"/>
+                <outlet property="wrapperViewHeightConstraint" destination="sqg-rh-xFR" id="UMv-hp-ALJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.65000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M7j-AL-noP">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAG-qp-WUA">
+                    <rect key="frame" x="0.0" y="387" width="393" height="465"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="진동 세기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAT-bN-BE9">
+                            <rect key="frame" x="23.999999999999993" y="33" width="110.33333333333331" height="36"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원하는 스타일의 키보드 진동 세기를 선택 해보세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Jz-gy-KKd">
+                            <rect key="frame" x="24" y="77" width="300.66666666666669" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vibrate_main_icon" translatesAutoresizingMaskIntoConstraints="NO" id="trP-ZG-MIV">
+                            <rect key="frame" x="86" y="128.33333333333337" width="203" height="104.33333333333331"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="203" id="8Le-lH-sG3"/>
+                                <constraint firstAttribute="height" constant="104.48" id="Cb8-1M-g1r"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="DiK-T4-E6C">
+                            <rect key="frame" x="21" y="276" width="351" height="70"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFm-Th-VBk">
+                                    <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                    <color key="backgroundColor" red="0.94509803921568625" green="0.95686274509803915" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="5N8-na-Pi0"/>
+                                        <constraint firstAttribute="width" constant="70" id="LRI-Xi-coD"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="없음">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtV-vU-n0o">
+                                    <rect key="frame" x="93.666666666666686" y="0.0" width="70" height="70"/>
+                                    <color key="backgroundColor" red="0.94509803920000002" green="0.95686274510000002" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="70" id="HGt-22-Dci"/>
+                                        <constraint firstAttribute="height" constant="70" id="NCv-kS-9Wy"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="약함">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4o-Lo-QSD">
+                                    <rect key="frame" x="187.33333333333334" y="0.0" width="70.000000000000028" height="70"/>
+                                    <color key="backgroundColor" red="0.94509803920000002" green="0.95686274510000002" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="K44-V7-UQk"/>
+                                        <constraint firstAttribute="width" constant="70" id="ox5-2R-sYK"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="강함">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fg-8t-M6g">
+                                    <rect key="frame" x="281" y="0.0" width="70" height="70"/>
+                                    <color key="backgroundColor" red="0.94509803920000002" green="0.95686274510000002" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="70" id="hrg-xj-9zH"/>
+                                        <constraint firstAttribute="height" constant="70" id="ob6-Tw-G7r"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="매우 강함">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="lLy-kA-Ccz"/>
+                            </constraints>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sO6-jz-c5B">
+                            <rect key="frame" x="24" y="384" width="345" height="52"/>
+                            <color key="backgroundColor" red="0.094117647058823528" green="0.43137254901960786" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="52" id="MFd-QL-My4"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="적용"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="sO6-jz-c5B" firstAttribute="top" secondItem="DiK-T4-E6C" secondAttribute="bottom" constant="38" id="FDb-KD-cbu"/>
+                        <constraint firstItem="mAT-bN-BE9" firstAttribute="top" secondItem="DAG-qp-WUA" secondAttribute="top" constant="33" id="Jxv-XR-yjb"/>
+                        <constraint firstItem="8Jz-gy-KKd" firstAttribute="leading" secondItem="DAG-qp-WUA" secondAttribute="leading" constant="24" id="Ks4-CI-0ED"/>
+                        <constraint firstItem="trP-ZG-MIV" firstAttribute="top" secondItem="8Jz-gy-KKd" secondAttribute="bottom" constant="33.25" id="QPI-Ey-2a2"/>
+                        <constraint firstAttribute="bottom" secondItem="sO6-jz-c5B" secondAttribute="bottom" constant="29" id="YNj-ev-Y3G"/>
+                        <constraint firstAttribute="trailing" secondItem="sO6-jz-c5B" secondAttribute="trailing" constant="24" id="jbb-8v-81p"/>
+                        <constraint firstItem="DiK-T4-E6C" firstAttribute="leading" secondItem="DAG-qp-WUA" secondAttribute="leading" constant="21" id="kJr-9I-ge1"/>
+                        <constraint firstItem="8Jz-gy-KKd" firstAttribute="top" secondItem="mAT-bN-BE9" secondAttribute="bottom" constant="8" id="lvu-Ec-VLR"/>
+                        <constraint firstItem="sO6-jz-c5B" firstAttribute="leading" secondItem="DAG-qp-WUA" secondAttribute="leading" constant="24" id="mr6-9W-zUV"/>
+                        <constraint firstItem="trP-ZG-MIV" firstAttribute="leading" secondItem="DAG-qp-WUA" secondAttribute="leading" constant="86" id="s2D-Oa-aRy"/>
+                        <constraint firstAttribute="height" constant="465" id="sqg-rh-xFR"/>
+                        <constraint firstItem="mAT-bN-BE9" firstAttribute="leading" secondItem="DAG-qp-WUA" secondAttribute="leading" constant="24" id="upX-9a-kcC"/>
+                        <constraint firstAttribute="trailing" secondItem="DiK-T4-E6C" secondAttribute="trailing" constant="21" id="xCb-Ca-4pK"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="M7j-AL-noP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="8jE-j0-6Yy"/>
+                <constraint firstItem="DAG-qp-WUA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Apq-Dx-ozt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="M7j-AL-noP" secondAttribute="trailing" id="DUc-vG-Zwb"/>
+                <constraint firstItem="M7j-AL-noP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="S4L-Rr-Dzx"/>
+                <constraint firstAttribute="trailing" secondItem="DAG-qp-WUA" secondAttribute="trailing" id="SFC-jJ-muB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="M7j-AL-noP" secondAttribute="bottom" id="V0B-b7-bv5"/>
+                <constraint firstAttribute="bottom" secondItem="DAG-qp-WUA" secondAttribute="bottom" id="wXk-Gz-4k0"/>
+            </constraints>
+            <point key="canvasLocation" x="125.59999999999999" y="19.340329835082461"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="vibrate_main_icon" width="203" height="104.66666412353516"/>
+    </resources>
+</document>

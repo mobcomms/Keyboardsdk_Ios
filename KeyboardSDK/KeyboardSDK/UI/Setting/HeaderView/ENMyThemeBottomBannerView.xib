@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ENMyThemeBottomBannerView" customModule="KeyboardSDK" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="uPC-wN-kSD" customClass="ENMyThemeBottomBannerView" customModule="KeyboardSDK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="291" height="102"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PV8-hB-53a">
+                    <rect key="frame" x="0.0" y="0.0" width="291" height="90"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IFD-kh-1pX">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="uPC-wN-kSD" id="KXI-4T-Sjz"/>
+                        <outlet property="delegate" destination="uPC-wN-kSD" id="ibK-ac-5Lp"/>
+                    </connections>
+                </collectionView>
+                <view alpha="0.29999999999999999" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fMJ-Wn-5U4">
+                    <rect key="frame" x="226" y="66" width="49" height="18"/>
+                    <color key="backgroundColor" name="aikbdCategoryBlack"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZ4-CC-dME">
+                    <rect key="frame" x="0.0" y="89" width="291" height="1"/>
+                    <color key="backgroundColor" name="aikbdBannerLineColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="RxT-0v-C0y"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Agh-xr-7xy" customClass="ENPageControlAleppo" customModule="KeyboardSDK" customModuleProvider="target">
+                    <rect key="frame" x="214" y="70" width="63" height="10"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="Hqo-oq-aS3"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="currentPageTintColor">
+                            <color key="value" name="aikbdRollingOn"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="enableTouchEvents" value="NO"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="inactiveTransparency">
+                            <real key="value" value="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hidesForSinglePage" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="dsZ-vU-fDf"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="PV8-hB-53a" firstAttribute="top" secondItem="uPC-wN-kSD" secondAttribute="top" id="8wY-7Q-okB"/>
+                <constraint firstItem="YZ4-CC-dME" firstAttribute="leading" secondItem="uPC-wN-kSD" secondAttribute="leading" id="9z4-6f-gUL"/>
+                <constraint firstItem="YZ4-CC-dME" firstAttribute="bottom" secondItem="PV8-hB-53a" secondAttribute="bottom" id="HYT-GA-Fr6"/>
+                <constraint firstItem="fMJ-Wn-5U4" firstAttribute="bottom" secondItem="Agh-xr-7xy" secondAttribute="bottom" constant="4" id="InF-hl-9vz"/>
+                <constraint firstAttribute="trailing" secondItem="Agh-xr-7xy" secondAttribute="trailing" constant="23" id="OcS-q8-4c4"/>
+                <constraint firstAttribute="bottom" secondItem="PV8-hB-53a" secondAttribute="bottom" constant="12" id="V45-ra-aNs"/>
+                <constraint firstAttribute="trailing" secondItem="PV8-hB-53a" secondAttribute="trailing" id="aTq-se-P2s"/>
+                <constraint firstItem="fMJ-Wn-5U4" firstAttribute="top" secondItem="Agh-xr-7xy" secondAttribute="top" constant="-4" id="dD1-K8-27q"/>
+                <constraint firstItem="fMJ-Wn-5U4" firstAttribute="leading" secondItem="Agh-xr-7xy" secondAttribute="leading" constant="-8" id="dqX-N7-WGx"/>
+                <constraint firstItem="fMJ-Wn-5U4" firstAttribute="trailing" secondItem="Agh-xr-7xy" secondAttribute="trailing" constant="8" id="kKS-Vi-2VW"/>
+                <constraint firstItem="Agh-xr-7xy" firstAttribute="bottom" secondItem="uPC-wN-kSD" secondAttribute="bottom" constant="-22" id="oEz-0S-w8L"/>
+                <constraint firstItem="PV8-hB-53a" firstAttribute="leading" secondItem="uPC-wN-kSD" secondAttribute="leading" id="tSa-Nq-h2Q"/>
+                <constraint firstAttribute="trailing" secondItem="YZ4-CC-dME" secondAttribute="trailing" id="uW7-WT-5T8"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bannerCollectionView" destination="PV8-hB-53a" id="Suj-9J-DuX"/>
+                <outlet property="pageControl" destination="Agh-xr-7xy" id="yLE-mL-coF"/>
+                <outlet property="pageControlBackgroundView" destination="fMJ-Wn-5U4" id="nkq-th-LQO"/>
+            </connections>
+            <point key="canvasLocation" x="-1892" y="-506"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="aikbdBannerLineColor">
+            <color red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="aikbdCategoryBlack">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="aikbdRollingOn">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
