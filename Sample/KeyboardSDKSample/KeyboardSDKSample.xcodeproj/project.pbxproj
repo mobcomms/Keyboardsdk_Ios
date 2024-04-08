@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25902CB32BC39293006EB627 /* KeyboardSDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25902CB22BC39293006EB627 /* KeyboardSDKCore.xcframework */; };
+		25902CB42BC39293006EB627 /* KeyboardSDKCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25902CB22BC39293006EB627 /* KeyboardSDKCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		25902CB92BC3936D006EB627 /* KeyboardSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A9AF542ABC92060032B7B7 /* KeyboardSDK.xcframework */; };
+		25902CBA2BC3936D006EB627 /* KeyboardSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26A9AF542ABC92060032B7B7 /* KeyboardSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		667FBC2C265248F200AE4E82 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 667FBC2B265248F100AE4E82 /* Settings.bundle */; };
 		66CDA7732641194200D98DB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CDA7722641194200D98DB6 /* AppDelegate.swift */; };
 		66CDA7752641194200D98DB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CDA7742641194200D98DB6 /* SceneDelegate.swift */; };
@@ -16,13 +20,16 @@
 		66CDA77F2641194200D98DB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66CDA77D2641194200D98DB6 /* LaunchScreen.storyboard */; };
 		66CDA7B526411DC200D98DB6 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CDA7B426411DC200D98DB6 /* KeyboardViewController.swift */; };
 		66CDA7BA26411DC300D98DB6 /* KeyboardSDKSampleExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 66CDA7B226411DC200D98DB6 /* KeyboardSDKSampleExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		6A83F4252B6041BF00896D71 /* KeyboardSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A9AF542ABC92060032B7B7 /* KeyboardSDK.xcframework */; };
-		6A83F4262B6041BF00896D71 /* KeyboardSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26A9AF542ABC92060032B7B7 /* KeyboardSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6A83F4382B60489100896D71 /* KeyboardSDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A83F4372B60489100896D71 /* KeyboardSDKCore.xcframework */; };
-		6A83F4392B60489100896D71 /* KeyboardSDKCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A83F4372B60489100896D71 /* KeyboardSDKCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		25902CA72BC38FE4006EB627 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25902CA02BC38FE4006EB627 /* KeyboardSDKCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 66D1312E2643C0F500C5E9E1;
+			remoteInfo = KeyboardSDKCore;
+		};
 		66CDA7B726411DC200D98DB6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 66CDA7672641194200D98DB6 /* Project object */;
@@ -37,13 +44,6 @@
 			remoteGlobalIDString = 66D1312E2643C0F500C5E9E1;
 			remoteInfo = KeyboardSDKCore;
 		};
-		6A95539D2BBD0B4600CA3B49 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6A9553982BBD0B4600CA3B49 /* KeyboardSDKCore.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 66D1312E2643C0F500C5E9E1;
-			remoteInfo = KeyboardSDKCore;
-		};
 		A1B840DE2A823D4600F521A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 66AA5E6D2648BF0400AF9E35 /* KeyboardSDK.xcodeproj */;
@@ -54,6 +54,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		25902CB52BC39293006EB627 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				25902CB42BC39293006EB627 /* KeyboardSDKCore.xcframework in Embed Frameworks */,
+				25902CBA2BC3936D006EB627 /* KeyboardSDK.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66741822264CD1E000AF4D42 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -75,21 +87,11 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A83F4272B6041BF00896D71 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				6A83F4392B60489100896D71 /* KeyboardSDKCore.xcframework in Embed Frameworks */,
-				6A83F4262B6041BF00896D71 /* KeyboardSDK.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		25902CA02BC38FE4006EB627 /* KeyboardSDKCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeyboardSDKCore.xcodeproj; path = ../../../01.ENKeyboardsdkcore_Ios/KeyboardSDKCore.xcodeproj; sourceTree = "<group>"; };
+		25902CB22BC39293006EB627 /* KeyboardSDKCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = KeyboardSDKCore.xcframework; path = ../../../01.ENKeyboardsdkcore_Ios/Release/KeyboardSDKCore.xcframework; sourceTree = "<group>"; };
 		26A9AF542ABC92060032B7B7 /* KeyboardSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = KeyboardSDK.xcframework; path = ../../Release/KeyboardSDK.xcframework; sourceTree = "<group>"; };
 		667FBC252652332700AE4E82 /* KeyboardSDKSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyboardSDKSample.entitlements; sourceTree = "<group>"; };
 		667FBC282652334800AE4E82 /* KeyboardSDKSampleExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyboardSDKSampleExtension.entitlements; sourceTree = "<group>"; };
@@ -109,7 +111,6 @@
 		6A83F4212B60418E00896D71 /* hanakeyboardsdkcore_ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = hanakeyboardsdkcore_ios; path = ../../../hanakeyboardsdkcore_ios; sourceTree = "<group>"; };
 		6A83F4282B6041CF00896D71 /* KeyboardSDKCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeyboardSDKCore.xcodeproj; path = ../../../hanakeyboardsdkcore_ios/KeyboardSDKCore.xcodeproj; sourceTree = "<group>"; };
 		6A83F4372B60489100896D71 /* KeyboardSDKCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = KeyboardSDKCore.xcframework; path = ../../../hanakeyboardsdkcore_ios/Release/KeyboardSDKCore.xcframework; sourceTree = "<group>"; };
-		6A9553982BBD0B4600CA3B49 /* KeyboardSDKCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeyboardSDKCore.xcodeproj; path = ../../../Keyboardsdkcore_Ios/KeyboardSDKCore.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +118,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A83F4382B60489100896D71 /* KeyboardSDKCore.xcframework in Frameworks */,
-				6A83F4252B6041BF00896D71 /* KeyboardSDK.xcframework in Frameworks */,
+				25902CB32BC39293006EB627 /* KeyboardSDKCore.xcframework in Frameworks */,
+				25902CB92BC3936D006EB627 /* KeyboardSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +133,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25902CA12BC38FE4006EB627 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				25902CA82BC38FE4006EB627 /* KeyboardSDKCore.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		66AA5E6E2648BF0400AF9E35 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,7 +152,7 @@
 		66CDA7662641194200D98DB6 = {
 			isa = PBXGroup;
 			children = (
-				6A9553982BBD0B4600CA3B49 /* KeyboardSDKCore.xcodeproj */,
+				25902CA02BC38FE4006EB627 /* KeyboardSDKCore.xcodeproj */,
 				66AA5E6D2648BF0400AF9E35 /* KeyboardSDK.xcodeproj */,
 				66CDA7712641194200D98DB6 /* KeyboardSDKSample */,
 				66CDA7B326411DC200D98DB6 /* KeyboardSDKSampleExtension */,
@@ -191,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				6A83F4372B60489100896D71 /* KeyboardSDKCore.xcframework */,
+				25902CB22BC39293006EB627 /* KeyboardSDKCore.xcframework */,
 				6A83F4282B6041CF00896D71 /* KeyboardSDKCore.xcodeproj */,
 				6A83F4212B60418E00896D71 /* hanakeyboardsdkcore_ios */,
 				26A9AF542ABC92060032B7B7 /* KeyboardSDK.xcframework */,
@@ -206,14 +216,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6A9553992BBD0B4600CA3B49 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6A95539E2BBD0B4600CA3B49 /* KeyboardSDKCore.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -225,8 +227,8 @@
 				66CDA76C2641194200D98DB6 /* Frameworks */,
 				66CDA76D2641194200D98DB6 /* Resources */,
 				66CDA7B926411DC300D98DB6 /* Embed App Extensions */,
-				6A83F4272B6041BF00896D71 /* Embed Frameworks */,
 				6A83F43A2B604F0F00896D71 /* ShellScript */,
+				25902CB52BC39293006EB627 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -294,8 +296,8 @@
 					ProjectRef = 6A83F4282B6041CF00896D71 /* KeyboardSDKCore.xcodeproj */;
 				},
 				{
-					ProductGroup = 6A9553992BBD0B4600CA3B49 /* Products */;
-					ProjectRef = 6A9553982BBD0B4600CA3B49 /* KeyboardSDKCore.xcodeproj */;
+					ProductGroup = 25902CA12BC38FE4006EB627 /* Products */;
+					ProjectRef = 25902CA02BC38FE4006EB627 /* KeyboardSDKCore.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -307,18 +309,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		25902CA82BC38FE4006EB627 /* KeyboardSDKCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeyboardSDKCore.framework;
+			remoteRef = 25902CA72BC38FE4006EB627 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		6A83F42E2B6041D000896D71 /* KeyboardSDKCore.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = KeyboardSDKCore.framework;
 			remoteRef = 6A83F42D2B6041D000896D71 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6A95539E2BBD0B4600CA3B49 /* KeyboardSDKCore.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = KeyboardSDKCore.framework;
-			remoteRef = 6A95539D2BBD0B4600CA3B49 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		A1B840DF2A823D4600F521A0 /* KeyboardSDK.framework */ = {

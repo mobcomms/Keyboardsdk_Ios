@@ -23,6 +23,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		25902CB62BC39300006EB627 /* KeyboardSDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25902CAD2BC39016006EB627 /* KeyboardSDKCore.xcframework */; };
+		25902CB72BC39300006EB627 /* KeyboardSDKCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25902CAD2BC39016006EB627 /* KeyboardSDKCore.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		262D449A2B2C1A4E00871FA0 /* ENAPIConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262D44992B2C1A4E00871FA0 /* ENAPIConst.swift */; };
 		262D44AA2B3137D700871FA0 /* HanaKeyboardInquiryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 262D44A92B3137D700871FA0 /* HanaKeyboardInquiryViewController.xib */; };
 		262D44AC2B31381300871FA0 /* HanaKeyboardInquiryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262D44AB2B31381300871FA0 /* HanaKeyboardInquiryViewController.swift */; };
@@ -232,10 +234,6 @@
 		6A5F84E22B635FC2005A145E /* GameZoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A5F84E12B635FC2005A145E /* GameZoneViewController.xib */; };
 		6A5F84E42B6364C6005A145E /* GameZoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5F84E32B6364C6005A145E /* GameZoneViewController.swift */; };
 		6A5F84E82B64276F005A145E /* ENRouletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5F84E72B64276F005A145E /* ENRouletteView.swift */; };
-		6A83F4302B60426700896D71 /* KeyboardSDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A83F42F2B60426700896D71 /* KeyboardSDKCore.xcframework */; };
-		6A83F4482B606D7400896D71 /* KeyboardSDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A83F42F2B60426700896D71 /* KeyboardSDKCore.xcframework */; };
-		6A9553952BBD0B3400CA3B49 /* KeyboardSDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A9553942BBD0B3400CA3B49 /* KeyboardSDKCore.xcframework */; };
-		6A9553962BBD0B3400CA3B49 /* KeyboardSDKCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A9553942BBD0B3400CA3B49 /* KeyboardSDKCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A104C1B02A9EE21700BA4A9D /* ENDefaultSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A104C1AF2A9EE21700BA4A9D /* ENDefaultSwitchCell.swift */; };
 		A104C1B22A9EE25B00BA4A9D /* ENDefaultSwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A104C1B12A9EE25B00BA4A9D /* ENDefaultSwitchCell.xib */; };
 		A128B6C12A9C504600A0F311 /* ENToolbarSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A128B6C02A9C504600A0F311 /* ENToolbarSettingViewController.xib */; };
@@ -275,13 +273,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6A9553972BBD0B3400CA3B49 /* Embed Frameworks */ = {
+		25902CB82BC39300006EB627 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6A9553962BBD0B3400CA3B49 /* KeyboardSDKCore.xcframework in Embed Frameworks */,
+				25902CB72BC39300006EB627 /* KeyboardSDKCore.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +287,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		25902CAD2BC39016006EB627 /* KeyboardSDKCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = KeyboardSDKCore.xcframework; path = ../../01.ENKeyboardsdkcore_Ios/Release/KeyboardSDKCore.xcframework; sourceTree = "<group>"; };
 		262D44992B2C1A4E00871FA0 /* ENAPIConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENAPIConst.swift; sourceTree = "<group>"; };
 		262D44A92B3137D700871FA0 /* HanaKeyboardInquiryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HanaKeyboardInquiryViewController.xib; sourceTree = "<group>"; };
 		262D44AB2B31381300871FA0 /* HanaKeyboardInquiryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanaKeyboardInquiryViewController.swift; sourceTree = "<group>"; };
@@ -545,9 +544,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A83F4482B606D7400896D71 /* KeyboardSDKCore.xcframework in Frameworks */,
-				6A83F4302B60426700896D71 /* KeyboardSDKCore.xcframework in Frameworks */,
-				6A9553952BBD0B3400CA3B49 /* KeyboardSDKCore.xcframework in Frameworks */,
+				25902CB62BC39300006EB627 /* KeyboardSDKCore.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1103,6 +1100,7 @@
 		66D131892643C39D00C5E9E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				25902CAD2BC39016006EB627 /* KeyboardSDKCore.xcframework */,
 				6A9553942BBD0B3400CA3B49 /* KeyboardSDKCore.xcframework */,
 				6A83F42F2B60426700896D71 /* KeyboardSDKCore.xcframework */,
 			);
@@ -1308,7 +1306,7 @@
 				66CDA7562641190200D98DB6 /* Sources */,
 				66CDA7572641190200D98DB6 /* Frameworks */,
 				66CDA7582641190200D98DB6 /* Resources */,
-				6A9553972BBD0B3400CA3B49 /* Embed Frameworks */,
+				25902CB82BC39300006EB627 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

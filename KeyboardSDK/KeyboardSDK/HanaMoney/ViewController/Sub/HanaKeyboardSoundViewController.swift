@@ -38,6 +38,9 @@ class HanaKeyboardSoundViewController: UIViewController, ENViewPrsenter {
     @IBOutlet weak var viewFourSound: UIView!
     @IBOutlet weak var imgFourSoundCheck: UIImageView!
     
+    @IBOutlet weak var viewFiveSound: UIView!
+    @IBOutlet weak var imgFiveSoundCheck: UIImageView!
+
     var selectValue: Int = 0
     
     override func viewDidLoad() {
@@ -65,6 +68,10 @@ class HanaKeyboardSoundViewController: UIViewController, ENViewPrsenter {
         case 3:
             imgFourSoundCheck.image = UIImage.init(named: "sound_check", in: Bundle.frameworkBundle, compatibleWith: nil)
             break
+        case 99:
+            imgFiveSoundCheck.image = UIImage.init(named: "sound_check", in: Bundle.frameworkBundle, compatibleWith: nil)
+            break
+
         default:
             imgDefaultSoundCheck.image = UIImage.init(named: "sound_check", in: Bundle.frameworkBundle, compatibleWith: nil)
             break
@@ -104,6 +111,8 @@ class HanaKeyboardSoundViewController: UIViewController, ENViewPrsenter {
         imgSecondSoundCheck.image = UIImage.init(named: "sound_uncheck", in: Bundle.frameworkBundle, compatibleWith: nil)
         imgThirdSoundCheck.image = UIImage.init(named: "sound_uncheck", in: Bundle.frameworkBundle, compatibleWith: nil)
         imgFourSoundCheck.image = UIImage.init(named: "sound_uncheck", in: Bundle.frameworkBundle, compatibleWith: nil)
+        imgFiveSoundCheck.image = UIImage.init(named: "sound_uncheck", in: Bundle.frameworkBundle, compatibleWith: nil)
+
     }
     
     func settingViewGestureHandler() {
@@ -111,7 +120,8 @@ class HanaKeyboardSoundViewController: UIViewController, ENViewPrsenter {
         let tap2 = UITapGestureRecognizer(target: self, action: #selector(tapHandler(_:)))
         let tap3 = UITapGestureRecognizer(target: self, action: #selector(tapHandler(_:)))
         let tap4 = UITapGestureRecognizer(target: self, action: #selector(tapHandler(_:)))
-        
+        let tap5 = UITapGestureRecognizer(target: self, action: #selector(tapHandler(_:)))
+
         viewDefaultSound.tag = 0
         viewDefaultSound.addGestureRecognizer(tap1)
         
@@ -123,6 +133,10 @@ class HanaKeyboardSoundViewController: UIViewController, ENViewPrsenter {
         
         viewFourSound.tag = 3
         viewFourSound.addGestureRecognizer(tap4)
+        
+        viewFiveSound.tag = 99
+        viewFiveSound.addGestureRecognizer(tap5)
+
     }
     
     @objc func tapHandler(_ sender: UITapGestureRecognizer) {
@@ -137,6 +151,8 @@ class HanaKeyboardSoundViewController: UIViewController, ENViewPrsenter {
                 changeImg(targetView: imgThirdSoundCheck, targetValue: tag)
             case 3:
                 changeImg(targetView: imgFourSoundCheck, targetValue: tag)
+            case 99:
+                changeImg(targetView: imgFiveSoundCheck, targetValue: tag)
             default:
                 changeImg(targetView: imgDefaultSoundCheck, targetValue: 0)
             }
@@ -148,8 +164,8 @@ class HanaKeyboardSoundViewController: UIViewController, ENViewPrsenter {
         UIView.transition(with: targetView, duration: 0.2, options: .curveEaseIn, animations: {
             targetView.image = UIImage.init(named: "sound_check", in: Bundle.frameworkBundle, compatibleWith: nil)
         })
+            ENKeyButtonEffectManager.shared.excuteSound(with: selectValue)
         
-        ENKeyButtonEffectManager.shared.excuteSound(with: selectValue)
     }
     
 }

@@ -130,6 +130,9 @@ extension ENMainViewController: UITableViewDelegate, UITableViewDataSource {
                 case 3:
                     cell.lblValue.text = "탁탁 (옛날 타자기 소리)"
                     break
+                case 4:
+                    cell.lblValue.text = "무음"
+                    break
                 default:
                     break
                 }

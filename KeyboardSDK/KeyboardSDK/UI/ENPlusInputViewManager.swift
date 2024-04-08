@@ -43,12 +43,12 @@ public class ENPlusInputViewManager {
     var prevOrentaion = true
     let enKeyboardSDK = ENKeyboardSDK.shared
     let enKeyboardSDKCore = ENKeyboardSDKCore.shared
-
-     init(){
+    
+    init(){
     }
     
     public func viewDidLoad() {
-
+        
         /// 키보드 뷰 매니저 객체 생성
         keyboardViewManager = ENKeyboardViewManager.init(proxy: inputViewController?.textDocumentProxy, needsInputModeSwitchKey: inputViewController?.needsInputModeSwitchKey ?? true)
         /// 딜리게이트 전달
@@ -95,75 +95,75 @@ public class ENPlusInputViewManager {
         // 여기가 뷰의 크기가 바뀌면 들어오는 곳임
         var isPortrait = true
         guard let inputView = inputViewController else{return}
-            isPortrait = inputView.preferredInterfaceOrientationForPresentation.isPortrait
-            if isPortrait {
-                if inputView.view.frame.width > inputView.view.frame.height && prevOrentaion
-                    || (inputViewController?.view.frame.width ?? 0) == keyboardFrame.width{
-                    return
-                }
-            }else{
-                if (inputView.view.frame.width < inputView.view.frame.height && !prevOrentaion)
-                    || (inputViewController?.view.frame.width ?? 0) == keyboardFrame.width {
-                    return
-                }
-
+        isPortrait = inputView.preferredInterfaceOrientationForPresentation.isPortrait
+        if isPortrait {
+            if inputView.view.frame.width > inputView.view.frame.height && prevOrentaion
+                || (inputViewController?.view.frame.width ?? 0) == keyboardFrame.width{
+                return
             }
-            prevOrentaion = inputView.preferredInterfaceOrientationForPresentation.isPortrait
-
+        }else{
+            if (inputView.view.frame.width < inputView.view.frame.height && !prevOrentaion)
+                || (inputViewController?.view.frame.width ?? 0) == keyboardFrame.width {
+                return
+            }
+            
+        }
+        prevOrentaion = inputView.preferredInterfaceOrientationForPresentation.isPortrait
+        
         keyboardFrame = inputViewController?.view.frame ?? .zero
         keyboardViewManager?.keyboardManager?.updateKeyboardFrame(frame: (inputViewController?.view.frame ?? .zero))
         //MARK: - 가로 모드, 세로 모드 대응하는 곳
-            /// 가로 세로 값을 가져옴. 이 값은 상위 class 에서 지정해줘야 한다.
-            /// ENInputViewController 에서 supportedInterfaceOrientations 이곳에서 지정해야 함
-            /// 공지사항 뷰가 가로 일 때 가려지지만 세로로 변경 되면서 다시 보이진 않습니다.
-        /// 
-    
+        /// 가로 세로 값을 가져옴. 이 값은 상위 class 에서 지정해줘야 한다.
+        /// ENInputViewController 에서 supportedInterfaceOrientations 이곳에서 지정해야 함
+        /// 공지사항 뷰가 가로 일 때 가려지지만 세로로 변경 되면서 다시 보이진 않습니다.
+        ///
+        
         if let customAreaView = customAreaView{
             self.resetKeyboard(customAreaView)
         }
-            if isPortrait {
-
-                // 세로 일 때는 그냥 툴바 버튼 정도만 크기 업데이트 해준다.
-                keyboardViewManager?.updateKeyboardHeight(isLand: false)
-                customAreaView?.buttonWidthUpdate(frame: (inputViewController?.view.frame ?? .zero))
-                if  notifyView?.heightConstraint?.constant == 0{
-                    self.loadInterface()
-                    notifyView?.updateNotifyView(isLand: false)
-
-                }
-
-                // 더치페이, 핫이슈 등 다른 콘텐츠 영역이 보여질 때 constraint 를 업데이트 한다.
-                keyboardViewManager?.updateContentView()
-                // 더치페이는 버튼의 높이를 변화 시켜야 하기 때문에 따로 한번 더 호출 함.
-                if let manager = keyboardViewManager {
-                    if manager.isUseDutchPay {
-                        dutchPayView?.updateButtonHeight(isLand: false)
-                    }
-                }
-            } else {
-                // 똑같이 툴바 버튼 크기 업데이트 해줌.
-                // 가로 일 때는 공지사항 뷰를 아주 가려버린다.
-                keyboardViewManager?.isUseNotifyView = false
-                keyboardViewManager?.updateKeyboardHeight(isLand: true)
-                customAreaView?.buttonWidthUpdate(frame: (inputViewController?.view.frame ?? .zero))
-                notifyView?.updateNotifyView(isLand: true)
+        if isPortrait {
+            
+            // 세로 일 때는 그냥 툴바 버튼 정도만 크기 업데이트 해준다.
+            keyboardViewManager?.updateKeyboardHeight(isLand: false)
+            customAreaView?.buttonWidthUpdate(frame: (inputViewController?.view.frame ?? .zero))
+            if  notifyView?.heightConstraint?.constant == 0{
+                self.loadInterface()
+                notifyView?.updateNotifyView(isLand: false)
                 
-                // 더치페이, 핫이슈 등 다른 콘텐츠 영역이 보여질 때 constraint 를 업데이트 한다.
-                keyboardViewManager?.updateContentView()
-                // 더치페이는 버튼의 높이를 변화 시켜야 하기 때문에 따로 한번 더 호출 함.
-                if let manager = keyboardViewManager {
-                    if manager.isUseDutchPay {
-                        dutchPayView?.updateButtonHeight(isLand: true)
-                    }
-                }
-                
-                if let settingView = hanaKeyboardContentSettingView {
-                    settingView.btnClose.removeFromSuperview()
-                    settingView.webView.removeFromSuperview()
-                    settingView.innerADView.removeFromSuperview()
-                    settingView.removeFromSuperview()
+            }
+            
+            // 더치페이, 핫이슈 등 다른 콘텐츠 영역이 보여질 때 constraint 를 업데이트 한다.
+            keyboardViewManager?.updateContentView()
+            // 더치페이는 버튼의 높이를 변화 시켜야 하기 때문에 따로 한번 더 호출 함.
+            if let manager = keyboardViewManager {
+                if manager.isUseDutchPay {
+                    dutchPayView?.updateButtonHeight(isLand: false)
                 }
             }
+        } else {
+            // 똑같이 툴바 버튼 크기 업데이트 해줌.
+            // 가로 일 때는 공지사항 뷰를 아주 가려버린다.
+            keyboardViewManager?.isUseNotifyView = false
+            keyboardViewManager?.updateKeyboardHeight(isLand: true)
+            customAreaView?.buttonWidthUpdate(frame: (inputViewController?.view.frame ?? .zero))
+            notifyView?.updateNotifyView(isLand: true)
+            
+            // 더치페이, 핫이슈 등 다른 콘텐츠 영역이 보여질 때 constraint 를 업데이트 한다.
+            keyboardViewManager?.updateContentView()
+            // 더치페이는 버튼의 높이를 변화 시켜야 하기 때문에 따로 한번 더 호출 함.
+            if let manager = keyboardViewManager {
+                if manager.isUseDutchPay {
+                    dutchPayView?.updateButtonHeight(isLand: true)
+                }
+            }
+            
+            if let settingView = hanaKeyboardContentSettingView {
+                settingView.btnClose.removeFromSuperview()
+                settingView.webView.removeFromSuperview()
+                settingView.innerADView.removeFromSuperview()
+                settingView.removeFromSuperview()
+            }
+        }
     }
     
     /// 이전에 작업 되있던거라 잘 모르겠지만 키보드가 보여질 때 프레임 조절 하는거 같음.
@@ -197,8 +197,8 @@ public class ENPlusInputViewManager {
         }
         
         if let notiView = notifyView {
-//            //            print("여기는/... : \(notiView.webView.bounds)")
-//            notiView.webViewSetting()
+            //            //            print("여기는/... : \(notiView.webView.bounds)")
+            //            notiView.webViewSetting()
             notiView.addWebView()
         }
         
@@ -237,7 +237,7 @@ public class ENPlusInputViewManager {
         if ENSettingManager.shared.brandUtilDay == "" || ENSettingManager.shared.brandUtilDay != now {
             ENSettingManager.shared.isFistUsingKeyboard = false
             ENSettingManager.shared.brandUtilDay = now
-                ENKeyboardAPIManeger.shared.callBrandUtil() { data, response, error in
+            ENKeyboardAPIManeger.shared.callBrandUtil() { data, response, error in
                 if let data = data, let jsonString = String(data: data, encoding: .utf8) {
                     if let jsonData = jsonString.data(using: .utf8) {
                         do {
@@ -279,7 +279,7 @@ public class ENPlusInputViewManager {
             }
         }
         setDayStats()
-
+        
     }
     func setDayStats(){
         
@@ -290,10 +290,10 @@ public class ENPlusInputViewManager {
                         do {
                             let data = try JSONDecoder().decode(ENDayStatsModel.self, from: jsonData)
                             if data.Result == "true"{
-
+                                
                                 ENSettingManager.shared.isFistUsingKeyboard = true
                             }else{
-
+                                
                             }
                             
                         } catch {
@@ -302,7 +302,7 @@ public class ENPlusInputViewManager {
                 }
             }
         }
-
+        
     }
     /// 인터페이스 로드 / 원래 있던 부분
     func loadInterface() {
@@ -366,6 +366,7 @@ public class ENPlusInputViewManager {
                 if let jsonData = jsonString.data(using: .utf8) {
                     do {
                         let data = try JSONDecoder().decode(ENCheckPointModel.self, from: jsonData)
+                        ENSettingManager.shared.usingKeyboardCntFlag = true
                         
                         if data.Result == "true" {
                             DispatchQueue.main.async {
@@ -439,25 +440,28 @@ extension ENPlusInputViewManager: ENKeyboardManagerDelegate {
             
             // 카운팅이 3인지 먼저 체크
             if ENSettingManager.shared.usingKeyboardCnt == 3 {
-                // 포인트 api 호출                
+                // 포인트 api 호출
                 ENKeyboardAPIManeger.shared.getUserCheckPoint { data, response, error in
                     if let data = data, let jsonString = String(data: data, encoding: .utf8) {
+                        
                         if let jsonData = jsonString.data(using: .utf8) {
                             do {
                                 let data = try JSONDecoder().decode(ENCheckPointModel.self, from: jsonData)
+                                self.loadUserTotalPoint()
                                 if data.Result == "true" {
-                                    DispatchQueue.main.async { [weak self] in
-                                        guard let self = self else { return }
-                                        // 상단 툴바에 보여줄 포인트를 넣어준다.
-                                        ENSettingManager.shared.readyForHanaPoint = data.total_point
-                                        // 카운팅이 3이라 포인트 적립 확인을 했으니 카운팅을 0 으로 만들어 준다.
-                                        ENSettingManager.shared.usingKeyboardCnt = 0
-                                        // 상단 툴바의 UI 를 업데이트 한다.
-                                        self.customAreaView?.updateRewardPointToolbar()
-                                    }
                                 } else {
                                     print("get_user_chk_point data result false")
                                 }
+                                DispatchQueue.main.async { [weak self] in
+                                    guard let self = self else { return }
+                                    // 상단 툴바에 보여줄 포인트를 넣어준다.
+                                    ENSettingManager.shared.readyForHanaPoint = data.total_point
+                                    // 카운팅이 3이라 포인트 적립 확인을 했으니 카운팅을 0 으로 만들어 준다.
+                                    ENSettingManager.shared.usingKeyboardCnt = 0
+                                    // 상단 툴바의 UI 를 업데이트 한다.
+                                    self.customAreaView?.updateRewardPointToolbar()
+                                }
+                                
                             } catch {
                                 print("get_user_chk_point error : \(error.localizedDescription)")
                             }
@@ -468,6 +472,7 @@ extension ENPlusInputViewManager: ENKeyboardManagerDelegate {
                 // 카운팅 증가
                 ENSettingManager.shared.usingKeyboardCnt += 1
             }
+            
         }
         
         if ENSettingManager.shared.useNewsAd || ENSettingManager.shared.useAd {
@@ -943,7 +948,7 @@ extension ENPlusInputViewManager: ENDutchpayViewDelegate {
 }
 
 extension ENPlusInputViewManager: ENNotifyViewDelegate, HanaKeyboardContentSettingViewDelegate {
-     
+    
     func adViewClose() {
         adViewCloses()
     }

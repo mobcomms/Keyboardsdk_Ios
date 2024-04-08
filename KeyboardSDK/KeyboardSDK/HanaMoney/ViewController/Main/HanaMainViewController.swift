@@ -190,6 +190,9 @@ public class HanaMainViewController: UIViewController, ENViewPrsenter {
         case 3:
             self.lblKeyboardSound.text = "탁탁 (옛날 타자기 소리)"
             break
+        case 99:
+            self.lblKeyboardSound.text = "무음"
+            break
         default:
             self.lblKeyboardSound.text = "기본"
             break
@@ -271,6 +274,9 @@ extension HanaMainViewController: HanaKeyboardSoundViewControllerDelegate {
             break
         case 3:
             self.lblKeyboardSound.text = "탁탁 (옛날 타자기 소리)"
+            break
+        case 99:
+            self.lblKeyboardSound.text = "무음"
             break
         default:
             self.lblKeyboardSound.text = "기본"

@@ -14,7 +14,7 @@ public class ENKeyboardSDK {
     public static let shared:ENKeyboardSDK = ENKeyboardSDK()
     
     /// SDK 버전 정보 (get-only)
-    public private(set) var SDK_VERSION: String = "SDK Version : 1.0.13" // 이거 무조건 바꿔야함... 전달 할때마다!!!!!
+    public private(set) var SDK_VERSION: String = "SDK Version : 1.0.14" // 이거 무조건 바꿔야함... 전달 할때마다!!!!!
     
     let appLovinMediationProvider = "max"
     let appLovinIdentifier = "mobcomms.app@gmail.com"

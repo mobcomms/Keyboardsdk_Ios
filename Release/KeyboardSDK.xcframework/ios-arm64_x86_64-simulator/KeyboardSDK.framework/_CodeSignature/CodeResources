@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		ynM8afwxvx89AHE2hNuZbLXvJNc=
+		CjlEBFeh/mnI8h8QSOPHXQTnm8s=
 		</data>
 		<key>ENBonusViewController.nib</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>ENKeyboardClipboardView.nib</key>
 		<data>
-		RJqMQKAfq8ptvqz8E9gvZ6EOcDE=
+		I4DSCAYpWsUkrf336r+hJUjmlkA=
 		</data>
 		<key>ENKeyboardHeightViewController.nib</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>ENKeyboardSoundViewController.nib</key>
 		<data>
-		IwOKU+MkcHREi3tjcRyoen+ApX8=
+		1cjnPJKnEsulsz0Uop3gM9qFAp4=
 		</data>
 		<key>ENKeyboardTabCoupangView.nib</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>ENMainViewController.nib</key>
 		<data>
-		uvMYoWVn5EdAFxT+MAL9/Ys2MLI=
+		hNgZe3eQeW6HgdiiSyd+9luy8Ek=
 		</data>
 		<key>ENMemoAddViewController.nib</key>
 		<data>
@@ -70,11 +70,11 @@
 		</data>
 		<key>ENMemoDetailViewController.nib</key>
 		<data>
-		aiFlh+R4sr1N1uMdl3OeiTK2qgE=
+		a/iv6K6PWey9POyNq3f1dprtUWA=
 		</data>
 		<key>ENMyPointViewController.nib</key>
 		<data>
-		zB2qYx4Y1J8swdLNfNsEkv12tU4=
+		VETzMsNd2xQhECEKetpoKmDHcPU=
 		</data>
 		<key>ENMyThemeBottomBannerView.nib</key>
 		<data>
@@ -118,7 +118,7 @@
 		</data>
 		<key>ENPointDetailViewController.nib</key>
 		<data>
-		1Ii+hnpzf1jzUhuKUWxXsQn4tgM=
+		oJPEZOi+Kid3T/8bef9KJT29Wd0=
 		</data>
 		<key>ENSearchBaseViewController.nib</key>
 		<data>
@@ -142,15 +142,15 @@
 		</data>
 		<key>ENSettingRadioTableViewCell.nib/objects-14.0+.nib</key>
 		<data>
-		J7bqv1rlRluRM2cbBy+B07z2L2s=
+		yYBuk/H8OiyuqcSnVo6+grELEP4=
 		</data>
 		<key>ENSettingRadioTableViewCell.nib/runtime.nib</key>
 		<data>
-		o1ICoKZIXmU2cN3trRxV9e5GZnI=
+		YOzOcQ8AFCtj1zuj1ga16An1xvg=
 		</data>
 		<key>ENSettingSlideTableViewCell.nib</key>
 		<data>
-		96Dxm+TfgVllFfQVltfRJpEppYc=
+		ImlnpspgQ3lZrjL1U0hshvk3/4E=
 		</data>
 		<key>ENSettingSwitchTableViewCell.nib</key>
 		<data>
@@ -162,7 +162,7 @@
 		</data>
 		<key>ENSettingViewController.nib</key>
 		<data>
-		iPVPo8LPTNxQfJJCqTqAFIExAps=
+		sN4PJVuVGUE1rfQFQPBy5OwkjNY=
 		</data>
 		<key>ENSoundSelectViewController.nib</key>
 		<data>
@@ -228,9 +228,257 @@
 		<data>
 		LhpP+4DAJnm9LN9djaXzkPVIBdQ=
 		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/Info.plist</key>
+		<data>
+		7FdMM9wEfMqwumYDhrtitYNQN54=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/KeyboardSDKCore</key>
+		<data>
+		TQcURh8e2LQ4IBfK4T9UHT7quHw=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/_CodeSignature/CodeResources</key>
+		<data>
+		BROBGQ1MKpdUYpzBERrQ5wjLzGo=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_emoticon_1@3x.png</key>
+		<data>
+		EJGFAiKx8s+5N2kAlRQYtUuRzZ4=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_emoticon_2@3x.png</key>
+		<data>
+		hnnBW6GcdBxEyjKnIJKm49F9SNw=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_emoticon_3@3x.png</key>
+		<data>
+		Hb2qBcyZ3SFGsBV15m6AN2JO5j8=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_emoticon_4@3x.png</key>
+		<data>
+		7PNS2N9q5YoEcwtn5ngp4Cq/hYQ=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_emoticon_5@3x.png</key>
+		<data>
+		aPCe3bEHgA3End5PCyNOiePa2Bw=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_emoticon_6@3x.png</key>
+		<data>
+		CsFccFriPsf7xgX9ra1I8J/s5lE=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_emoticon_latest@3x.png</key>
+		<data>
+		PoUIrePeS6jmLLjKt6/Nu0zqlso=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_cash@3x.png</key>
+		<data>
+		UVAot6S3AuSj1VdHYuj+KLh44Kw=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_cash_off@3x.png</key>
+		<data>
+		hTqaJeyr3THxH59DUJEc6xNimwc=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_delete@3x.png</key>
+		<data>
+		hVKyPEfl3o9Yk5P9E/UAp+tXCuc=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_enter@3x.png</key>
+		<data>
+		LoqDOpZCoAAlFt7gLzYgLWpEJxw=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_icon@3x.png</key>
+		<data>
+		Hw5bokuoQL0GyW0nSQA2SVM8hvU=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_icon_1@3x.png</key>
+		<data>
+		G19WB3A49q7dP2IUXOBbw4+6pD4=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_key_off.9.png</key>
+		<data>
+		2NAwRtzlAKsWzrdMnu5zrFI7dpo=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_key_on.9.png</key>
+		<data>
+		RLuHq/D0yQrW+9yU3hWgVasj1Y8=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_logo@3x.png</key>
+		<data>
+		vHIxywAc+702NwJL+KzD8OyqE0A=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_notice@3x.png</key>
+		<data>
+		YkXgrvuAqlrK1ULQuKQYVvB+ntY=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_preview@3x.png</key>
+		<data>
+		76Uf6WwI5KrR0RU3F+mlC3wdwlU=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_search@3x.png</key>
+		<data>
+		cO5dCqjiDFXlP86wbmwnJKMuQCM=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_shift@3x.png</key>
+		<data>
+		g22B6LJw8DQjUoIuILiwDAqQrVA=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_shift_1@3x.png</key>
+		<data>
+		anETAUY2eAgdSJYLfMeexT8TtAw=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_shift_2@3x.png</key>
+		<data>
+		qi5iO6eOzOVN0+4wogp2eFYjwFo=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_sign@3x.png</key>
+		<data>
+		ZU9xk/kfCSE/fGUzH6dxNnCunC0=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_space@3x.png</key>
+		<data>
+		e6EyLxkvCrgifqA9hoteLeUeScA=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_specialkey_off.9.png</key>
+		<data>
+		o0j06qiQYGSA8vyzgZXPHpYigUY=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_specialkey_on.9.png</key>
+		<data>
+		w5wGdGVmDcToKcymWUxFzLvwoWs=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_text@3x.png</key>
+		<data>
+		9p3b6OfF9zUjFh4VF2U4Ka1d7e8=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_memo_addition@3x.png</key>
+		<data>
+		R64GCiCEFQ+Yt23AQkrg5PKI+Oc=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_memo_bookmark_off@3x.png</key>
+		<data>
+		m2SaE0vJnZ6dm4YBygMJ5gHIY64=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_memo_bookmark_on@3x.png</key>
+		<data>
+		CLx6YCOOcsDM99HpP0nFXFIiymk=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_memo_bookmark_s_off@3x.png</key>
+		<data>
+		jiC+a/qsk7ppbjZRacWEf1YfEN0=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_memo_bookmark_s_on@3x.png</key>
+		<data>
+		3XuwhseBn1beYAy6v8hGL6hbTrE=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_memo_delete_s@3x.png</key>
+		<data>
+		hBYvW/qwSvdQirdYYQR6tMC9c/I=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_memo_keyboard@3x.png</key>
+		<data>
+		fQtODAvOH7rea2AzHHFf+GNcc34=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_memo_modify@3x.png</key>
+		<data>
+		yeMbVcZi4Qp4Xg9cvrkToI3xoRc=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_img_keyboard_bg@3x.png</key>
+		<data>
+		E8BwGb2Q9zrJHg5/hB68HgUPL5s=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_img_keyboard_bg_origin@3x.png</key>
+		<data>
+		PD/2xyplPAJTZR/JpHS4hDq9C3U=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_sound0.wav</key>
+		<data>
+		TulOMKfScAk/Tx/nVMHbUvAjA9k=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_sound1.wav</key>
+		<data>
+		HwTW9U1uBTO+tpvWbFUC93OvrMc=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_sound2.wav</key>
+		<data>
+		34x53yvB8Rm8gGAkPVETg6Xn8d4=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_sound3.wav</key>
+		<data>
+		7OZgjjlQ0gKKrzdGLoXemOghqMg=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_sound4.wav</key>
+		<data>
+		yzcJ1rNai05h36h5+zt4SMbKdww=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_bookmark@3x.png</key>
+		<data>
+		iCjHbnVt1MSjlPyjh8btu5C6whc=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_delete@3x.png</key>
+		<data>
+		9dDUkLkpZNhZ/RQut5xSpABMgHs=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_emoticon@3x.png</key>
+		<data>
+		30ykOCo2+3s5Mrd6GyRVnCmrw8Y=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_enter@3x.png</key>
+		<data>
+		7IsbIEwiRoh0KCD1EOkchT29KzU=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_icon@3x.png</key>
+		<data>
+		+OnGSBz4zptmw9gcaN2rlul6Arc=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_icon_1@3x.png</key>
+		<data>
+		v7+2gGJHE3DE83Hv6ATkUxc0ZjQ=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_memo@3x.png</key>
+		<data>
+		v7H30oY4obyvTxjHVDRQ6Wi/DUw=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_memo_on@3x.png</key>
+		<data>
+		y6lK6hJJBTL396jXPOukclgCRfo=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_search@3x.png</key>
+		<data>
+		WKrIWRgDN0vgBI2n1YTYpjofHsE=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_setting@3x.png</key>
+		<data>
+		ShhVVNMs/pEnZo9z6vmz2cdzZ7U=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_shift@3x.png</key>
+		<data>
+		tfkWAR+GWkR6ZEz7mxvPu+cLZ0w=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_shift_1@3x.png</key>
+		<data>
+		qLaOVkDcr8h407l80KJiYXyBDFM=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_shift_2@3x.png</key>
+		<data>
+		HWqrv9NugrgJmeiO7+vRQtcoedA=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_sign@3x.png</key>
+		<data>
+		37vHUdd5m/GugrYiMZDUDHmajyw=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_space@3x.png</key>
+		<data>
+		+ISX4OvWht9nZD0xnIWzO5ToPJk=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_text@3x.png</key>
+		<data>
+		6QEFFBpUMBTDhobDYKzDoF/k9uQ=
+		</data>
+		<key>Frameworks/KeyboardSDKCore.framework/theme_color.txt</key>
+		<data>
+		qcnwCHjLV5t1y5CxDPU7ZApCNro=
+		</data>
 		<key>GameZoneViewController.nib</key>
 		<data>
-		3H+2vqw6rD5pynti8OEJNK8desM=
+		WxpvHsqqgwzCijmjeQMTWxRn2KA=
 		</data>
 		<key>HanaGuideViewController.nib</key>
 		<data>
@@ -242,7 +490,7 @@
 		</data>
 		<key>HanaKeyboardSoundViewController.nib</key>
 		<data>
-		aZCLUK0vcO72lxThq5UnG60iQss=
+		4zBIDYIYC5cwfEVtX7oe71NdC/g=
 		</data>
 		<key>HanaKeyboardTypeViewController.nib</key>
 		<data>
@@ -270,7 +518,7 @@
 		</data>
 		<key>Headers/KeyboardSDK-Swift.h</key>
 		<data>
-		JcB7DNNRrA9j2UdLV8elLDVesqQ=
+		LdUNtRxkKQlJ5lKwaPd0ONo1W5g=
 		</data>
 		<key>Headers/KeyboardSDK.h</key>
 		<data>
@@ -286,47 +534,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		jxiAqcmJtkeo0vHjAHbdCmLWWxI=
+		Zsr0bF9HORNvo96WhARFuyANCiQ=
 		</data>
 		<key>Modules/KeyboardSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		DTsU+TyUoeAqTXEapQ/TbQzoltA=
+		a4RAv+v0aqMEP6PvPtyxWmcBOl8=
 		</data>
 		<key>Modules/KeyboardSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		GnswvTfp5fsErOEexhWR2s3eBYI=
+		Rx/xERAlt2vV7CmSP/A/RNMNaak=
 		</data>
 		<key>Modules/KeyboardSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		sZiT3tWOlnfhV7A6bFz6UontaJo=
+		MzrdhQuloIV/1RsitBFGve1uRu8=
 		</data>
 		<key>Modules/KeyboardSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		GnswvTfp5fsErOEexhWR2s3eBYI=
+		Rx/xERAlt2vV7CmSP/A/RNMNaak=
 		</data>
 		<key>Modules/KeyboardSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		SrGYFEHPcJAniW4IAK8H2S9xG34=
+		VVqqOtSKUeL2ycPSLEBeb0xveio=
 		</data>
 		<key>Modules/KeyboardSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		DTsU+TyUoeAqTXEapQ/TbQzoltA=
+		a4RAv+v0aqMEP6PvPtyxWmcBOl8=
 		</data>
 		<key>Modules/KeyboardSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		bih2tHmWaV7cfFazfxJiEWLqm6Q=
+		ORgh0iG6jzfRvM7VJ5xqqgARHEI=
 		</data>
 		<key>Modules/KeyboardSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		RUIjDRg1bG4sYuhgqvY2+TUoBns=
+		R+lSTe3vrsNe4jWbUPiuG+Vz2Pg=
 		</data>
 		<key>Modules/KeyboardSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		bih2tHmWaV7cfFazfxJiEWLqm6Q=
+		ORgh0iG6jzfRvM7VJ5xqqgARHEI=
 		</data>
 		<key>Modules/KeyboardSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		bkxDbLowby12Hx16bThQDrNS/gU=
+		45h6RlBlqpqQoh5SfJwz06cdtXg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -391,7 +639,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sKpL3VfnevuaGHA6dS20XK+7cxkH+h5U92+6MoegVK0=
+			5rsqaZFv/s+7Wq9RlVtLuE5TibT1chtl0ZEpegBY5n0=
 			</data>
 		</dict>
 		<key>ENBonusViewController.nib</key>
@@ -440,7 +688,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RSofC2uW8xMtjs+XLsoNFSeE9+6VurjjxIYJ3XLdmwY=
+			fErwYE4ZLm/C+5BY91za70LPjlSCpZ3Iit6cezwZPbw=
 			</data>
 		</dict>
 		<key>ENKeyboardHeightViewController.nib</key>
@@ -461,7 +709,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+F1Cnq5Xvhq1tMD0WTbduxabqliCWyFEC0+gdRrvXHk=
+			2P9sDpnaIobV+fjEJY8IpDY657IBfoWiSiPrJLWISWU=
 			</data>
 		</dict>
 		<key>ENKeyboardTabCoupangView.nib</key>
@@ -482,7 +730,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wyIhKFtizoBpub7fz6J34dvUCGr8GDbecolOFPw0/g0=
+			PByJRDKf9VV5Yho/3uvhBQc/7OV8I9EFv3/PIiYIGdU=
 			</data>
 		</dict>
 		<key>ENMemoAddViewController.nib</key>
@@ -503,14 +751,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Xy2Pgk9KMeDSQhkKesR5k3QtwGeLTox9234FsJ8YC90=
+			rTPCJ1+6RckDEY9QDRAM75s2h5TvTlOsHxI95qDbHkc=
 			</data>
 		</dict>
 		<key>ENMyPointViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Bla4R56NBqrGYMg48GH0kysyYCaxm+JOa6DarJanfpE=
+			aQNcaPMnKewJt1hiRHBKTNDmMAn/w2sKo/6zndmRZiM=
 			</data>
 		</dict>
 		<key>ENMyThemeBottomBannerView.nib</key>
@@ -587,7 +835,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			L5YIWC+lMQAn4Vk9+flbM7MKPqHzIQtWiBWcyDh4Rc8=
+			7qIPbakf+UCutk0790WaQlU4lUhFf8K1rlh+xl0pSGY=
 			</data>
 		</dict>
 		<key>ENSearchBaseViewController.nib</key>
@@ -629,21 +877,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			iL66AfPrNEv8GkDfmkBe31SB8ENPtQZd/c6WQa+VlFc=
+			9sar2ziEfU73XECpvXaNlMZtqi/mPW7OQ5PeJI3H1Ds=
 			</data>
 		</dict>
 		<key>ENSettingRadioTableViewCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Kg8XglZ4CqstcMw4s8UPHUStSVCZw+QqYGiEhEZOOys=
+			mXJwK8Lo4dO5bpeKiEeozBONVO9fQWRAUpVbJ3ba80M=
 			</data>
 		</dict>
 		<key>ENSettingSlideTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			29H7UXr/Vv1valcK3nJeBTZWQT+NqouYhHqjYG07JUE=
+			UvCRnB0rXoSlY1iE9hNABrtResOTELF2ieE8WxfJEw0=
 			</data>
 		</dict>
 		<key>ENSettingSwitchTableViewCell.nib</key>
@@ -664,7 +912,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VYEmvmaE25AteAbrKcCfObWOSgbkm5ZZHbRwPUJ4cx8=
+			7/YPxOdL2ctVidXNeErjviGZjj/7iWUo6fBJm4sQgn8=
 			</data>
 		</dict>
 		<key>ENSoundSelectViewController.nib</key>
@@ -779,11 +1027,445 @@
 			dzYemqxQ5Lb6OTwcTQGtPKtLrgTwhRhoAFc5MJKCkkc=
 			</data>
 		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ihQUowOxfIpd2mGbETCCw+i2ULItnryI2T+m7EyW5Ag=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/KeyboardSDKCore</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Hr9+b3sKcQRI3jMbDXXzoiRWgUqWTV+Yl59Tl/daGcA=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+fbuMRUDkONbHdLT6SY42Z0sPgFdcmVVDuzRrHuvie0=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_emoticon_1@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			jacgaG9WDIl547Augw717OWY0nt/kg8RYULWaeJmNtQ=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_emoticon_2@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			zvMffGiDXvCKc2dFR46eX51qy0J1mkAG9/PEkRWbUqs=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_emoticon_3@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0BPnG0+KmED2V0NXXv2KMFPV7oq8+wjZkGNGc0YXOwI=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_emoticon_4@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			zJhGqTx72hN46OGM4/wBS1YwdTj6I4E2EmtUPZYzpwk=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_emoticon_5@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ERfyGpJ8oAVhQ0OFvKxv8KPnHHQla2mq5faneX48a6Y=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_emoticon_6@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			hk+uZUZtJgZdwNDJF8qHLUzvWqEWKG/ApAbhzbxUGwc=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_emoticon_latest@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			TOZip3cK/urUKzjYfyLlmm7EWEMwI3F73pxL3X41whQ=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_cash@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qwVCfp745OleHwpUu54c5PaE7/BcNpLeMEFpWI1yq0k=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_cash_off@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LWA6QnXo5hqMqwSGoY/ZapZ1GFtNjBz3ttW4sg/vL68=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_delete@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			xTESKKdvZJNfCKb3OmoNTbwEMtm31C39IK0Di6JZwa4=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_enter@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+SZnC2hGDo639BAYrmBNKIRT3iXCkxI1Cae0Uex5CTw=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_icon@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			KJGR1YftmyS1eHjoNclZhzzgPQZor8XvOXW7AU8ZcI8=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_icon_1@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vXut7MjS4SR7rn/+O36G/wKqe1FUpnDpOyMGuThacXs=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_key_off.9.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LkMb9BrQvwXt6xmGvY1IRIoQVFteBlTdGDKaw1ZpA3Y=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_key_on.9.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9NbLO4E6AIUevlTaGHx/PZ8zoP27jbXwwN/1yJmTo/s=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_logo@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			WHXLgp7HaRv7lRLD9APzcEk79P7Rxl3REANqiQel4Fw=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_notice@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LN/NJe4sCSQmiFkaYuWWfSvTaqDeU13QzbstrniFFKc=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_preview@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Mrvvpa6FnkljfIIfiP9Cq5gkaJXbXSj2/q7N7+IQKMM=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_search@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4SROpNzZicLnMhdbKvZVO34CEFbjakJp12WaCfFnleE=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_shift@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			kiYE7GgryMUHpsaPs0WqrYLRw4JaGWpvBbdlvjk/PFU=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_shift_1@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5r3gPTXNyvaxdKd9z6BGtNJDmDCIMT3k/4PHA/yR2Bk=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_shift_2@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dEADJGV9xgTL9O/Ksa6RoIN2oRl/Dc3SzLeQFxWcny4=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_sign@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Cvtac2qyEQIybMnF+ibzPMNvuJEtrskhRk5+xUKLaNA=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_space@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+89ot+I6IBp3Vr9ccTkXiEWdHsD+7I785I1NHkbt9m0=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_specialkey_off.9.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			O0nICBZJAX3YU+qobFERFF70Jd5lWTx/YUKVadZMgMQ=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_specialkey_on.9.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nDz9fhpto5NZ7h2HMt/4JMbh8fo235xX2WHj0qZUoPo=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_keyboard_text@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			i77Kvfs4ksabbCnRYd9g2EAJgw/t8ZRPWYIFF1dqW2s=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_memo_addition@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			O2xcHQeeIhayEu25cvY7UYvw+7EikNDky05D23v5RU4=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_memo_bookmark_off@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+r+W8GBoCmX00LygXrC1obped8/Kvrm6MOjtorVxUBk=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_memo_bookmark_on@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4rFWegDT6LJj/QsZu2kNm0FGEU7/4A0K1OX6Hyh99ek=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_memo_bookmark_s_off@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lX0TG4brLINFoJGMez9P+KR+L8KSuSVbsKNX4+Dwgvw=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_memo_bookmark_s_on@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			r/J5gSVh7PHERb4CPZlOk09c7HdMDb202M5uPYnwF64=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_memo_delete_s@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Ql1fZn8rJK2am2eig7z3GMlHat0szLaTP5laXtrNQh0=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_memo_keyboard@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			A3J+0NtqfUct4Xd/UW5qmKLym1XE+tia9Dr6q9mCdaI=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_memo_modify@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			yhy13RSJCR2mti8O4rbaUDuLPg3aKNKp7NEF5ngj4pg=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_img_keyboard_bg@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qnTmx1qkzvb0emogi6MDnS9OXYkH8Tn/JdCQiTeQvNk=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_img_keyboard_bg_origin@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Bl3az9eKS1w0hbCsBvrd9l6EpuS264hZfCZZ8GppVIg=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_sound0.wav</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			8wCS/QUCadHKPTcCZSE3qwRgC4j9uYWVj4ynGGdITPQ=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_sound1.wav</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			wpW3rLwwsm7OXUVOLY2d/eZH+jtpQ3nxPvH+Oy5/l64=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_sound2.wav</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			AvJHeNofDQf/g4ics/iuWtoppKAtqs/4PF9uv8UTqwY=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_sound3.wav</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Qjr6Yo2NqZO9z3oJ6mTC/Uux6WTKvh8ErLCLGdmWjFw=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/aikbd_sound4.wav</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			B4SXv8PY7ZItJsnx938aFyiyQpeDEjblTWeVpVtiUZw=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_bookmark@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5Q6+2zkfRiQkRKjlP5GYalUqxNU5teqHOGaZ881k4Yo=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_delete@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			k4nVjRdZ+xjcmd4jm1SgNn+uAcQN4RKjNvQ4PMGoS+c=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_emoticon@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/CjZpjEjrG7CnpobravYfmNZ6GCc3i6F3w+N02En1xc=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_enter@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VbG7Dl9bRZQwxyIMt5cuo2t8Lq2M4ZAJHdlg/ZIOPtw=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_icon@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			d/MtxTg90yeAG75WY947b2e4gDm7rx7pEO2Ih4KQrf0=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_icon_1@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			sfusOhfD9z2IzQrNci7MqUFx3Regrlq1+Z6GHObCIjg=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_memo@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mrRHu9i5onn+Oad5XXTgWn9OaqMctpvoFXa2/wQMj0U=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_memo_on@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MqckaNf6jDdK+R3SoH7LfgdGghRIY23CVie4QHs03Js=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_search@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GC5AZTPzMr3+MSYSnC1N0RWYLvUlkQ5/kotvF6Mvz7U=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_setting@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			sYt7WDxfpXMsvOyxnIyM7ykcVX1JSnfvz/pLt5BwC+Y=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_shift@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OW3bJnqSFCvE06zZYPmaF/ELl/HJEfkJJicCuAKFJtE=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_shift_1@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vToPx2G8Uo5gpN85V/62yV1nghciNReveIjaiiNm06Y=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_shift_2@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VQzxUgUJWxfOU996GbhY/mvQkueQOVnOl2gHhodUQ0o=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_sign@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZK4Z1YKxF1Lz470BExs3asdXcSnMAEMzLuXdwBL/18U=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_space@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			I3fvsupZI4yXZ2WicVaArsEV5UEUGPvAcC4J6/0CWTQ=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/paikbd_btn_keyboard_text@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6Sy72vYhPS2XKVHiv2TzaMxtac7ng4Zv2XrVUEDqKTw=
+			</data>
+		</dict>
+		<key>Frameworks/KeyboardSDKCore.framework/theme_color.txt</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			BqZeopj/snr0PS8OfExvbJH71XK0u+WM6q56PG+CKjE=
+			</data>
+		</dict>
 		<key>GameZoneViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eQc3xdGh/IKMmAhUhsuvjp4YBX7n1411iX4IRBuEsbg=
+			A2BaNEIcAq63/bO6TyazBFb8t087clyvpMYwiG58qJ4=
 			</data>
 		</dict>
 		<key>HanaGuideViewController.nib</key>
@@ -804,7 +1486,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VGNAWXzQHqANV/8vj6gCWgrDP+TxorvDijHZMIuaRcw=
+			yQvWUzglczx97WcuW8V9DXoQDtPZ48QJ7LbHcFQnbtE=
 			</data>
 		</dict>
 		<key>HanaKeyboardTypeViewController.nib</key>
@@ -853,7 +1535,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eGaY8H3g2tEEUGCeEEMyJwOpC2OT73BCsOj8ZpPyl48=
+			Vmxr3efawe3ZIiiZXalgzGo1kwGv/4jOYAkoGwZB4fo=
 			</data>
 		</dict>
 		<key>Headers/KeyboardSDK.h</key>
@@ -881,70 +1563,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eWVkk20zJWaGte3wWHtYuqm1lzTmFnCpeaJg7VpfaVw=
+			jqXl4WFTRNWSFwyjweIwJbRT97p2B5/te1rIyUeJQIw=
 			</data>
 		</dict>
 		<key>Modules/KeyboardSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RiG/jJTzE7brTGPoJVYesQN3eeFpKDoz72/3GjHnIek=
+			xf+9lRichHNHjyWowO9r4HUjbqNPwdSMhak84u0fo64=
 			</data>
 		</dict>
 		<key>Modules/KeyboardSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			97G3xtDmMSJafr+qjT3+SyAEFRRAUUyGEe7xHY0cMh0=
+			rbm0XAizjOgwUrdFB2a1sNeR1B0oAsKG6N6bqY3X0jQ=
 			</data>
 		</dict>
 		<key>Modules/KeyboardSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RiG/jJTzE7brTGPoJVYesQN3eeFpKDoz72/3GjHnIek=
+			xf+9lRichHNHjyWowO9r4HUjbqNPwdSMhak84u0fo64=
 			</data>
 		</dict>
 		<key>Modules/KeyboardSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			M7BFAZV3BUdpJDu7sRL5E6mnZqw0C0CA5fA3D+TWRH4=
+			3pmPYXK1A+uecaoRKyqbmI93bw/Gl72zIhUW1K3T83w=
 			</data>
 		</dict>
 		<key>Modules/KeyboardSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eWVkk20zJWaGte3wWHtYuqm1lzTmFnCpeaJg7VpfaVw=
+			jqXl4WFTRNWSFwyjweIwJbRT97p2B5/te1rIyUeJQIw=
 			</data>
 		</dict>
 		<key>Modules/KeyboardSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qCl3eZj1dJmMYGGnxTCli5BSNEWP41pETeHgR79/nlg=
+			fD9/ykfR8YehRcOlRKRyPtPBcGXjC1MUuUfo1g5X/o4=
 			</data>
 		</dict>
 		<key>Modules/KeyboardSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1/wLIhu0JNbvvQdjnoff3F4xe6rz7uFcf5KZjlaRgiQ=
+			5VDyDi2/n3/HzZLpnYRpLArDSmOCXVWIkZ3mNsArRM0=
 			</data>
 		</dict>
 		<key>Modules/KeyboardSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qCl3eZj1dJmMYGGnxTCli5BSNEWP41pETeHgR79/nlg=
+			fD9/ykfR8YehRcOlRKRyPtPBcGXjC1MUuUfo1g5X/o4=
 			</data>
 		</dict>
 		<key>Modules/KeyboardSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eAELzsWikmpggkKFKEjdXswqvCw3CPMHLjYJOKufjkU=
+			Pk66sHsYdV8OtLrBud7FL5U/3WsRNHiq7RDLUr+ORb8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -31,6 +31,9 @@ public class ENKeyboardSoundViewController: UIViewController, ENViewPrsenter {
     @IBOutlet weak var viewSound4: UIView!
     @IBOutlet weak var imgSound4: UIImageView!
     
+    @IBOutlet weak var viewSound5: UIView!
+    @IBOutlet weak var imgSound5: UIImageView!
+    
     @IBOutlet weak var btnConfirm: UIButton!
     
     var selectValue: Int = 0
@@ -68,12 +71,14 @@ public class ENKeyboardSoundViewController: UIViewController, ENViewPrsenter {
         let tap2 = UITapGestureRecognizer(target: self, action: #selector(tapHandler(_:)))
         let tap3 = UITapGestureRecognizer(target: self, action: #selector(tapHandler(_:)))
         let tap4 = UITapGestureRecognizer(target: self, action: #selector(tapHandler(_:)))
-        
+        let tap5 = UITapGestureRecognizer(target: self, action: #selector(tapHandler(_:)))
+
         viewSound1.addGestureRecognizer(tap1)
         viewSound2.addGestureRecognizer(tap2)
         viewSound3.addGestureRecognizer(tap3)
         viewSound4.addGestureRecognizer(tap4)
-        
+        viewSound5.addGestureRecognizer(tap5)
+
         let dismissTap = UITapGestureRecognizer(target: self, action: #selector(opacityViewHandler(_:)))
         viewOpacity.addGestureRecognizer(dismissTap)
         
@@ -93,6 +98,9 @@ public class ENKeyboardSoundViewController: UIViewController, ENViewPrsenter {
         case 3:
             imgSound4.image = UIImage.init(named: "sound_check", in: Bundle.frameworkBundle, compatibleWith: nil)
             break
+        case 4:
+            imgSound4.image = UIImage.init(named: "sound_check", in: Bundle.frameworkBundle, compatibleWith: nil)
+            break
         default:
             imgSound1.image = UIImage.init(named: "sound_check", in: Bundle.frameworkBundle, compatibleWith: nil)
             break
@@ -104,6 +112,8 @@ public class ENKeyboardSoundViewController: UIViewController, ENViewPrsenter {
         imgSound2.image = UIImage.init(named: "sound_uncheck", in: Bundle.frameworkBundle, compatibleWith: nil)
         imgSound3.image = UIImage.init(named: "sound_uncheck", in: Bundle.frameworkBundle, compatibleWith: nil)
         imgSound4.image = UIImage.init(named: "sound_uncheck", in: Bundle.frameworkBundle, compatibleWith: nil)
+        imgSound5.image = UIImage.init(named: "sound_uncheck", in: Bundle.frameworkBundle, compatibleWith: nil)
+
     }
     
     private func changeImg(targetView: UIImageView, targetValue: Int) {
@@ -153,6 +163,9 @@ public class ENKeyboardSoundViewController: UIViewController, ENViewPrsenter {
                 break
             case 3:
                 changeImg(targetView: imgSound4, targetValue: innerView.tag)
+                break
+            case 4:
+                changeImg(targetView: imgSound5, targetValue: innerView.tag)
                 break
             default:
                 changeImg(targetView: imgSound1, targetValue: 0)

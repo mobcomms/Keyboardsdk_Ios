@@ -704,13 +704,9 @@ public class ENKeyboardCustomAreaView: UIView {
             delegate?.enKeyboardCustomAreaView(self, targetButton: sender, hanaCoupang: nil)
             break
         case ENToolbarType.hanaPointList.rawValue:
-//            if let title = sender.titleLabel?.text {
-//                if title.contains("+") {
-//                    callPointAPI()
-//                }
-//            }
             if ENSettingManager.shared.readyForHanaPoint != 0 {
-                callPointAPI(targetBtn: sender)
+//                callPointAPI(targetBtn: sender)
+                getPointAPI(targetBtn: sender)
             } else {
                 delegate?.enKeyboardCustomAreaView(self, targetButton: sender, hanaPointList: nil)
             }
@@ -722,8 +718,42 @@ public class ENKeyboardCustomAreaView: UIView {
             break
         }
     }
-    
-    func callPointAPI(targetBtn: UIButton) {        
+    func getPointAPI(targetBtn: UIButton) {
+        ENKeyboardAPIManeger.shared.getUserTotalPoint(){[weak self] data, response, error in
+            guard let self = self else { return }
+            if let data = data, let jsonString = String(data: data, encoding: .utf8) {
+
+                if let jsonData = jsonString.data(using: .utf8) {
+                    do {
+                        let data = try JSONDecoder().decode(ENCheckPointModel.self, from: jsonData)
+                        DispatchQueue.main.async {
+                           
+                    
+                        if data.Result == "true" {
+                            ENSettingManager.shared.readyForHanaPoint = data.total_point
+
+                        } else {
+                                ENSettingManager.shared.readyForHanaPoint = 0
+                                
+                            
+                        }
+                            self.callPointAPI(targetBtn:targetBtn)
+
+                        }
+                    } catch {
+                        DispatchQueue.main.async {
+                            ENSettingManager.shared.readyForHanaPoint = 0
+                            self.callPointAPI(targetBtn:targetBtn)
+
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    func callPointAPI(targetBtn: UIButton) {
+        
         ENKeyboardAPIManeger.shared.callSendPoint {[weak self] data, response, error in
             guard let self else { return }
             
