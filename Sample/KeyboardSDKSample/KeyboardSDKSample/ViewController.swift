@@ -75,9 +75,45 @@ class ViewController: UIViewController {
 //        
 //        let testMain = HanaPPZWebViewController.create()
 //        self.navigationController?.pushViewController(testMain, animated: true)
-        
+        test()
+    }
+    func test(){
+        let jsonString = "{\"Result\":\"true\",\"total_point\":0,\"result_message\":\"1P \\uc801\\ub9bd \\uc644\\ub8cc!\"}"
+        if let jsonData = jsonString.data(using: .utf8) {
+            do {
+                print("send_point json parse success !!!")
+
+                let data = try JSONDecoder().decode(ENSendPointModel.self, from: jsonData)
+                
+                print("send_point json parse success  --  1")
+
+                DispatchQueue.main.async {
+                    if data.total_point ?? -1 >= 0 {
+                        print("send_point json parse success  --  2")
+
+                        
+                    }
+                    if data.Result == "false" {
+                        print("send_point json parse success  --  5")
+
+                        
+                    }
+                }
+                
+            } catch {
+                print("send_point json parse error")
+                
+            }
+        }
     }
     
+    struct ENSendPointModel: Codable {
+        let Result: String
+        let total_point: Int?
+        let errcode: Int?
+        let result_message: String?
+    }
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }

@@ -705,8 +705,8 @@ public class ENKeyboardCustomAreaView: UIView {
             break
         case ENToolbarType.hanaPointList.rawValue:
             if ENSettingManager.shared.readyForHanaPoint != 0 {
-//                callPointAPI(targetBtn: sender)
-                getPointAPI(targetBtn: sender)
+                callPointAPI_v2(targetBtn: sender)
+
             } else {
                 delegate?.enKeyboardCustomAreaView(self, targetButton: sender, hanaPointList: nil)
             }
@@ -718,81 +718,53 @@ public class ENKeyboardCustomAreaView: UIView {
             break
         }
     }
-    func getPointAPI(targetBtn: UIButton) {
-        ENKeyboardAPIManeger.shared.getUserTotalPoint(){[weak self] data, response, error in
-            guard let self = self else { return }
-            if let data = data, let jsonString = String(data: data, encoding: .utf8) {
-
-                if let jsonData = jsonString.data(using: .utf8) {
-                    do {
-                        let data = try JSONDecoder().decode(ENCheckPointModel.self, from: jsonData)
-                        DispatchQueue.main.async {
-                           
-                    
-                        if data.Result == "true" {
-                            ENSettingManager.shared.readyForHanaPoint = data.total_point
-
-                        } else {
-                                ENSettingManager.shared.readyForHanaPoint = 0
-                                
-                            
-                        }
-                            self.callPointAPI(targetBtn:targetBtn)
-
-                        }
-                    } catch {
-                        DispatchQueue.main.async {
-                            ENSettingManager.shared.readyForHanaPoint = 0
-                            self.callPointAPI(targetBtn:targetBtn)
-
-                        }
-                    }
-                }
-            }
-        }
-
-    }
-    func callPointAPI(targetBtn: UIButton) {
+    func callPointAPI_v2(targetBtn: UIButton) {
         
-        ENKeyboardAPIManeger.shared.callSendPoint {[weak self] data, response, error in
+        ENKeyboardAPIManeger.shared.callSendPoint_v2 {[weak self] data, response, error in
             guard let self else { return }
             
             if let data = data, let jsonString = String(data: data, encoding: .utf8) {
                 #if DEBUG
                 print("send_point : \(jsonString)")
                 #endif
-                
+                print("send_point v2 : \(jsonString)")
+
                 if let jsonData = jsonString.data(using: .utf8) {
                     do {
+                        print("send_point json parse success !!!")
+
                         let data = try JSONDecoder().decode(ENSendPointModel.self, from: jsonData)
                         
-                        if data.Result == "true" {
-                            DispatchQueue.main.async {
-                                let totalPoint = ENSettingManager.shared.readyForHanaPoint
+                        print("send_point json parse success  --  1")
+
+                        DispatchQueue.main.async {
+                            if data.total_point ?? -1 >= 0 {
+                                print("send_point json parse success  --  2")
+
                                 ENSettingManager.shared.readyForHanaPoint = data.total_point ?? 0
+                                print("send_point json parse success  --  3")
+
                                 self.updateUI()
                                 
-                                if let super1 = self.superview {
-                                    if let super2 = super1.superview {
-                                        super2.showEnToast(message: "\(totalPoint)P 적립 완료!")
-                                    }
+                            }
+                            if let super1 = self.superview {
+                                if let super2 = super1.superview {
+                                    print("send_point json parse success  --  4")
+
+                                    super2.showEnToast(message: data.result_message ?? "사용자 정보를 확인할 수 없어요. 하나머니 앱에서 인증해 주세요.")
                                 }
                             }
-                        } else {
-//                            print("send_point error code : \(data.errcode ?? 0)")
-//                            print("send_point error String : \(data.errstr ?? "errstr nil")")
-                            DispatchQueue.main.async {
+                            if data.Result == "false" {
+                                print("send_point json parse success  --  5")
+
                                 if let del = self.delegate {
+                                    print("send_point json parse success  --  6")
+
                                     del.enKeyboardCustomAreaView(self, targetButton: targetBtn, hanaPointList: nil)
-                                }
-                                
-                                if let super1 = self.superview {
-                                    if let super2 = super1.superview {
-                                        super2.showEnToast(message: data.errstr ?? "사용자 정보를 확인할 수 없어요. 하나머니 앱에서 인증해 주세요.")
-                                    }
                                 }
                             }
                         }
+                        
                     } catch {
                         print("send_point json parse error")
                         DispatchQueue.main.async {
@@ -837,6 +809,7 @@ public class ENKeyboardCustomAreaView: UIView {
             }
         }
     }
+
     
     /// 툴바 버튼 UI 리셋
     public func resetButtonStatus() {
@@ -1221,5 +1194,5 @@ struct ENSendPointModel: Codable {
     let Result: String
     let total_point: Int?
     let errcode: Int?
-    let errstr: String?
+    let result_message: String?
 }

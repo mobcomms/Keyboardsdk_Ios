@@ -447,7 +447,6 @@ extension ENPlusInputViewManager: ENKeyboardManagerDelegate {
                         if let jsonData = jsonString.data(using: .utf8) {
                             do {
                                 let data = try JSONDecoder().decode(ENCheckPointModel.self, from: jsonData)
-                                self.loadUserTotalPoint()
                                 if data.Result == "true" {
                                 } else {
                                     print("get_user_chk_point data result false")

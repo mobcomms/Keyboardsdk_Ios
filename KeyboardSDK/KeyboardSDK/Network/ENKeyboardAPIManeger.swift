@@ -88,9 +88,9 @@ public class ENKeyboardAPIManeger{
         }
     }
 
-    public func callSendPoint( completion: @escaping (Data?, URLResponse?, Error?) -> Void){
+    public func callSendPoint_v2( completion: @escaping (Data?, URLResponse?, Error?) -> Void){
 
-        let urlString = "\(ENAPIConst.API_URL)send_point.php"
+        let urlString = "\(ENAPIConst.API_URL)send_point_v2.php"
         let param = ["uuid": "\(ENAPIConst.uuid)",
                      "user_point": ENSettingManager.shared.readyForHanaPoint,
                      "event_id": "1",
