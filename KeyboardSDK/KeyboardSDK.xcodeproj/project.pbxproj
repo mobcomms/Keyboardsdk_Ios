@@ -287,7 +287,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		257D57582BDFCF7E0011FB0A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		25902CAD2BC39016006EB627 /* KeyboardSDKCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = KeyboardSDKCore.xcframework; path = ../../01.ENKeyboardsdkcore_Ios/Release/KeyboardSDKCore.xcframework; sourceTree = "<group>"; };
+		25FDB7772BF5AE3200FE6336 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		262D44992B2C1A4E00871FA0 /* ENAPIConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENAPIConst.swift; sourceTree = "<group>"; };
 		262D44A92B3137D700871FA0 /* HanaKeyboardInquiryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HanaKeyboardInquiryViewController.xib; sourceTree = "<group>"; };
 		262D44AB2B31381300871FA0 /* HanaKeyboardInquiryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanaKeyboardInquiryViewController.swift; sourceTree = "<group>"; };
@@ -1066,6 +1068,7 @@
 		66CDA7502641190200D98DB6 = {
 			isa = PBXGroup;
 			children = (
+				25FDB7772BF5AE3200FE6336 /* PrivacyInfo.xcprivacy */,
 				66CDA75C2641190200D98DB6 /* KeyboardSDK */,
 				66D131892643C39D00C5E9E1 /* Frameworks */,
 				6A8063BD2B50CA3100FC7368 /* KeyboardSDK.framework */,
@@ -1076,6 +1079,7 @@
 			isa = PBXGroup;
 			children = (
 				66CDA75E2641190200D98DB6 /* Info.plist */,
+				257D57582BDFCF7E0011FB0A /* PrivacyInfo.xcprivacy */,
 				66CDA75D2641190200D98DB6 /* KeyboardSDK.h */,
 				66155942264BDF2A0005363F /* KeyboardSDK.m */,
 				66B1270B26573F9C00E0C0FD /* Resource */,
@@ -1460,7 +1464,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export TARGET_NAME=KeyboardSDK\nexport RELEASE_FOLDER=../Release\n\nrm -rf \"${RELEASE_FOLDER}/${TARGET_NAME}.xcframework\"\n\nxcodebuild archive -scheme \"${TARGET_NAME}\" -configuration Release -destination 'generic/platform=iOS' -archivePath \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphoneos.xcarchive\" -sdk iphoneos SKIP_INSTALL=NO LIBRARIES_FOR_DISTRIBUTION=YES\nxcodebuild archive -scheme \"${TARGET_NAME}\" -configuration Release -destination 'generic/platform=iOS Simulator' -archivePath \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphonesimulator.xcarchive\" -sdk iphonesimulator SKIP_INSTALL=NO LIBRARIES_FOR_DISTRIBUTION=YES\n\nxcodebuild -create-xcframework -framework \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphonesimulator.xcarchive/Products/Library/Frameworks/${TARGET_NAME}.framework\" -framework \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphoneos.xcarchive/Products/Library/Frameworks/${TARGET_NAME}.framework\" -output \"${RELEASE_FOLDER}/${TARGET_NAME}.xcframework\"\n\nrm -r \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphonesimulator.xcarchive\"\nrm -r \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphoneos.xcarchive\"\n";
+			shellScript = "export TARGET_NAME=KeyboardSDK\nexport RELEASE_FOLDER=../Release\n\nrm -rf \"${RELEASE_FOLDER}/${TARGET_NAME}.xcframework\"\n\nxcodebuild archive -scheme \"${TARGET_NAME}\" -configuration Release -destination 'generic/platform=iOS' -archivePath \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphoneos.xcarchive\" -sdk iphoneos SKIP_INSTALL=NO LIBRARIES_FOR_DISTRIBUTION=YES\nxcodebuild archive -scheme \"${TARGET_NAME}\" -configuration Release -destination 'generic/platform=iOS Simulator' -archivePath \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphonesimulator.xcarchive\" -sdk iphonesimulator SKIP_INSTALL=NO LIBRARIES_FOR_DISTRIBUTION=YES\n\nxcodebuild -create-xcframework -framework \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphonesimulator.xcarchive/Products/Library/Frameworks/${TARGET_NAME}.framework\" -framework \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphoneos.xcarchive/Products/Library/Frameworks/${TARGET_NAME}.framework\" -output \"${RELEASE_FOLDER}/${TARGET_NAME}.xcframework\"\n\nfind . -name \"*.swiftinterface\" -exec sed -i -e 's/KeyboardSDK\\.//g' {} \\;\n\nrm -r \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphonesimulator.xcarchive\"\nrm -r \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphoneos.xcarchive\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

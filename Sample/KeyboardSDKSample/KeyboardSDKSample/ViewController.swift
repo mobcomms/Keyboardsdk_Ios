@@ -23,6 +23,11 @@ class ViewController: UIViewController {
         overrideUserInterfaceStyle = .light
         self.navigationController?.isNavigationBarHidden = true
         print(ENKeyboardSDK.shared.isKeyboardExtensionEnabled() ? "keyboard extension active" : "keyboard extension deactive" )
+        
+        
+       let vendor = UIDevice.current.identifierForVendor
+        print(vendor)
+        
     }
     
     
@@ -56,7 +61,7 @@ class ViewController: UIViewController {
         }
         
         adid = ASIdentifierManager.shared().advertisingIdentifier.uuidString
-        
+        print(adid)
         if let idfa = adid {
             ENSettingManager.shared.userIdfa = idfa
         }
@@ -68,43 +73,13 @@ class ViewController: UIViewController {
         ENKeyboardSDK.shared.saveUUID("rzWKcbVLkG6cetZVt2nChg==") //재민 아이디
         
 
-//        ENKeyboardSDK.shared.setDebug(isDebug: true)
+        ENKeyboardSDK.shared.setDebug(isDebug: true)
         
 //        let hanaMain = HanaMainViewController.create()
 //        self.navigationController?.pushViewController(hanaMain, animated: true)
 //        
 //        let testMain = HanaPPZWebViewController.create()
 //        self.navigationController?.pushViewController(testMain, animated: true)
-        test()
-    }
-    func test(){
-        let jsonString = "{\"Result\":\"true\",\"total_point\":0,\"result_message\":\"1P \\uc801\\ub9bd \\uc644\\ub8cc!\"}"
-        if let jsonData = jsonString.data(using: .utf8) {
-            do {
-                print("send_point json parse success !!!")
-
-                let data = try JSONDecoder().decode(ENSendPointModel.self, from: jsonData)
-                
-                print("send_point json parse success  --  1")
-
-                DispatchQueue.main.async {
-                    if data.total_point ?? -1 >= 0 {
-                        print("send_point json parse success  --  2")
-
-                        
-                    }
-                    if data.Result == "false" {
-                        print("send_point json parse success  --  5")
-
-                        
-                    }
-                }
-                
-            } catch {
-                print("send_point json parse error")
-                
-            }
-        }
     }
     
     struct ENSendPointModel: Codable {

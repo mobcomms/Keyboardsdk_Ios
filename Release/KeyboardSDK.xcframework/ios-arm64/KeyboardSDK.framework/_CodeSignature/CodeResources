@@ -234,11 +234,11 @@
 		</data>
 		<key>Frameworks/KeyboardSDKCore.framework/KeyboardSDKCore</key>
 		<data>
-		Ihgesx2J7GVqq7BV47OGMav2piM=
+		KZZxHxspqqdLNIGFLaza0wT4ekk=
 		</data>
 		<key>Frameworks/KeyboardSDKCore.framework/_CodeSignature/CodeResources</key>
 		<data>
-		e2c/u0ReiLuFFTG3tMyjReerlE4=
+		kUxbJkY6kHstUi8KZ04rD1HNf48=
 		</data>
 		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_emoticon_1@3x.png</key>
 		<data>
@@ -518,7 +518,7 @@
 		</data>
 		<key>Headers/KeyboardSDK-Swift.h</key>
 		<data>
-		jusDszQ+LUPo6rvrj32MPIXMYkM=
+		1CTHvpSKyMXdC14EItoNIfkQHqI=
 		</data>
 		<key>Headers/KeyboardSDK.h</key>
 		<data>
@@ -538,7 +538,7 @@
 		</data>
 		<key>Modules/KeyboardSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		T8AqyebODTYJz7pJoBpHPIQPrp4=
+		kHPsWnav5OVnApgdxz84S+EuPjw=
 		</data>
 		<key>Modules/KeyboardSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -554,7 +554,7 @@
 		</data>
 		<key>Modules/KeyboardSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		YiD2ski++6BselsVML8Q8MKvwc8=
+		tfwdGH6O566h9kQMhZ2XaG9RZyQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1018,14 +1018,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wp9aCw2zcmKe8+mJEJDOViFI0MVL+/N/Y5ERokKm1nE=
+			RiiLXC6CPEEgi206hhga66fRDY5zcJblvT3JPw/WZEs=
 			</data>
 		</dict>
 		<key>Frameworks/KeyboardSDKCore.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FFHXLLi0OIj2NLvfuJQdUeRNae/dhC2XBdXy4au1fBY=
+			rl/Tzu/oJrS/s7UixiEHSvkh/ZGosfhSkVPteo6MilY=
 			</data>
 		</dict>
 		<key>Frameworks/KeyboardSDKCore.framework/aikbd_btn_emoticon_1@3x.png</key>
@@ -1515,7 +1515,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			scjVVoTg0cduwrAxMCska1ffRQLLs+H34jrXDgLi6v0=
+			EZAWh2qmKuWdW/a5zrISli7BBfitI3EuAENHQO+l/WI=
 			</data>
 		</dict>
 		<key>Headers/KeyboardSDK.h</key>
@@ -1543,7 +1543,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cZrKHPiJ+cDn2l76RCsp68GU2WCyZPXKrDJ0ysqMwVw=
+			eHPKw+Wmv48h0UrrZhNYOEDPYbXwdG0xbSK7wRE7Hk8=
 			</data>
 		</dict>
 		<key>Modules/KeyboardSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -1571,7 +1571,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SeEAitXvGpJpWoVLPiBiaaPPYS3PKlTsrzjMIysPfKs=
+			p4mOtIEGP9utgiCMylGW+kLI8S0O9YtYUFZmgYan6kA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -110,7 +110,8 @@ class HanaKeyboardContentSettingView: UIView, WKUIDelegate, WKNavigationDelegate
     }()
     
     weak var delegate: HanaKeyboardContentSettingViewDelegate? = nil
-    
+    var isCallSavePoint:Bool = false
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         settingViewConstraint()
@@ -252,13 +253,13 @@ class HanaKeyboardContentSettingView: UIView, WKUIDelegate, WKNavigationDelegate
                             self.settingAdPoint(rewardFlag: data.Result, rewardPoint: data.point)
                         }
                     } catch {
-                        print("get_reward_chk_set exception")
+                        DHLogger.log("get_reward_chk_set exception")
                         DispatchQueue.main.async {
                             self.settingAdPoint(rewardFlag: "false", rewardPoint: "")
                         }
                     }
                 } else {
-                    print("get_reward_chk_set invalid json data")
+                    DHLogger.log("get_reward_chk_set invalid json data")
                     DispatchQueue.main.async {
                         self.settingAdPoint(rewardFlag: "false", rewardPoint: "")
                     }
@@ -350,6 +351,8 @@ class HanaKeyboardContentSettingView: UIView, WKUIDelegate, WKNavigationDelegate
     }
     func loadWebview(){
         let url = URL(string:ENAPIConst.AD_Sub_Banner)!
+        isCallSavePoint = false
+
         webView.load(URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10)) // 캐싱 사용하지 않도록 설정
         loadSettingBannerPoint()
     }
@@ -383,21 +386,21 @@ class HanaKeyboardContentSettingView: UIView, WKUIDelegate, WKNavigationDelegate
                                 }
                             }
                         } else {
-                            print("send_reward_zone_point error code : \(data.errcode ?? "code nil")")
-                            print("send_reward_zone_point error String : \(data.errstr ?? "errstr nil")")
+                            DHLogger.log("send_reward_zone_point error code : \(data.errcode ?? "code nil")")
+                            DHLogger.log("send_reward_zone_point error String : \(data.errstr ?? "errstr nil")")
                             ENSettingManager.shared.zoneToastMsg = data.errstr ?? "사용자 정보를 확인할 수 없어요. 하나머니 앱에서 인증해 주세요."
 
                             
                         }
                         
                     } catch {
-                        print("json parse error")
+                        DHLogger.log("json parse error")
                     }
                 } else {
-                    print("not invalid jsonData")
+                    DHLogger.log("not invalid jsonData")
                 }
             } else {
-                print("not invalid data & jsonString")
+                DHLogger.log("not invalid data & jsonString")
             }
             
             if let err = error {
@@ -405,21 +408,20 @@ class HanaKeyboardContentSettingView: UIView, WKUIDelegate, WKNavigationDelegate
             }
         }
     }
-}
-
-
-extension HanaKeyboardContentSettingView {
-    // html a tag target
-    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
-        if var urlString = navigationAction.request.url?.absoluteString, urlString.count > 0{
-
+    private func excuteLanding(url: URL?) {
+        if let urlString = url?.absoluteString, urlString.count > 0 && !isCallSavePoint{
+            isCallSavePoint = true
             if let delegates = self.delegate {
                 ///딥링크 이동 이슈 대응
                 ///canOpenURL 함수로 이동이 가능하면 포인트를 지급하도록
                 ///이동이 불가능하면 토스트 메시지 노출 후 광고 다시 로드
                 if delegates.canOpenURL(url: urlString) {
+                    print("[ENNotifyView] : canOpenURL")
+
                     self.callSendRewardPoint(url: urlString)
                 }else{
+                    print("[ENNotifyView] : canOpenURL FAIL")
+
                     DispatchQueue.main.async {
                         self.loadWebview()
                         if let supView = self.superview {
@@ -433,7 +435,39 @@ extension HanaKeyboardContentSettingView {
             }
             
         }
-        
+
+    }
+
+}
+
+
+extension HanaKeyboardContentSettingView {
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        let request = navigationAction.request
+
+        if navigationAction.navigationType == .linkActivated{
+            if let url = request.url {
+                DHLogger.log("[ENNotifyView] decidePolicyFor : \(navigationAction.navigationType) >> \(url)")
+                excuteLanding(url: url)
+            }
+        }
+
+        decisionHandler(.allow)
+        return
+    }
+
+    // html a tag target
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        let request = navigationAction.request
+
+            if let url = request.url {
+                DHLogger.log("[ENNotifyView] createWebViewWith : \(navigationAction.navigationType) >> \(url)")
+
+                excuteLanding(url: url)
+
+            
+        }
+
         return nil
     }
     
@@ -446,10 +480,6 @@ extension HanaKeyboardContentSettingView {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
     }
     
-    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        decisionHandler(.allow)
-        return
-    }
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
             return true

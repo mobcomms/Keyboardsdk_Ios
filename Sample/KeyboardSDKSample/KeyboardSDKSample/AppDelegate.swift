@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 개발 서버 or 사용 서버 구분 할 수 있는 값
         // true => 개발 서버
         // false => 상용 서버
-//        ENKeyboardSDK.shared.setDebug(isDebug: false)
+        ENKeyboardSDK.shared.setDebug(isDebug: true)
         
         // SDK Version 확인
         print(ENKeyboardSDK.shared.SDK_VERSION)

@@ -13,7 +13,6 @@ public enum ENAPIConst {
     static let API_URL = "\(HOST_URL)/API/HANA/"
 
     static let API_SERVER_TYPE: String = "\(ENSettingManager.shared.setDebug ? "ALPHA" : "RELEASE")"
-
     static let AD_URL: String = "https://www.mobwithad.com/api/v1/banner/app/ocbKeyboard"
     static let ZONE_ID_MAIN: String = "10884594"
     static let ZONE_ID_SUB: String = "10884595"
@@ -27,5 +26,7 @@ public enum ENAPIConst {
     
     static let InquiryURL:String = "https://hana-api.commsad.com/API/HANA/inquiry/index.php?uuid=\(changHanaCustomerID)"
     static let PlusPointZoneURL:String = "https://pomission.com/common/view/missionList?pomissionMediaId=\(mediaID)&pomissionRefreshToken=\(token)&top_yn=v1&userAdId=\(ENSettingManager.shared.userIdfa)&userUuId=\(changHanaCustomerID)&useService=\(mediaID)&server_type=\(API_SERVER_TYPE)"
+
+    
 
 }

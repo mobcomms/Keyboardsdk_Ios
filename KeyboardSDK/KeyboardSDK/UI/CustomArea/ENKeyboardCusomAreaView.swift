@@ -725,40 +725,39 @@ public class ENKeyboardCustomAreaView: UIView {
             
             if let data = data, let jsonString = String(data: data, encoding: .utf8) {
                 #if DEBUG
-                print("send_point : \(jsonString)")
+                print("send_point V2: \(jsonString)")
                 #endif
-                print("send_point v2 : \(jsonString)")
 
                 if let jsonData = jsonString.data(using: .utf8) {
                     do {
-                        print("send_point json parse success !!!")
+                        DHLogger.log("send_point json parse success !!!")
 
                         let data = try JSONDecoder().decode(ENSendPointModel.self, from: jsonData)
                         
-                        print("send_point json parse success  --  1")
+                        DHLogger.log("send_point json parse success  --  1")
 
                         DispatchQueue.main.async {
                             if data.total_point ?? -1 >= 0 {
-                                print("send_point json parse success  --  2")
+                                DHLogger.log("send_point json parse success  --  2")
 
                                 ENSettingManager.shared.readyForHanaPoint = data.total_point ?? 0
-                                print("send_point json parse success  --  3")
+                                DHLogger.log("send_point json parse success  --  3")
 
                                 self.updateUI()
                                 
                             }
                             if let super1 = self.superview {
                                 if let super2 = super1.superview {
-                                    print("send_point json parse success  --  4")
+                                    DHLogger.log("send_point json parse success  --  4")
 
                                     super2.showEnToast(message: data.result_message ?? "사용자 정보를 확인할 수 없어요. 하나머니 앱에서 인증해 주세요.")
                                 }
                             }
                             if data.Result == "false" {
-                                print("send_point json parse success  --  5")
+                                DHLogger.log("send_point json parse success  --  5")
 
                                 if let del = self.delegate {
-                                    print("send_point json parse success  --  6")
+                                    DHLogger.log("send_point json parse success  --  6")
 
                                     del.enKeyboardCustomAreaView(self, targetButton: targetBtn, hanaPointList: nil)
                                 }
@@ -766,7 +765,7 @@ public class ENKeyboardCustomAreaView: UIView {
                         }
                         
                     } catch {
-                        print("send_point json parse error")
+                        DHLogger.log("send_point json parse error")
                         DispatchQueue.main.async {
                             if let del = self.delegate {
                                 del.enKeyboardCustomAreaView(self, targetButton: targetBtn, hanaPointList: nil)
@@ -780,7 +779,7 @@ public class ENKeyboardCustomAreaView: UIView {
                         }
                     }
                 } else {
-                    print("send_point invalid jsonData ")
+                    DHLogger.log("send_point invalid jsonData ")
                     DispatchQueue.main.async {
                         if let del = self.delegate {
                             del.enKeyboardCustomAreaView(self, targetButton: targetBtn, hanaPointList: nil)
@@ -794,7 +793,7 @@ public class ENKeyboardCustomAreaView: UIView {
                     }
                 }
             } else {
-                print("send_point invalid data & jsonString")
+                DHLogger.log("send_point invalid data & jsonString")
                 DispatchQueue.main.async {
                     if let del = self.delegate {
                         del.enKeyboardCustomAreaView(self, targetButton: targetBtn, hanaPointList: nil)

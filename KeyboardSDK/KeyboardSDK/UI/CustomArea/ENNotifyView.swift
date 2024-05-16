@@ -23,7 +23,8 @@ class ENNotifyView: UIView, WKUIDelegate, WKNavigationDelegate, UIScrollViewDele
     var currentNewsIndex = 0
     
     var newsTimer: Timer?
-    
+    var isCallSavePoint:Bool = false
+
     lazy var newsView: UIView = {
         let inner: UIView = UIView()
         inner.backgroundColor = UIColor(red: 70/255, green: 79/255, blue: 84/255, alpha: 1)
@@ -100,6 +101,8 @@ class ENNotifyView: UIView, WKUIDelegate, WKNavigationDelegate, UIScrollViewDele
     }
     
     func initLayout() {
+        DHLogger.log("ENNotifyView initLayout : ")
+
         // 현재 뷰 세팅
         self.translatesAutoresizingMaskIntoConstraints = false
         self.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
@@ -244,13 +247,13 @@ class ENNotifyView: UIView, WKUIDelegate, WKNavigationDelegate, UIScrollViewDele
                         DispatchQueue.main.async {
                             self.settingAdPoint(rewardFlag: "false", rewardPoint: "")
                         }
-                        print("json parse error : \(error.localizedDescription)")
+                        DHLogger.log("json parse error : \(error.localizedDescription)")
                     }
                 } else {
                     DispatchQueue.main.async {
                         self.settingAdPoint(rewardFlag: "false", rewardPoint: "")
                     }
-                    print("invalid json data")
+                    DHLogger.log("invalid json data")
                 }
             }
             
@@ -303,7 +306,10 @@ class ENNotifyView: UIView, WKUIDelegate, WKNavigationDelegate, UIScrollViewDele
         loadWebview()
     }
     func loadWebview(){
+        DHLogger.log("[ENNotifyView] : loadWebview")
+
         let url = URL(string:ENAPIConst.AD_Main_Banner)!
+        isCallSavePoint = false
         webView.load(URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10)) // 캐싱 사용하지 않도록 설정
         loadBannerPoint()
     }
@@ -344,6 +350,8 @@ class ENNotifyView: UIView, WKUIDelegate, WKNavigationDelegate, UIScrollViewDele
         ENKeyboardAPIManeger.shared.callSendRewardPoint(ENAPIConst.ZONE_ID_MAIN) {[weak self] data, response, error in
             guard let self = self else { return }
             if let data = data, let jsonString = String(data: data, encoding: .utf8) {
+                DHLogger.log("send_reward_zone_point jsonString : \(jsonString ?? "code nil")")
+
                 if let jsonData = jsonString.data(using: .utf8) {
                     do {
                         let data = try JSONDecoder().decode(ENSendRewardZonePointModel.self, from: jsonData)
@@ -367,20 +375,20 @@ class ENNotifyView: UIView, WKUIDelegate, WKNavigationDelegate, UIScrollViewDele
                                 }
                             }
                         } else {
-                            print("send_reward_zone_point error code : \(data.errcode ?? "code nil")")
-                            print("send_reward_zone_point error String : \(data.errstr ?? "errstr nil")")
+                            DHLogger.log("send_reward_zone_point error code : \(data.errcode ?? "code nil")")
+                            DHLogger.log("send_reward_zone_point error String : \(data.errstr ?? "errstr nil")")
                             ENSettingManager.shared.zoneToastMsg = data.errstr ?? "사용자 정보를 확인할 수 없어요. 하나머니 앱에서 인증해 주세요."
                             
                         }
                         
                     } catch {
-                        print("json parse error")
+                        DHLogger.log("json parse error")
                     }
                 } else {
-                    print("not invalid jsonData")
+                    DHLogger.log("not invalid jsonData")
                 }
             } else {
-                print("not invalid data & jsonString")
+                DHLogger.log("not invalid data & jsonString")
             }
             
             if let err = error {
@@ -388,19 +396,20 @@ class ENNotifyView: UIView, WKUIDelegate, WKNavigationDelegate, UIScrollViewDele
             }
         }
     }
-}
-
-extension ENNotifyView {
-    // html a tag target
-    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
-        if var urlString = navigationAction.request.url?.absoluteString, urlString.count > 0{
+    private func excuteLanding(url: URL?) {
+        if let urlString = url?.absoluteString, urlString.count > 0 && !isCallSavePoint{
+            isCallSavePoint = true
             if let delegates = self.delegate {
                 ///딥링크 이동 이슈 대응
                 ///canOpenURL 함수로 이동이 가능하면 포인트를 지급하도록
                 ///이동이 불가능하면 토스트 메시지 노출 후 광고 다시 로드
                 if delegates.canOpenURL(url: urlString) {
+                    print("[ENNotifyView] : canOpenURL")
+
                     self.callSendRewardPoint(url: urlString)
                 }else{
+                    print("[ENNotifyView] : canOpenURL FAIL")
+
                     DispatchQueue.main.async {
                         self.loadWebview()
                         if let supView = self.superview {
@@ -414,7 +423,38 @@ extension ENNotifyView {
             }
             
         }
-        
+
+    }
+}
+
+extension ENNotifyView {
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        let request = navigationAction.request
+
+        if navigationAction.navigationType == .linkActivated{
+            if let url = request.url {
+                DHLogger.log("[ENNotifyView] decidePolicyFor : \(navigationAction.navigationType) >> \(url)")
+                excuteLanding(url: url)
+            }
+        }
+
+        decisionHandler(.allow)
+        return
+    }
+
+    // html a tag target
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+//        print("webview load createWebViewWith : \(navigationAction.request.url?.absoluteString)")
+        let request = navigationAction.request
+
+            if let url = request.url {
+                DHLogger.log("[ENNotifyView] createWebViewWith : \(navigationAction.navigationType) >> \(url)")
+
+                excuteLanding(url: url)
+
+            
+        }
+
         return nil
     }
     
@@ -430,11 +470,6 @@ extension ENNotifyView {
 //        print("webview load finish url : \(webView.url?.absoluteString)")
     }
     
-    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-//        print("webview load decidePolicyFor : \(navigationAction.request.url?.absoluteString)")
-        decisionHandler(.allow)
-        return
-    }
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
