@@ -68,7 +68,7 @@ class ViewController: UIViewController {
         
 //        ENKeyboardSDK.shared.saveUUID("5XRNRyUoG4Eifg21Od0kQA==")
 
-//        ENKeyboardSDK.shared.saveUUID("oNV6SI330ASUXJwGciHidw==")
+//        ENKeyboardSDK.shared.saveUUID("oI/0LUHZoWGtJOkyiiISQw==")
 
         ENKeyboardSDK.shared.saveUUID("rzWKcbVLkG6cetZVt2nChg==") //재민 아이디
         

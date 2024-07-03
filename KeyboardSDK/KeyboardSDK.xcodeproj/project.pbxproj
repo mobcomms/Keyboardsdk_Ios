@@ -23,8 +23,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		25751AF52BFC3ECC002752EB /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 25FDB7772BF5AE3200FE6336 /* PrivacyInfo.xcprivacy */; };
 		25902CB62BC39300006EB627 /* KeyboardSDKCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25902CAD2BC39016006EB627 /* KeyboardSDKCore.xcframework */; };
-		25902CB72BC39300006EB627 /* KeyboardSDKCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25902CAD2BC39016006EB627 /* KeyboardSDKCore.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		262D449A2B2C1A4E00871FA0 /* ENAPIConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262D44992B2C1A4E00871FA0 /* ENAPIConst.swift */; };
 		262D44AA2B3137D700871FA0 /* HanaKeyboardInquiryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 262D44A92B3137D700871FA0 /* HanaKeyboardInquiryViewController.xib */; };
 		262D44AC2B31381300871FA0 /* HanaKeyboardInquiryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262D44AB2B31381300871FA0 /* HanaKeyboardInquiryViewController.swift */; };
@@ -272,22 +272,7 @@
 		A1F740EB2A9D9AD900D7CE21 /* ENDefaultBackgroundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1F740EA2A9D9AD900D7CE21 /* ENDefaultBackgroundCell.xib */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		25902CB82BC39300006EB627 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				25902CB72BC39300006EB627 /* KeyboardSDKCore.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		257D57582BDFCF7E0011FB0A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		25902CAD2BC39016006EB627 /* KeyboardSDKCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = KeyboardSDKCore.xcframework; path = ../../01.ENKeyboardsdkcore_Ios/Release/KeyboardSDKCore.xcframework; sourceTree = "<group>"; };
 		25FDB7772BF5AE3200FE6336 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		262D44992B2C1A4E00871FA0 /* ENAPIConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENAPIConst.swift; sourceTree = "<group>"; };
@@ -1079,7 +1064,6 @@
 			isa = PBXGroup;
 			children = (
 				66CDA75E2641190200D98DB6 /* Info.plist */,
-				257D57582BDFCF7E0011FB0A /* PrivacyInfo.xcprivacy */,
 				66CDA75D2641190200D98DB6 /* KeyboardSDK.h */,
 				66155942264BDF2A0005363F /* KeyboardSDK.m */,
 				66B1270B26573F9C00E0C0FD /* Resource */,
@@ -1310,7 +1294,6 @@
 				66CDA7562641190200D98DB6 /* Sources */,
 				66CDA7572641190200D98DB6 /* Frameworks */,
 				66CDA7582641190200D98DB6 /* Resources */,
-				25902CB82BC39300006EB627 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1408,6 +1391,7 @@
 				66FB4A3E269D62E6001AB6A0 /* aikbd_btn_keyboard_memo_on_2@3x.png in Resources */,
 				663093022681901E009BA37C /* ENThemeBannerCollectionViewCell.xib in Resources */,
 				66FB4A3F269D62E6001AB6A0 /* aikbd_btn_keyboard_setting@3x.png in Resources */,
+				25751AF52BFC3ECC002752EB /* PrivacyInfo.xcprivacy in Resources */,
 				26A9AF632ABD2B2A0032B7B7 /* ENBonusViewController.xib in Resources */,
 				26A9AF6A2ABD2B4E0032B7B7 /* ENPointBarCell.xib in Resources */,
 				66E2FE74269E8904002CE02C /* ENKeyboardTabCoupangView.xib in Resources */,
@@ -1464,7 +1448,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export TARGET_NAME=KeyboardSDK\nexport RELEASE_FOLDER=../Release\n\nrm -rf \"${RELEASE_FOLDER}/${TARGET_NAME}.xcframework\"\n\nxcodebuild archive -scheme \"${TARGET_NAME}\" -configuration Release -destination 'generic/platform=iOS' -archivePath \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphoneos.xcarchive\" -sdk iphoneos SKIP_INSTALL=NO LIBRARIES_FOR_DISTRIBUTION=YES\nxcodebuild archive -scheme \"${TARGET_NAME}\" -configuration Release -destination 'generic/platform=iOS Simulator' -archivePath \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphonesimulator.xcarchive\" -sdk iphonesimulator SKIP_INSTALL=NO LIBRARIES_FOR_DISTRIBUTION=YES\n\nxcodebuild -create-xcframework -framework \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphonesimulator.xcarchive/Products/Library/Frameworks/${TARGET_NAME}.framework\" -framework \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphoneos.xcarchive/Products/Library/Frameworks/${TARGET_NAME}.framework\" -output \"${RELEASE_FOLDER}/${TARGET_NAME}.xcframework\"\n\nfind . -name \"*.swiftinterface\" -exec sed -i -e 's/KeyboardSDK\\.//g' {} \\;\n\nrm -r \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphonesimulator.xcarchive\"\nrm -r \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphoneos.xcarchive\"\n";
+			shellScript = "export TARGET_NAME=KeyboardSDK\nexport RELEASE_FOLDER=../Release\n\nrm -rf \"${RELEASE_FOLDER}/${TARGET_NAME}.xcframework\"\n\nxcodebuild archive -scheme \"${TARGET_NAME}\" -configuration Release -destination 'generic/platform=iOS' -archivePath \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphoneos.xcarchive\" -sdk iphoneos SKIP_INSTALL=NO LIBRARIES_FOR_DISTRIBUTION=YES\nxcodebuild archive -scheme \"${TARGET_NAME}\" -configuration Release -destination 'generic/platform=iOS Simulator' -archivePath \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphonesimulator.xcarchive\" -sdk iphonesimulator SKIP_INSTALL=NO LIBRARIES_FOR_DISTRIBUTION=YES\n\nxcodebuild -create-xcframework -framework \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphonesimulator.xcarchive/Products/Library/Frameworks/${TARGET_NAME}.framework\" -framework \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphoneos.xcarchive/Products/Library/Frameworks/${TARGET_NAME}.framework\" -output \"${RELEASE_FOLDER}/${TARGET_NAME}.xcframework\"\n\nrm -r \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphonesimulator.xcarchive\"\nrm -r \"${RELEASE_FOLDER}/${TARGET_NAME}.framework-iphoneos.xcarchive\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

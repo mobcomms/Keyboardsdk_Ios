@@ -2,40 +2,41 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>NSPrivacyTrackingDomains</key>
-    <array>
-        <string>https://mobwithad.com/</string>
-        <string>https://paybooc-api.commsad.com</string>
-        <string>https://mixer.mobon.net</string>
-        <string>https://www.mobwithad.com</string>
-    </array>
-    <key>NSPrivacyTracking</key>
-    <true/>
-    <key>NSPrivacyCollectedDataTypes</key>
-    <array>
-        <dict>
-            <key>NSPrivacyCollectedDataTypeLinked</key>
-            <false/>
-            <key>NSPrivacyCollectedDataTypeTracking</key>
-            <true/>
-            <key>NSPrivacyCollectedDataTypePurposes</key>
-            <array>
-                <string>앱 내에서 사용자에게 맞춤 광고를 제공하고, 광고 효과를 측정하기 위해 IDFA를 사용합니다.</string>
-            </array>
-            <key>NSPrivacyCollectedDataType</key>
-            <string>IDFA (Identifier for Advertisers)</string>
-        </dict>
-    </array>
-    <key>NSPrivacyAccessedAPITypes</key>
-    <array>
-        <dict>
-            <key>NSPrivacyAccessedAPIType</key>
-            <string>IDFA</string>
-            <key>NSPrivacyAccessedAPITypeReasons</key>
-            <array>
-                <string>앱 내에서 사용자에게 맞춤 광고를 제공하고, 광고 효과를 측정하기 위해 IDFA를 사용합니다.</string>
-            </array>
-        </dict>
-    </array>
+	<key>NSPrivacyAccessedAPITypes</key>
+	<array>
+		<dict>
+			<key>NSPrivacyAccessedAPIType</key>
+			<string>NSPrivacyAccessedAPICategoryActiveKeyboards</string>
+			<key>NSPrivacyAccessedAPITypeReasons</key>
+			<array>
+				<string>3EC4.1</string>
+			</array>
+		</dict>
+	</array>
+	<key>NSPrivacyTrackingDomains</key>
+	<array>
+		<string>https://mobwithad.com/</string>
+		<string>https://paybooc-api.commsad.com</string>
+		<string>https://mixer.mobon.net</string>
+		<string>https://www.mobwithad.com</string>
+	</array>
+	<key>NSPrivacyTracking</key>
+	<true/>
+	<key>NSPrivacyCollectedDataTypes</key>
+	<array>
+		<dict>
+			<key>NSPrivacyCollectedDataTypeLinked</key>
+			<true/>
+			<key>NSPrivacyCollectedDataTypeTracking</key>
+			<true/>
+			<key>NSPrivacyCollectedDataTypePurposes</key>
+			<array>
+				<string>NSPrivacyCollectedDataTypePurposeThirdPartyAdvertising</string>
+				<string>NSPrivacyCollectedDataTypePurposeDeveloperAdvertising</string>
+			</array>
+			<key>NSPrivacyCollectedDataType</key>
+			<string>NSPrivacyCollectedDataTypeAdvertisingData</string>
+		</dict>
+	</array>
 </dict>
 </plist>
